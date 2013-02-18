@@ -1,84 +1,62 @@
-2006-01-11  Scott James Remnant  <scott@netsplit.com>
+2005-04-04  Michael Vogt <mvo@debian.org>
 
-	* src/reboot.c: New file containing code to deal with reboot
-	notifications.
-	* src/reboot.h: Header for new code.
-	* src/Makefile.am (update_notifier_SOURCES): Add new source files
-	to the binary.
-	
-	* src/update-notifier.c (tray_icons_init): Initialise the reboot
-	tray icon as well.
-	(fam_init): Initialise watch for the reboot-required file.
-	(fam_check): If the reboot-required file gets touched or remove,
-	run the reboot_check function.
-	* src/update-notifier.h (struct _UpgradeNotifier): Add pointer to
-	reboot tray applet and request context for watching the file we'll
-	use to do this.
+        * configure.in: Added "xh" to ALL_LINGUAS.
 
-	* data/notify-reboot-required: instead of copying a hook into the
-	directory, touch /var/run/reboot-required which is sufficient for
-	that message.  Obviously anything wanting to give more detail can
-	still use the hooks.
-	* data/reboot-hook.in: Removed.
-	* data/Makefile.am (templates_DATA): Drop this now there's no hook.
+2005-04-01  Steve Murphy  <murf@e-tools.com>
 
-	* pixmaps/reboot.png: Copied pixmap from the Ubuntu logout dialog.
-	* pixmaps/reboot-icon.png: Taken from Tango theme and colours
-	modified to be a bie like the logout one.
-	* pixmaps/Makefile.am (appicon_DATA): added both new graphcis to
-	pixmaps directory.
+        * configure.in: Added "rw" to ALL_LINGUAS.
+
+2005-03-29  Raphael Higino  <raphaelh@cvs.gnome.org>
+
+	* configure.in: Added pt_BR to ALL_LINGUAS.
+
+2005-03-29  Zygmunt Krynicki  <zyga@www.suxx.pl>
+
+       * src/dialog_apt_key.py.in: Enabled translation of known keys
+
+2005-03-24  Michiel Sikkes  <michiel@eyesopened.nl>
+
+	* data/update-manager.glade: Added help button. Put package count next
+	to reload button above updatelist.
+	* src/update-manager.in: Implemented help button.
+	* configure.in: Added ja to ALL_LINGUAS.
+
+2005-03-21  Adam Weinberger  <adamw@gnome.org>
+
+	* configure.in: Added en_CA to ALL_LINGUAS.
+
+2005-03-21  Christian Rose  <menthos@menthos.com>
+
+	* configure.in: Added "sv" to ALL_LINGUAS.
+	Also sorted the language entries in the ALL_LINGUAS line,
+	so that it will be possible to spot duplicates or omissions.
+
+2005-03-11  Michiel Sikkes  <michiel@eyesopened.nl>
+
+	* configure.in: Added el (Greek) to ALL_LINGUAS.
 
 2005-03-03  Dan Damian  <dand@gnome.ro>
 
-       * po/ro.po:
-       * configure.in: Added Romanian translation.
+	* configure.in: Added ro (Romanian) to ALL_LINGUAS.
 
-2005-03-02  Martin Willemoes Hansen  <mwh@sysrq.dk>
+2005-03-10  Zygmunt Krynicki <zyga@www.suxx.pl>
 
-        * da.po: Updated Danish translation.
+	* Improved translation support
 
-2005-01-25  Martin Willemoes Hansen  <mwh@sysrq.dk>
-        * da.po: Added Danish translation.
-	
-2005-01-06  Michael Vogt <mvo@debian.org>
-	* lot's of internal changes
-	* renamed to udpate-notifier
-	
-2004-10-24  Michiel Sikkes  <michiel@eyesopened.nl>
+2005-02-18  Michiel Sikkes  <michiel@eyesopened.nl>
 
-	* configure.in: Added with-package-manager configure var.
-	* src/upgrade-notifier.c: 
-	  - Added die signal to the gnome client.
-	  - Added invokation of the package manager.
+	* Added window title to the synaptic gtk socket window.
 
-2004-10-22  Michiel Sikkes  <michiel@eyesopened.nl>
+2005-02-18  Michiel Sikkes  <michiel@eyesopened.nl>
 
-	* Makefile.am: Removed autogen.sh from extra_dist.
-	* configure.in: Replaced configure.in with src/upgrade-notifier.c in
-	AC_INIT.
+	* Updated strings to have more consistent messages and it's not a pain
+	in the ass to translate ;).
+	* Merge from branches/release-37-2.
 
-2004-10-22  Michiel Sikkes  <michiel@eyesopened.nl>
+2005-01-27  Martin Willemoes Hansen  <mwh@sysrq.dk>
 
-	* src/Makefile.am: Added upgrade-notifier.[ch]
-	* src/upgrade-dialog.glade: Moved to ui/
-	* src/upgrade-notifier.c: Added. Was: tray.c
+	* da.po: Added Danish translation.
 
-2004-10-22  Michiel Sikkes  <michiel@eyesopened.nl>
+2004-10-25  Michiel Sikkes  <michiel@eyesopened.nl>
 
-	* AUTHORS: Added myself
-	* autogen.sh: Stripped down, using gnome-autogen.sh now.
-	* configure.in: Added checks for the package manager and
-	upate-manager.
-	* data/Makefile: 
-	* data/Makefile.in:
-	* pixmaps/Makefile:
-	* pixmaps/Makefile.in:
-	* po/Makefile:
-	* po/Makefile.in:
-	* po/Makefile.in.in:
-	* po/POTFILES:
-	* po/upgrade-notifier.pot:
-	* src/Makefile:
-	* src/Makefile.in: Removed all these files. They don't belong in the
-	upstream repo ;-)
-
+	* Initial release.

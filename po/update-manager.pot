@@ -1,0 +1,766 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-25 12:22-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: ../UpdateManager/backend/InstallBackendSynaptic.py:64
+msgid "Please wait, this can take some time."
+msgstr ""
+
+#: ../UpdateManager/backend/InstallBackendSynaptic.py:66
+msgid "Update is complete"
+msgstr ""
+
+#: ../UpdateManager/DistUpgradeFetcher.py:114
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:109
+msgid "Could not find the release notes"
+msgstr ""
+
+#: ../UpdateManager/DistUpgradeFetcher.py:115
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:110
+msgid "The server may be overloaded. "
+msgstr ""
+
+#: ../UpdateManager/DistUpgradeFetcher.py:125
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:114
+msgid "Could not download the release notes"
+msgstr ""
+
+#: ../UpdateManager/DistUpgradeFetcher.py:126
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:115
+msgid "Please check your internet connection."
+msgstr ""
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:68
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:91
+msgid "Upgrade"
+msgstr ""
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:95
+#: ../data/gtkbuilder/UpdateManager.ui.h:15
+msgid "Release Notes"
+msgstr ""
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:134
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:148
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:150
+msgid "Downloading additional package files..."
+msgstr ""
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:148
+#, python-format
+msgid "File %s of %s at %sB/s"
+msgstr ""
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:150
+#, python-format
+msgid "File %s of %s"
+msgstr ""
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:155
+#, python-format
+msgid "Please insert '%s' into the drive '%s'"
+msgstr ""
+
+#. change = QMessageBox.question(None, _("Media Change"), msg, QMessageBox.Ok, QMessageBox.Cancel)
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:157
+msgid "Media Change"
+msgstr ""
+
+#: ../UpdateManager/ChangelogViewer.py:75
+msgid "Open Link in Browser"
+msgstr ""
+
+#: ../UpdateManager/ChangelogViewer.py:78
+msgid "Copy Link to Clipboard"
+msgstr ""
+
+#: ../UpdateManager/GtkProgress.py:162
+#, python-format
+msgid "Downloading file %(current)li of %(total)li with %(speed)s/s"
+msgstr ""
+
+#: ../UpdateManager/GtkProgress.py:167
+#, python-format
+msgid "Downloading file %(current)li of %(total)li"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:100
+msgid "Your Ubuntu release is not supported anymore."
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:101
+msgid ""
+"You will not get any further security fixes or critical updates. Please "
+"upgrade to a later version of Ubuntu."
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:109
+msgid "Upgrade information"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:204
+#: ../UpdateManagerText/UpdateManagerText.py:35
+msgid "Install"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:206
+msgid "Name"
+msgstr ""
+
+#. upload_archive = version_match.group(2).strip()
+#: ../UpdateManager/UpdateManager.py:359
+#, python-format
+msgid "Version %s: \n"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:417
+msgid ""
+"No network connection detected, you can not download changelog information."
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:427
+msgid "Downloading list of changes..."
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:471
+msgid "_Deselect All"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:477
+msgid "Select _All"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:536
+#, python-format
+msgid "%s will be downloaded."
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:548
+msgid "The update has already been downloaded."
+msgid_plural "The updates have already been downloaded."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../UpdateManager/UpdateManager.py:553
+msgid "There are no updates to install."
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:562
+msgid "Unknown download size."
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:577
+msgid "The software on this computer is up to date."
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:591
+#, python-format
+msgid ""
+"Updated software has been issued since %s was released. Do you want to "
+"install it now?"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:594
+msgid ""
+"Updated software is available for this computer. Do you want to install it "
+"now?"
+msgstr ""
+
+#. print("on_button_install_clicked")
+#: ../UpdateManager/UpdateManager.py:645
+msgid "Not enough free disk space"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:646
+#, python-format
+msgid ""
+"The upgrade needs a total of %s free space on disk '%s'. Please free at "
+"least an additional %s of disk space on '%s'. Empty your trash and remove "
+"temporary packages of former installations using 'sudo apt-get clean'."
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:671
+msgid ""
+"The computer needs to restart to finish installing updates. Please save your "
+"work before continuing."
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:728
+msgid "Reading package information"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:743
+msgid "Connecting..."
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:758
+msgid "You may not be able to check for updates or download new updates."
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:880
+msgid "Could not initialize the package information"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:881
+msgid ""
+"An unresolvable problem occurred while initializing the package "
+"information.\n"
+"\n"
+"Please report this bug against the 'update-manager' package and include the "
+"following error message:\n"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:905
+msgid "Could not calculate the upgrade"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:906
+msgid ""
+"An unresolvable problem occurred while calculating the upgrade.\n"
+"\n"
+"Please report this bug against the 'update-manager' package and include the "
+"following error message:"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:930
+msgid " (New install)"
+msgstr ""
+
+#. TRANSLATORS: the b stands for Bytes
+#: ../UpdateManager/UpdateManager.py:937
+#, python-format
+msgid "(Size: %s)"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:941
+#, python-format
+msgid "From version %(old_version)s to %(new_version)s"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:945
+#, python-format
+msgid "Version %s"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:978
+msgid "Release upgrade not possible right now"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:979
+#, python-format
+msgid ""
+"The release upgrade can not be performed currently, please try again later. "
+"The server reported: '%s'"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:981
+msgid "Downloading the release upgrade tool"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:988
+#, python-format
+msgid "<b>New Ubuntu release '%s' is available</b>"
+msgstr ""
+
+#. we assert a clean cache
+#: ../UpdateManager/UpdateManager.py:1027
+msgid "Software index is broken"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:1028
+msgid ""
+"It is impossible to install or remove any software. Please use the package "
+"manager \"Synaptic\" or run \"sudo apt-get install -f\" in a terminal to fix "
+"this issue at first."
+msgstr ""
+
+#: ../UpdateManager/UnitySupport.py:57
+msgid "Install All Available Updates"
+msgstr ""
+
+#: ../UpdateManagerText/UpdateManagerText.py:34
+msgid "Cancel"
+msgstr ""
+
+#: ../UpdateManagerText/UpdateManagerText.py:37
+msgid "Changelog"
+msgstr ""
+
+#: ../UpdateManagerText/UpdateManagerText.py:40
+msgid "Updates"
+msgstr ""
+
+#: ../UpdateManagerText/UpdateManagerText.py:53
+msgid "Building Updates List"
+msgstr ""
+
+#: ../UpdateManagerText/UpdateManagerText.py:56
+msgid ""
+"\n"
+"A normal upgrade can not be calculated, please run: \n"
+"  sudo apt-get dist-upgrade\n"
+"\n"
+"\n"
+"This can be caused by:\n"
+" * A previous upgrade which didn't complete\n"
+" * Problems with some of the installed software\n"
+" * Unofficial software packages not provided by Ubuntu\n"
+" * Normal changes of a pre-release version of Ubuntu"
+msgstr ""
+
+#: ../UpdateManagerText/UpdateManagerText.py:125
+msgid "Downloading changelog"
+msgstr ""
+
+#: ../UpdateManager/Core/MyCache.py:147
+#, python-format
+msgid "Other updates (%s)"
+msgstr ""
+
+#: ../UpdateManager/Core/MyCache.py:325
+msgid "This update does not come from a source that supports changelogs."
+msgstr ""
+
+#: ../UpdateManager/Core/MyCache.py:331 ../UpdateManager/Core/MyCache.py:359
+msgid ""
+"Failed to download the list of changes. \n"
+"Please check your Internet connection."
+msgstr ""
+
+#: ../UpdateManager/Core/MyCache.py:338
+#, python-format
+msgid ""
+"Changes for the versions:\n"
+"Installed version: %s\n"
+"Available version: %s\n"
+"\n"
+msgstr ""
+
+#: ../UpdateManager/Core/MyCache.py:348
+#, python-format
+msgid ""
+"The changelog does not contain any relevant changes.\n"
+"\n"
+"Please use http://launchpad.net/ubuntu/+source/%s/%s/+changelog\n"
+"until the changes become available or try again later."
+msgstr ""
+
+#: ../UpdateManager/Core/MyCache.py:353
+#, python-format
+msgid ""
+"The list of changes is not available yet.\n"
+"\n"
+"Please use http://launchpad.net/ubuntu/+source/%s/%s/+changelog\n"
+"until the changes become available or try again later."
+msgstr ""
+
+#: ../UpdateManager/Core/UpdateList.py:51
+msgid "Failed to detect distribution"
+msgstr ""
+
+#: ../UpdateManager/Core/UpdateList.py:52
+#, python-format
+msgid "A error '%s' occurred while checking what system you are using."
+msgstr ""
+
+#: ../UpdateManager/Core/UpdateList.py:63
+msgid "Important security updates"
+msgstr ""
+
+#: ../UpdateManager/Core/UpdateList.py:64
+msgid "Recommended updates"
+msgstr ""
+
+#: ../UpdateManager/Core/UpdateList.py:65
+msgid "Proposed updates"
+msgstr ""
+
+#: ../UpdateManager/Core/UpdateList.py:66
+msgid "Backports"
+msgstr ""
+
+#: ../UpdateManager/Core/UpdateList.py:67
+msgid "Distribution updates"
+msgstr ""
+
+#: ../UpdateManager/Core/UpdateList.py:72
+msgid "Other updates"
+msgstr ""
+
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:72
+#, python-format
+msgid "authenticate '%(file)s' against '%(signature)s' "
+msgstr ""
+
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:131
+#, python-format
+msgid "extracting '%s'"
+msgstr ""
+
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:151
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:152
+msgid "Could not run the upgrade tool"
+msgstr ""
+
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:152
+msgid ""
+"This is most likely a bug in the upgrade tool. Please report it as a bug "
+"using the command 'ubuntu-bug update-manager'."
+msgstr ""
+
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:227
+msgid "Upgrade tool signature"
+msgstr ""
+
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:234
+msgid "Upgrade tool"
+msgstr ""
+
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:268
+msgid "Failed to fetch"
+msgstr ""
+
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:269
+msgid "Fetching the upgrade failed. There may be a network problem. "
+msgstr ""
+
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:273
+msgid "Authentication failed"
+msgstr ""
+
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:274
+msgid ""
+"Authenticating the upgrade failed. There may be a problem with the network "
+"or with the server. "
+msgstr ""
+
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:279
+msgid "Failed to extract"
+msgstr ""
+
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:280
+msgid ""
+"Extracting the upgrade failed. There may be a problem with the network or "
+"with the server. "
+msgstr ""
+
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:285
+msgid "Verification failed"
+msgstr ""
+
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:286
+msgid ""
+"Verifying the upgrade failed.  There may be a problem with the network or "
+"with the server. "
+msgstr ""
+
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:300
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:306
+msgid "Can not run the upgrade"
+msgstr ""
+
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:301
+msgid ""
+"This usually is caused by a system where /tmp is mounted noexec. Please "
+"remount without noexec and run the upgrade again."
+msgstr ""
+
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:307
+#, python-format
+msgid "The error message is '%s'."
+msgstr ""
+
+#. TRANSLATORS: download size of small updates, e.g. "250 kB"
+#: ../UpdateManager/Core/utils.py:433
+#, python-format
+msgid "%(size).0f kB"
+msgid_plural "%(size).0f kB"
+msgstr[0] ""
+msgstr[1] ""
+
+#. TRANSLATORS: download size of updates, e.g. "2.3 MB"
+#: ../UpdateManager/Core/utils.py:436
+#, python-format
+msgid "%.1f MB"
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:1
+msgid "<big><b>Starting Software Updater</b></big>"
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:2
+msgid ""
+"Software updates correct errors, eliminate security vulnerabilities and "
+"provide new features."
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:3
+msgid "_Partial Upgrade"
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:4
+msgid "<big><b>Not all updates can be installed</b></big>"
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:5
+msgid ""
+"Run a partial upgrade, to install as many updates as possible. \n"
+"\n"
+"This can be caused by:\n"
+" * A previous upgrade which didn't complete\n"
+" * Problems with some of the installed software\n"
+" * Unofficial software packages not provided by Ubuntu\n"
+" * Normal changes of a pre-release version of Ubuntu"
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:12
+msgid "Co_ntinue"
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:13
+msgid "<big><b>Running on battery</b></big>"
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:14
+msgid "Your system is running on battery. Are you sure you want to continue?"
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:16
+msgid "_Upgrade"
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:17
+msgid "Show progress of individual files"
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:18
+#: ../data/update-manager.desktop.in.h:1
+msgid "Software Updater"
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:19
+msgid "U_pgrade"
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:20
+msgid "_Restart Now"
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:21
+msgid "updates"
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:22
+msgid "Changes"
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:23
+msgid "Description"
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:24
+msgid "Details of updates"
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:25
+msgid ""
+"You are connected via roaming and may be charged for the data consumed by "
+"this update."
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:26
+msgid ""
+"You may want to wait until you’re not using a mobile broadband connection."
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:27
+msgid "It’s safer to connect the computer to AC power before updating."
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:28
+msgid "_Settings..."
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:29
+msgid "_Install Now"
+msgstr ""
+
+#: ../data/update-manager.desktop.in.h:2
+msgid "Software Updates"
+msgstr ""
+
+#: ../data/update-manager.desktop.in.h:3
+msgid "Show and install available updates"
+msgstr ""
+
+#: ../update-manager:71 ../update-manager-text:55
+msgid "Show version and exit"
+msgstr ""
+
+#: ../update-manager:74
+msgid "Directory that contains the data files"
+msgstr ""
+
+#: ../update-manager:77
+msgid "Check if a new Ubuntu release is available"
+msgstr ""
+
+#: ../update-manager:80
+msgid "Check if upgrading to the latest devel release is possible"
+msgstr ""
+
+#: ../update-manager:84
+msgid "Upgrade using the latest proposed version of the release upgrader"
+msgstr ""
+
+#: ../update-manager:91
+msgid "Do not focus on map when starting"
+msgstr ""
+
+#: ../update-manager:94
+msgid "Try to run a dist-upgrade"
+msgstr ""
+
+#: ../update-manager:97
+msgid "Do not check for updates when starting"
+msgstr ""
+
+#: ../update-manager:101
+msgid "Test upgrade with a sandbox aufs overlay"
+msgstr ""
+
+#: ../update-manager:121
+msgid "Running partial upgrade"
+msgstr ""
+
+#: ../update-manager-text:59
+msgid "Show description of the package instead of the changelog"
+msgstr ""
+
+#: ../ubuntu-support-status:91
+msgid "Show unsupported packages on this machine"
+msgstr ""
+
+#: ../ubuntu-support-status:94
+msgid "Show supported packages on this machine"
+msgstr ""
+
+#: ../ubuntu-support-status:97
+msgid "Show all packages with their status"
+msgstr ""
+
+#: ../ubuntu-support-status:100
+msgid "Show all packages in a list"
+msgstr ""
+
+#: ../ubuntu-support-status:142
+#, c-format
+msgid "Support status summary of '%s':"
+msgstr ""
+
+#: ../ubuntu-support-status:145
+msgid "You have %(num)s packages (%(percent).1f%%) supported until %(time)s"
+msgstr ""
+
+#: ../ubuntu-support-status:151
+msgid ""
+"You have %(num)s packages (%(percent).1f%%) that can not/no-longer be "
+"downloaded"
+msgstr ""
+
+#: ../ubuntu-support-status:154
+msgid "You have %(num)s packages (%(percent).1f%%) that are unsupported"
+msgstr ""
+
+#: ../ubuntu-support-status:162
+msgid ""
+"Run with --show-unsupported, --show-supported or --show-all to see more "
+"details"
+msgstr ""
+
+#: ../ubuntu-support-status:166
+msgid "No longer downloadable:"
+msgstr ""
+
+#: ../ubuntu-support-status:169
+msgid "Unsupported: "
+msgstr ""
+
+#: ../ubuntu-support-status:174
+#, c-format
+msgid "Supported until %s:"
+msgstr ""
+
+#: ../ubuntu-support-status:183
+msgid "Unsupported"
+msgstr ""
+
+#. Why do we use %s here instead of $strings or {} format placeholders?
+#. It's because we don't want to break existing translations.
+#: ../janitor/plugincore/exceptions.py:42
+#, python-format
+msgid "Unimplemented method: %s"
+msgstr ""
+
+#: ../janitor/plugincore/core/file_cruft.py:41
+msgid "A file on disk"
+msgstr ""
+
+#: ../janitor/plugincore/core/missing_package_cruft.py:39
+msgid "Install missing package."
+msgstr ""
+
+#. 2012-06-08 BAW: i18n string; don't use {} or PEP 292.
+#: ../janitor/plugincore/core/missing_package_cruft.py:49
+#, python-format
+msgid "Package %s should be installed."
+msgstr ""
+
+#: ../janitor/plugincore/core/package_cruft.py:49
+msgid ".deb package"
+msgstr ""
+
+#: ../janitor/plugincore/plugins/langpack_manual_plugin.py:46
+#, python-format
+msgid "%s needs to be marked as manually installed."
+msgstr ""
+
+#: ../janitor/plugincore/plugins/kdelibs4to5_plugin.py:49
+msgid ""
+"When upgrading, if kdelibs4-dev is installed, kdelibs5-dev needs to be "
+"installed. See bugs.launchpad.net, bug #279621 for details."
+msgstr ""
+
+#: ../janitor/plugincore/plugins/dpkg_status_plugin.py:44
+#, python-format
+msgid "%i obsolete entries in the status file"
+msgstr ""
+
+#: ../janitor/plugincore/plugins/dpkg_status_plugin.py:47
+msgid "Obsolete entries in dpkg status"
+msgstr ""
+
+#. pragma: no cover
+#: ../janitor/plugincore/plugins/dpkg_status_plugin.py:50
+msgid "Obsolete dpkg status entries"
+msgstr ""
+
+#: ../janitor/plugincore/plugins/remove_lilo_plugin.py:42
+msgid "Remove lilo since grub is also installed.(See bug #314004 for details.)"
+msgstr ""

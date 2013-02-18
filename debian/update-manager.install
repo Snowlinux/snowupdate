@@ -1,0 +1,17 @@
+debian/tmp/usr/bin/update-manager
+debian/tmp/usr/share/update-manager/gtkbuilder
+debian/tmp/usr/share/gnome
+debian/tmp/usr/share/omf
+debian/tmp/usr/share/icons
+debian/tmp/usr/share/glib-2.0/schemas
+debian/tmp/usr/share/GConf/gsettings
+debian/tmp/usr/share/applications/update-manager.desktop
+debian/tmp/usr/lib/python3*/dist-packages/UpdateManager/ChangelogViewer.py
+debian/tmp/usr/lib/python3*/dist-packages/UpdateManager/Dialogs.py
+debian/tmp/usr/lib/python3*/dist-packages/UpdateManager/InstallProgress.py
+debian/tmp/usr/lib/python3*/dist-packages/UpdateManager/MetaReleaseGObject.py
+debian/tmp/usr/lib/python3*/dist-packages/UpdateManager/UpdateManager.py
+debian/tmp/usr/lib/python3*/dist-packages/UpdateManager/UpdateProgress.py
+debian/tmp/usr/lib/python3*/dist-packages/UpdateManager/UpdatesAvailable.py
+debian/tmp/usr/lib/python3*/dist-packages/UpdateManager/SimpleGtkbuilderApp.py
+debian/tmp/usr/lib/python3*/dist-packages/UpdateManager/HelpViewer.py

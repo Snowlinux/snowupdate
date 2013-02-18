@@ -1,30 +1,22 @@
 This package was debianized by Michiel Sikkes <michiel@eyesopened.nl> on
-Fri, 22 Oct 2004 22:43:31 +0200.
+Mon, 25 Oct 2004 21:49:07 +0200.
 
-It was downloaded via bzr from:
-   http://people.ubuntu.com/~mvo/bzr/update-notifier/main/
+It was downloaded from http://code.launchpad.net/~ubuntu-core-dev/update-manager/main
 
-Upstream Author: Michael Vogt <mvo@debian.org>
-                 Michiel Sikkes <michiel@eyesopened.nl>
+Upstream Authors: 
+Michiel Sikkes <michiel@eyesopened.nl>
+Michael Vogt <michael.vogt@ubuntu.com>
+Sebastian Heinlein <glatzor@ubuntu.com>
+Jonathan Riddell <jriddell@ubuntu.com>
 
 Copyright:
+2004-2008 Canonical Ltd.
+2004-2005 Michiel Sikkes
 
-Copyright (C) 2004 Lukas Lipka <lukas@pmad.net>
-          (C) 2004 Michael Vogt <mvo@debian.org>
-          (C) 2004 Michiel Sikkes <michiel@eyesopened.nl>
-          (c) 2004-2006 Canonical
+All code released under the GPL, see /usr/share/common-licenses/GPL
 
-This library is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
-License as published by the Free Software Foundation; either
-version 2 of the License, or (at your option) any later version.
 
-This library is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-Lesser General Public License for more details.
+With the exception of 
+UpdateManager/SimpleGladeApp.py
+which is released under the LGPL, see /usr/share/common-licenses/LGPL
 
-You should have received a copy of the GNU Lesser General Public
-License along with this library; if not, write to the
-Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
-Boston, MA  02110-1301 USA

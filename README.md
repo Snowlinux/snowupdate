@@ -1,0 +1,4 @@
+snowupdate
+==========
+
+The Snowlinux updater

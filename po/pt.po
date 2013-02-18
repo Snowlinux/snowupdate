@@ -1,0 +1,406 @@
+# Portuguese translation for update-notifier
+# Copyright (c) (c) 2005 Canonical Ltd, and Rosetta Contributors 2005
+# This file is distributed under the same license as the update-notifier package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: update-notifier\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-31 00:41+0000\n"
+"PO-Revision-Date: 2012-06-04 14:23+0000\n"
+"Last-Translator: Mykas0 <Mykas0@gmail.com>\n"
+"Language-Team: Portuguese <pt@li.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2012-10-09 15:32+0000\n"
+"X-Generator: Launchpad (build 16112)\n"
+"X-Rosetta-Version: 0.1\n"
+
+#: ../data/apt_check.py:22
+#, python-format
+msgid "Unknown Error: '%s' (%s)"
+msgstr "Erro Desconhecido: '%s' (%s)"
+
+#: ../data/apt_check.py:61
+#, python-format
+msgid "%i package can be updated."
+msgid_plural "%i packages can be updated."
+msgstr[0] "%i pacote pode ser actualizado."
+msgstr[1] "%i pacotes podem ser actualizados."
+
+#: ../data/apt_check.py:66
+#, python-format
+msgid "%i update is a security update."
+msgid_plural "%i updates are security updates."
+msgstr[0] "%i actualização é uma actualização de segurança."
+msgstr[1] "%i actualizações são actualizações de segurança."
+
+#: ../data/apt_check.py:94
+#, python-format
+msgid "Error: Opening the cache (%s)"
+msgstr "Error: A abrir a cache (%s)"
+
+#: ../data/apt_check.py:108
+msgid "Error: BrokenCount > 0"
+msgstr "Erro: BrokenCount>0"
+
+#: ../data/apt_check.py:115
+#, python-format
+msgid "Error: Marking the upgrade (%s)"
+msgstr "Erro: A marcar a actualização (%s)"
+
+#: ../data/apt_check.py:179
+msgid "Show the packages that are going to be installed/upgraded"
+msgstr "Mostrar os pacotes que vão ser instalados/actualizados"
+
+#: ../data/apt_check.py:184
+msgid "Show human readable output on stdout"
+msgstr "Mostrar mensagens mais amigáveis no stdout"
+
+#: ../data/apt_check.py:188
+msgid ""
+"Return the time in days when security updates are installed unattended (0 "
+"means disabled)"
+msgstr ""
+"Informar o tempo em dias em que as actualizações de segurança são instaladas "
+"sem acompanhamento (0 significa desactivado)"
+
+#: ../src/crash.c:46
+msgid "System program problem detected"
+msgstr "Problema detectado no programa de sistema"
+
+#: ../src/crash.c:47
+msgid "Do you want to report the problem now?"
+msgstr "Quer relatar o problema agora?"
+
+#: ../src/crash.c:57
+msgid "Report problem…"
+msgstr "Relatar problema..."
+
+#: ../src/crash.c:90 ../src/crash.c:209
+msgid "Crash report detected"
+msgstr "Relatório de falha detectado"
+
+#: ../src/crash.c:91
+msgid ""
+"An application has crashed on your system (now or in the past). Click on the "
+"notification icon to display details. "
+msgstr ""
+"Ocorreu uma falha numa aplicação do seu sistema (agora ou no passado). "
+"Clique no icon de notificação para obter mais detalhes. "
+
+#. Create and show the notification
+#: ../src/avahi.c:15
+msgid "Network service discovery disabled"
+msgstr "Serviço de detecção de rede desactivado"
+
+#: ../src/avahi.c:16
+msgid ""
+"Your current network has a .local domain, which is not recommended and "
+"incompatible with the Avahi network service discovery. The service has been "
+"disabled."
+msgstr ""
+"A sua rede actual possui um domínio .local, o que não é recomendado e é "
+"incompatível com o serviço de detecção de redes Avahi. O serviço foi "
+"desactivado."
+
+#: ../src/cdroms.c:51
+msgid "Software Packages Volume Detected"
+msgstr "Volume de Pacotes de Software detectado"
+
+#: ../src/cdroms.c:52
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with software packages has "
+"been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Um volume com pacotes de software foi "
+"detectado.</span>\n"
+"\n"
+"Gostaria de abri-lo com o gestor de pacotes?"
+
+#: ../src/cdroms.c:60
+msgid "Start Package Manager"
+msgstr "Iniciar Gestor de Pacotes"
+
+#: ../src/cdroms.c:66
+msgid "Upgrade volume detected"
+msgstr "Disco de actualização detectado"
+
+#: ../src/cdroms.c:67
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A distribution volume with software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to try to upgrade from it automatically? "
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Foi detectado um disco da distribuição "
+"com pacotes de software.</span>\n"
+"\n"
+"Gostaria de tentar actualizar a partir desse disco automaticamente? "
+
+#: ../src/cdroms.c:74
+msgid "Run upgrade"
+msgstr "Executar actualização"
+
+#: ../src/cdroms.c:82
+msgid "APTonCD volume detected"
+msgstr "Volume APTonCD detectado"
+
+#: ../src/cdroms.c:83
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with unofficial software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Um volume com pacotes de software não-"
+"oficiais foi detectado.</span>\n"
+"\n"
+"Gostaria de abri-lo com o gestor de pacotes?"
+
+#: ../src/cdroms.c:91 ../src/update.c:38
+msgid "Start package manager"
+msgstr "Iniciar gestor de pacotes"
+
+#: ../src/hooks.c:360 ../ui/hooks-dialog.ui.h:2
+msgid "_Run this action now"
+msgstr "_Executar esta acção agora"
+
+#: ../src/hooks.c:513 ../src/hooks.c:664 ../src/hooks.c:893
+msgid "Information available"
+msgstr "Informação disponível"
+
+#: ../src/hooks.c:665
+msgid "Click on the notification icon to show the available information.\n"
+msgstr "Clique no ícone de notificação para mostrar a informação disponível\n"
+
+#: ../src/reboot.c:27 ../src/reboot.c:275
+msgid "System restart required"
+msgstr "É necessário reiniciar o sistema"
+
+#: ../src/reboot.c:28
+msgid ""
+"To finish updating your system, please restart it.\n"
+"\n"
+"Click on the notification icon for details."
+msgstr ""
+"Para terminar a actualização do sistema, por favor reinicie-o.\n"
+"\n"
+"Clique no ícone de notificação para obter mais detalhes."
+
+#: ../src/reboot.c:102
+msgid "Reboot failed"
+msgstr "Falha ao reiniciar o sistema"
+
+#: ../src/reboot.c:103
+msgid "Failed to request reboot, please shutdown manually"
+msgstr "Falha ao pedir para reiniciar o sistema, por favor encerre manualmente"
+
+#: ../src/update.c:27
+msgid "Show updates"
+msgstr "Mostrar actualizações"
+
+#: ../src/update.c:31
+msgid "Install all updates"
+msgstr "Instalar todas as actualizações"
+
+#: ../src/update.c:35
+msgid "Check for updates"
+msgstr "Verificar existência de actualizações"
+
+#: ../src/update.c:82
+#, c-format
+msgid "There is %i update available"
+msgid_plural "There are %i updates available"
+msgstr[0] "Existe %i actualização disponível"
+msgstr[1] "Existem %i actualizações disponíveis"
+
+#: ../src/update.c:147
+msgid "Show notifications"
+msgstr "Mostrar notificações"
+
+#. and update the tooltip
+#: ../src/update.c:205
+msgid "A package manager is working"
+msgstr "Um gestor de pacotes está em funcionamento"
+
+#: ../src/update.c:237
+#, c-format
+msgid ""
+"There is %i update available. Click on the notification icon to show the "
+"available update."
+msgid_plural ""
+"There are %i updates available. Click on the notification icon to show the "
+"available updates."
+msgstr[0] ""
+"Existe %i actualização disponível. Clique no botão de notificação para ver a "
+"actualização disponível."
+msgstr[1] ""
+"Existem %i actualizações disponíveis. Clique no botão de notificação para "
+"ver as actualizações disponíveis."
+
+#: ../src/update.c:248
+msgid "Software updates available"
+msgstr "Actualizações de software disponíveis"
+
+#: ../src/update.c:284
+#, fuzzy
+msgid ""
+"The update information is outdated. This may be caused by network problems "
+"or by a repository that is no longer available. Please update manually by "
+"selecting 'Show updates' from the indicator menu, and watching for any "
+"failing repositories."
+msgstr ""
+"A informação de actualização está desatualizada. Isto pode ser causado por "
+"problemas de rede ou por algum repositório que já não está disponível. Por "
+"favor atualize manualmente clicando neste ícone e seleccionando 'Verificar "
+"Actualizações' e verifique se algum dos repositórios listados falha."
+
+#: ../src/update.c:579
+#, c-format
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong.\n"
+"The error message was: '%s'. "
+msgstr ""
+"Ocorreu um erro. Por favor execute o Gestor de Pacotes no menu clique-"
+"direito, ou com apt-get numa consola para saber o que está errado.\n"
+"A mensagem de erro foi: '%s'. "
+
+#: ../src/update.c:586
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong."
+msgstr ""
+"Ocorreu um erro, por favor execute o Gestor de Pacotes pelo menu do clique-"
+"direito ou o apt-get num terminal para verificar o qual é o problema."
+
+#: ../src/update.c:590
+msgid "This usually means that your installed packages have unmet dependencies"
+msgstr "Isto geralmente significa que os pacotes instalados têm  pendências"
+
+#: ../src/update.c:603
+msgid "A problem occurred when checking for the updates."
+msgstr "Ocorreu um problema ao verificar por novas actualizações."
+
+#: ../src/update-notifier.c:572
+msgid "- inform about updates"
+msgstr "- informar sobre actualizações"
+
+#: ../src/update-notifier.c:574
+#, c-format
+msgid "Failed to init the UI: %s\n"
+msgstr "Falha ao iniciar a UI: %s\n"
+
+#: ../src/update-notifier.c:575
+msgid "unknown error"
+msgstr "erro desconhecido"
+
+#: ../src/update-notifier.c:598
+msgid "update-notifier"
+msgstr "notificação de actualização"
+
+#: ../ui/hooks-dialog.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Update information</span>"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Informação de actualização</span>"
+
+#: ../ui/reboot-dialog.ui.h:1
+msgid "Restart Required"
+msgstr "É necessário Reiniciar"
+
+#: ../ui/reboot-dialog.ui.h:2
+msgid "Restart _Later"
+msgstr "Reiniciar _Posteriormente"
+
+#: ../ui/reboot-dialog.ui.h:3
+msgid "_Restart Now"
+msgstr "_Reiniciar Agora"
+
+#: ../ui/reboot-dialog.ui.h:4
+msgid ""
+"The computer needs to restart to finish installing updates. Please save your "
+"work before continuing."
+msgstr ""
+"O computador precisa de reiniciar para acabar de instalar as actualizações. "
+"Por favor guarde o seu trabalho antes de continuar."
+
+#: ../data/update-notifier.desktop.in.h:1
+msgid "Update Notifier"
+msgstr "Notificador de Actualizações"
+
+#: ../data/update-notifier.desktop.in.h:2
+msgid "Check for available updates automatically"
+msgstr "Verificar actualizações disponíveis automaticamente"
+
+#. Name
+#: ../data/package-data-downloads-failed.in:2
+msgid "Failure to download extra data files"
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"The following packages requested additional data downloads after package "
+"installation, but the data could not be downloaded or could not be processed."
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid "  $packages"
+msgstr "  $packages"
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+msgid ""
+"The download will be attempted again later, or you can try the download "
+"again now.  Running this command requires an active Internet connection."
+msgstr ""
+
+#. Name
+#: ../data/package-data-downloads-failed-permanently.in:2
+msgid "Data files for some packages could not be downloaded"
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"This is a permanent failure that leaves these packages unusable on your "
+"system.  You may need to fix your Internet connection, then remove and "
+"reinstall the packages to fix this problem."
+msgstr ""
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">Please enter your password to "
+#~ "access problem reports of system programs</span>"
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">Por favor introduza a sua senha "
+#~ "para aceder aos relatórios de problemas dos programas do sistema</span>"
+
+#~ msgid "Addon volume detected"
+#~ msgstr "Volume suplementar detectado"
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">An addon volume with software "
+#~ "applications has been detected.</span>\n"
+#~ "\n"
+#~ "Would you like to view/install the content? "
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">Um volume de expansão com "
+#~ "aplicações foi detectado.</span>\n"
+#~ "\n"
+#~ "Gostaria de visualizar/instalar o conteúdo? "
+
+#~ msgid "Start addon installer"
+#~ msgstr "Iniciar o instalador suplementar"
+
+#~ msgid "Internal error"
+#~ msgstr "Erro interno"

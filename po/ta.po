@@ -1,0 +1,350 @@
+# Tamil translation for update-notifier
+# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
+# This file is distributed under the same license as the update-notifier package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: update-notifier\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-31 00:41+0000\n"
+"PO-Revision-Date: 2010-02-09 10:25+0000\n"
+"Last-Translator: Surendhar <Unknown>\n"
+"Language-Team: Tamil <ta@li.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2012-10-09 15:32+0000\n"
+"X-Generator: Launchpad (build 16112)\n"
+
+#: ../data/apt_check.py:22
+#, python-format
+msgid "Unknown Error: '%s' (%s)"
+msgstr "எதிர்பாரத பிழை : '%s' (%s)"
+
+#: ../data/apt_check.py:61
+#, python-format
+msgid "%i package can be updated."
+msgid_plural "%i packages can be updated."
+msgstr[0] "%i தொகுப்பை மேம்படுத்தலாம்"
+msgstr[1] "%i தொகுப்புக்களை மேம்படுத்தலாம்"
+
+#: ../data/apt_check.py:66
+#, python-format
+msgid "%i update is a security update."
+msgid_plural "%i updates are security updates."
+msgstr[0] "%i புதுப்பிப்பு ஒரு பாதுக்காப்பு புதுப்பிப்பு ஆகும்."
+msgstr[1] "%i புதுப்பிப்புகள் பாதுக்காப்பு புதுப்பிப்புகள் ஆகும்."
+
+#: ../data/apt_check.py:94
+#, python-format
+msgid "Error: Opening the cache (%s)"
+msgstr ""
+
+#: ../data/apt_check.py:108
+msgid "Error: BrokenCount > 0"
+msgstr ""
+
+#: ../data/apt_check.py:115
+#, python-format
+msgid "Error: Marking the upgrade (%s)"
+msgstr ""
+
+#: ../data/apt_check.py:179
+msgid "Show the packages that are going to be installed/upgraded"
+msgstr ""
+
+#: ../data/apt_check.py:184
+msgid "Show human readable output on stdout"
+msgstr ""
+
+#: ../data/apt_check.py:188
+msgid ""
+"Return the time in days when security updates are installed unattended (0 "
+"means disabled)"
+msgstr ""
+
+#: ../src/crash.c:46
+msgid "System program problem detected"
+msgstr ""
+
+#: ../src/crash.c:47
+msgid "Do you want to report the problem now?"
+msgstr ""
+
+#: ../src/crash.c:57
+msgid "Report problem…"
+msgstr "பிரச்சனையைப் புகார் செய்யவும்..."
+
+#: ../src/crash.c:90 ../src/crash.c:209
+msgid "Crash report detected"
+msgstr "முறிவு அறிக்கை தென்படுகிறது"
+
+#: ../src/crash.c:91
+msgid ""
+"An application has crashed on your system (now or in the past). Click on the "
+"notification icon to display details. "
+msgstr ""
+
+#. Create and show the notification
+#: ../src/avahi.c:15
+msgid "Network service discovery disabled"
+msgstr "பிணைய சேவை கண்டறிதல் முடக்கப்பட்டுள்ளது"
+
+#: ../src/avahi.c:16
+msgid ""
+"Your current network has a .local domain, which is not recommended and "
+"incompatible with the Avahi network service discovery. The service has been "
+"disabled."
+msgstr ""
+
+#: ../src/cdroms.c:51
+msgid "Software Packages Volume Detected"
+msgstr ""
+
+#: ../src/cdroms.c:52
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with software packages has "
+"been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">மென்பொருட் பொதிகளின் தொகுதி ஒன்று "
+"கண்டறியப்பட்டுள்ளது</span>\n"
+"\n"
+"இதனை பொதி முகாமையாளருடன் திறக்க விரும்புகிறீர்களா?"
+
+#: ../src/cdroms.c:60
+msgid "Start Package Manager"
+msgstr "தொகுப்பு மேலாளரை தொடங்கு"
+
+#: ../src/cdroms.c:66
+msgid "Upgrade volume detected"
+msgstr "மேம்படுத்தற் தொகுதி கண்டறியப்பட்டுள்ளது"
+
+#: ../src/cdroms.c:67
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A distribution volume with software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to try to upgrade from it automatically? "
+msgstr ""
+
+#: ../src/cdroms.c:74
+msgid "Run upgrade"
+msgstr "மேம்படுத்துக"
+
+#: ../src/cdroms.c:82
+msgid "APTonCD volume detected"
+msgstr "APTonCD தொகுப்புகள் தென்படுகிறது"
+
+#: ../src/cdroms.c:83
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with unofficial software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+
+#: ../src/cdroms.c:91 ../src/update.c:38
+msgid "Start package manager"
+msgstr "பொதி முகாமையாளரை ஆரம்பிக்கவும்"
+
+#: ../src/hooks.c:360 ../ui/hooks-dialog.ui.h:2
+msgid "_Run this action now"
+msgstr "_இச்செயலை இயக்கவும்"
+
+#: ../src/hooks.c:513 ../src/hooks.c:664 ../src/hooks.c:893
+msgid "Information available"
+msgstr "தகவல் உள்ளது"
+
+#: ../src/hooks.c:665
+msgid "Click on the notification icon to show the available information.\n"
+msgstr "கிடைப்பிலுள்ள தகவல்களை பார்வையிட அறிவித்தல் படவுருவின் மேல் சொடுக்குக\n"
+
+#: ../src/reboot.c:27 ../src/reboot.c:275
+msgid "System restart required"
+msgstr "கணிணியை நிறுத்தி மீண்டும்  துவக்கவேண்டும்"
+
+#: ../src/reboot.c:28
+msgid ""
+"To finish updating your system, please restart it.\n"
+"\n"
+"Click on the notification icon for details."
+msgstr ""
+
+#: ../src/reboot.c:102
+msgid "Reboot failed"
+msgstr "மறுதுவக்கம் தடைபட்டது"
+
+#: ../src/reboot.c:103
+msgid "Failed to request reboot, please shutdown manually"
+msgstr "மறுதுவக்கம் தடைபட்டதால், தயவுசெய்து தாங்களே பணிநிறுத்தம் செய்யவும்"
+
+#: ../src/update.c:27
+msgid "Show updates"
+msgstr "இற்றைப்படுத்தல்களை காண்பிக்கவும்"
+
+#: ../src/update.c:31
+msgid "Install all updates"
+msgstr "அனைத்து இற்றைப்படுத்தல்களையும் நிறுவுக"
+
+#: ../src/update.c:35
+msgid "Check for updates"
+msgstr "இற்றைப்படுத்தல்கள் உண்டா என அறிக"
+
+#: ../src/update.c:82
+#, c-format
+msgid "There is %i update available"
+msgid_plural "There are %i updates available"
+msgstr[0] "%i இற்றைப்படுத்தல் உண்டு"
+msgstr[1] "%i இற்றைப்படுத்தல்கள் உண்டு"
+
+#: ../src/update.c:147
+msgid "Show notifications"
+msgstr "அறிவித்தல்களை காண்பிக்க"
+
+#. and update the tooltip
+#: ../src/update.c:205
+msgid "A package manager is working"
+msgstr "பொதி முகாமையாளர் இயங்கிக்கொண்டிருக்கிறது"
+
+#: ../src/update.c:237
+#, c-format
+msgid ""
+"There is %i update available. Click on the notification icon to show the "
+"available update."
+msgid_plural ""
+"There are %i updates available. Click on the notification icon to show the "
+"available updates."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/update.c:248
+msgid "Software updates available"
+msgstr "மென்பொருள் இற்றைப்படுத்தல்கள் உள்ளன"
+
+#: ../src/update.c:284
+msgid ""
+"The update information is outdated. This may be caused by network problems "
+"or by a repository that is no longer available. Please update manually by "
+"selecting 'Show updates' from the indicator menu, and watching for any "
+"failing repositories."
+msgstr ""
+
+#: ../src/update.c:579
+#, c-format
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong.\n"
+"The error message was: '%s'. "
+msgstr ""
+
+#: ../src/update.c:586
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong."
+msgstr ""
+
+#: ../src/update.c:590
+msgid "This usually means that your installed packages have unmet dependencies"
+msgstr ""
+"நீங்கள் நிறுவிய பொதிகள் தளைகளை சரியாக பூர்த்திசெய்யவில்லை என்பது பொதுவாக இதன் அர்த்தமாகும்"
+
+#: ../src/update.c:603
+msgid "A problem occurred when checking for the updates."
+msgstr "புதுப்பிக்க சோதிக்கையில் ஒரு சிக்கல் நேர்ந்தது"
+
+#: ../src/update-notifier.c:572
+msgid "- inform about updates"
+msgstr "- புதுப்பிப்புகள் பற்றி தெரிவிக்கவும்"
+
+#: ../src/update-notifier.c:574
+#, c-format
+msgid "Failed to init the UI: %s\n"
+msgstr ""
+
+#: ../src/update-notifier.c:575
+msgid "unknown error"
+msgstr "தெரியாத பிழை"
+
+#: ../src/update-notifier.c:598
+msgid "update-notifier"
+msgstr "இற்றைப்படுத்தல்-அறிவிப்பான்"
+
+#: ../ui/hooks-dialog.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Update information</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">தகவலைப் புதுப்பிக்கவும்</span>"
+
+#: ../ui/reboot-dialog.ui.h:1
+msgid "Restart Required"
+msgstr "மறுதுவக்கம் தேவைப்படும்"
+
+#: ../ui/reboot-dialog.ui.h:2
+msgid "Restart _Later"
+msgstr "பிறகு_மீளத்தொடங்கவும்"
+
+#: ../ui/reboot-dialog.ui.h:3
+msgid "_Restart Now"
+msgstr "_இப்பொழுதே மீளத்தொடங்கவும்"
+
+#: ../ui/reboot-dialog.ui.h:4
+msgid ""
+"The computer needs to restart to finish installing updates. Please save your "
+"work before continuing."
+msgstr ""
+
+#: ../data/update-notifier.desktop.in.h:1
+msgid "Update Notifier"
+msgstr "புதுப்பிப்பு அறிவிப்பாளர்"
+
+#: ../data/update-notifier.desktop.in.h:2
+msgid "Check for available updates automatically"
+msgstr ""
+
+#. Name
+#: ../data/package-data-downloads-failed.in:2
+msgid "Failure to download extra data files"
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"The following packages requested additional data downloads after package "
+"installation, but the data could not be downloaded or could not be processed."
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid "  $packages"
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+msgid ""
+"The download will be attempted again later, or you can try the download "
+"again now.  Running this command requires an active Internet connection."
+msgstr ""
+
+#. Name
+#: ../data/package-data-downloads-failed-permanently.in:2
+msgid "Data files for some packages could not be downloaded"
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"This is a permanent failure that leaves these packages unusable on your "
+"system.  You may need to fix your Internet connection, then remove and "
+"reinstall the packages to fix this problem."
+msgstr ""
+
+#~ msgid "Start addon installer"
+#~ msgstr "Addon நிறுவுதலை தொடங்கு"
+
+#~ msgid "Internal error"
+#~ msgstr "உள்ளமைப் பிழை"

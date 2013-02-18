@@ -1,0 +1,374 @@
+# Hindi translation for update-notifier
+# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
+# This file is distributed under the same license as the update-notifier package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: update-notifier\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-31 00:41+0000\n"
+"PO-Revision-Date: 2012-04-26 18:07+0000\n"
+"Last-Translator: Varun Priolkar <varunpr97@gmail.com>\n"
+"Language-Team: Hindi <hi@li.org>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2012-10-09 15:32+0000\n"
+"X-Generator: Launchpad (build 16112)\n"
+
+#: ../data/apt_check.py:22
+#, python-format
+msgid "Unknown Error: '%s' (%s)"
+msgstr "अज्ञात त्रुटि: '%s' (%s)"
+
+#: ../data/apt_check.py:61
+#, python-format
+msgid "%i package can be updated."
+msgid_plural "%i packages can be updated."
+msgstr[0] "%i पैकेज अद्यतन हो सकते है."
+msgstr[1] "%i पैकेज अद्यतन हो सकते है."
+
+#: ../data/apt_check.py:66
+#, python-format
+msgid "%i update is a security update."
+msgid_plural "%i updates are security updates."
+msgstr[0] "%i अद्यतन एक सुरक्षा अद्यतन है."
+msgstr[1] "%i अद्यतन सभी सुरक्षा अद्यतन है."
+
+#: ../data/apt_check.py:94
+#, python-format
+msgid "Error: Opening the cache (%s)"
+msgstr "त्रुटि: कैची खोल रहा है (%s)"
+
+#: ../data/apt_check.py:108
+msgid "Error: BrokenCount > 0"
+msgstr "त्रुटि: खंडित-गणना > 0"
+
+#: ../data/apt_check.py:115
+#, python-format
+msgid "Error: Marking the upgrade (%s)"
+msgstr "त्रुटि: अद्यतन चिह्नित कर रहा है (%s)"
+
+#: ../data/apt_check.py:179
+msgid "Show the packages that are going to be installed/upgraded"
+msgstr "संस्थापित/अद्यतन होने वाले पैकेज को दिखाएं"
+
+#: ../data/apt_check.py:184
+msgid "Show human readable output on stdout"
+msgstr "स्त्दौत पर निष्कर्ष जो मानव-पठित हो दिखाएं"
+
+#: ../data/apt_check.py:188
+msgid ""
+"Return the time in days when security updates are installed unattended (0 "
+"means disabled)"
+msgstr "उस समय पर लौटे जब सुरक्षा अद्यतन का संस्थापन की कोशिश नहीं हुई (0 मतलब अशक्त)"
+
+#: ../src/crash.c:46
+msgid "System program problem detected"
+msgstr "तंत्र कार्यक्रम में समस्या आयी है"
+
+#: ../src/crash.c:47
+msgid "Do you want to report the problem now?"
+msgstr "क्या आप इस समस्या को रिपोर्ट अभी करना चाहेगें?"
+
+#: ../src/crash.c:57
+msgid "Report problem…"
+msgstr "रिपोर्ट समस्या..."
+
+#: ../src/crash.c:90 ../src/crash.c:209
+msgid "Crash report detected"
+msgstr "ध्वंस रिपोर्ट ज्ञात हुआ"
+
+#: ../src/crash.c:91
+msgid ""
+"An application has crashed on your system (now or in the past). Click on the "
+"notification icon to display details. "
+msgstr ""
+"आपके कंप्यूटर के तंत्र मे किसी  अनुप्रयोग का ध्वंस हुआ है (अभी या पहले)।अतः  अधिक जानकारी के "
+"लिए अधिसूचना पटल पे क्लिक करे. "
+
+#. Create and show the notification
+#: ../src/avahi.c:15
+msgid "Network service discovery disabled"
+msgstr "संजाल सेवा की खोज अशक्त की गई  है."
+
+#: ../src/avahi.c:16
+msgid ""
+"Your current network has a .local domain, which is not recommended and "
+"incompatible with the Avahi network service discovery. The service has been "
+"disabled."
+msgstr ""
+"आपके वर्तमान संजाल मे स्थानीय(.local) प्रक्षेत्र है, जो की  स्वीकार्य नही है और अवाही "
+"संजाल खोजी सेवा के अनुकूल नही है । अतः  यह सेवा बाधित कर दी गई है ।"
+
+#: ../src/cdroms.c:51
+msgid "Software Packages Volume Detected"
+msgstr "साफ्टवेयर पैकेज आयतन ज्ञात हुआ है"
+
+#: ../src/cdroms.c:52
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with software packages has "
+"been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+
+#: ../src/cdroms.c:60
+msgid "Start Package Manager"
+msgstr "पैकेज प्रबंधक आरंभ करें"
+
+#: ../src/cdroms.c:66
+msgid "Upgrade volume detected"
+msgstr "उन्नयन आयतन ज्ञात हुआ है"
+
+#: ../src/cdroms.c:67
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A distribution volume with software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to try to upgrade from it automatically? "
+msgstr ""
+
+#: ../src/cdroms.c:74
+msgid "Run upgrade"
+msgstr "कोटि-उन्नयन शुरू करे."
+
+#: ../src/cdroms.c:82
+msgid "APTonCD volume detected"
+msgstr "APTonCD आयतन ज्ञात हुआ है"
+
+#: ../src/cdroms.c:83
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with unofficial software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+
+#: ../src/cdroms.c:91 ../src/update.c:38
+msgid "Start package manager"
+msgstr "पैकेज प्रबंधक आरंभ करें"
+
+#: ../src/hooks.c:360 ../ui/hooks-dialog.ui.h:2
+msgid "_Run this action now"
+msgstr "इस क्रिया को अभी चलायें (_R)"
+
+#: ../src/hooks.c:513 ../src/hooks.c:664 ../src/hooks.c:893
+msgid "Information available"
+msgstr "सूचना उपलब्ध"
+
+#: ../src/hooks.c:665
+msgid "Click on the notification icon to show the available information.\n"
+msgstr "उपलब्ध सूचना को जानने के लिए संकेतक चिन्ह पे क्लिक करे.\n"
+
+#: ../src/reboot.c:27 ../src/reboot.c:275
+msgid "System restart required"
+msgstr "आपके कंप्यूटर तंत्र को पुनःआरंभ  करने की जरुरत है"
+
+#: ../src/reboot.c:28
+msgid ""
+"To finish updating your system, please restart it.\n"
+"\n"
+"Click on the notification icon for details."
+msgstr ""
+"अद्यतन पूरा करने के लिए, अपने कंप्यूटर को पुनः आरंभ करें.\n"
+"अधिक जानकारी के लिए अधिसूचना चिह्न पर क्लिक करें."
+
+#: ../src/reboot.c:102
+msgid "Reboot failed"
+msgstr "पुनःबूट असफल"
+
+#: ../src/reboot.c:103
+msgid "Failed to request reboot, please shutdown manually"
+msgstr "पुनःबूट का आग्रह असफल, कृपया हस्त बंद करे"
+
+#: ../src/update.c:27
+msgid "Show updates"
+msgstr "अद्यतन दिखाएँ"
+
+#: ../src/update.c:31
+msgid "Install all updates"
+msgstr "सभी अद्यतन संस्थापित करें"
+
+#: ../src/update.c:35
+msgid "Check for updates"
+msgstr "अद्यतन हेतु जाँच"
+
+#: ../src/update.c:82
+#, c-format
+msgid "There is %i update available"
+msgid_plural "There are %i updates available"
+msgstr[0] "%i अद्यतन उपलब्ध है."
+msgstr[1] "%i अद्यतन उपलब्ध है."
+
+#: ../src/update.c:147
+msgid "Show notifications"
+msgstr "अधिसुचनाओ को दिखाए"
+
+#. and update the tooltip
+#: ../src/update.c:205
+msgid "A package manager is working"
+msgstr "पैकेज प्रबंधक कार्यरत है"
+
+#: ../src/update.c:237
+#, c-format
+msgid ""
+"There is %i update available. Click on the notification icon to show the "
+"available update."
+msgid_plural ""
+"There are %i updates available. Click on the notification icon to show the "
+"available updates."
+msgstr[0] "%i अद्यतन उपलब्ध है. उपलब्ध अद्यतन देखने हेतु अधिसूचना पटल पर क्लिक करें."
+msgstr[1] "%i अद्यतन उपलब्ध है. उपलब्ध अद्यतन देखने हेतु अधिसूचना पटल पर क्लिक करें."
+
+#: ../src/update.c:248
+msgid "Software updates available"
+msgstr "सॉफ्टवेयर अद्यतन उपलब्ध है"
+
+#: ../src/update.c:284
+#, fuzzy
+msgid ""
+"The update information is outdated. This may be caused by network problems "
+"or by a repository that is no longer available. Please update manually by "
+"selecting 'Show updates' from the indicator menu, and watching for any "
+"failing repositories."
+msgstr ""
+"अद्यतन जानकारी पुरानी हो चुकी है. यह संजाल समस्याओं या किसी भण्डार के अब उपलब्ध नहीं "
+"होने के कारण भी हो सकता है. कृपया इस पटल पर क्लिक कर हस्त अद्यतन करें तत्पश्चात  'अद्यतन "
+"हेतु जाँचें' को चुने और यदि कुछ सूचीबद्ध भण्डार विफलता हो तो उसकी जाँचें करें."
+
+#: ../src/update.c:579
+#, c-format
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong.\n"
+"The error message was: '%s'. "
+msgstr ""
+"एक त्रुटि हुई, कृपया दाँए-क्लिक सूची से पैकेज प्रबंधक चलाएँ या टर्मिनल में apt-get चलाकर देखें "
+"कि क्या गरबड़ी हुई है.\n"
+"त्रुटि संदेश था: '%s'. "
+
+#: ../src/update.c:586
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong."
+msgstr ""
+"एक त्रुटी हुई है. कृपया गलती देखने के लिए दाहिनी क्लिक सूची मे से पैकेज प्रबंधक चलाएं या फ़िर "
+"टर्मिनल में apt-get चलाएं."
+
+#: ../src/update.c:590
+msgid "This usually means that your installed packages have unmet dependencies"
+msgstr ""
+"आमतौर पर  इसका मतलब यह कि आपके द्वारा स्थापित पैकेज की ऐसी निर्भरताएं हैं जो पूरी नही "
+"हो रही हैं"
+
+#: ../src/update.c:603
+msgid "A problem occurred when checking for the updates."
+msgstr "अद्यतन की जाँच करने में एक समस्या हुई है."
+
+#: ../src/update-notifier.c:572
+msgid "- inform about updates"
+msgstr "- अद्यतन के बारे में सूचना"
+
+#: ../src/update-notifier.c:574
+#, c-format
+msgid "Failed to init the UI: %s\n"
+msgstr "UI आरंभ करने में असफल: %s\n"
+
+#: ../src/update-notifier.c:575
+msgid "unknown error"
+msgstr "अज्ञात त्रुटि"
+
+#: ../src/update-notifier.c:598
+msgid "update-notifier"
+msgstr "अद्यतन-सूचक"
+
+#: ../ui/hooks-dialog.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Update information</span>"
+msgstr "<विस्तार भार=\"मोटा\" आकार=\"बड़ा\">सूचना अद्यतन करें </विस्तार>"
+
+#: ../ui/reboot-dialog.ui.h:1
+msgid "Restart Required"
+msgstr "पुनः आरंभ की जरुरत"
+
+#: ../ui/reboot-dialog.ui.h:2
+msgid "Restart _Later"
+msgstr "बाद मे पुनःआरंभ करे (_L)"
+
+#: ../ui/reboot-dialog.ui.h:3
+msgid "_Restart Now"
+msgstr "अभी पुनःआरंभ करें (_R)"
+
+#: ../ui/reboot-dialog.ui.h:4
+msgid ""
+"The computer needs to restart to finish installing updates. Please save your "
+"work before continuing."
+msgstr ""
+"अद्यतन संस्थापन पूर्ण करने के लिए कंप्यूटर को पुनःआरंभ करने की जरुरत है. आगे बदने के पहले अपने "
+"कार्य को सहेजें."
+
+#: ../data/update-notifier.desktop.in.h:1
+msgid "Update Notifier"
+msgstr "अद्यतन अधिसूचक"
+
+#: ../data/update-notifier.desktop.in.h:2
+msgid "Check for available updates automatically"
+msgstr "स्वतः अद्यतन उपलब्धता हेतु जाँच"
+
+#. Name
+#: ../data/package-data-downloads-failed.in:2
+msgid "Failure to download extra data files"
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"The following packages requested additional data downloads after package "
+"installation, but the data could not be downloaded or could not be processed."
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid "  $packages"
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+msgid ""
+"The download will be attempted again later, or you can try the download "
+"again now.  Running this command requires an active Internet connection."
+msgstr ""
+
+#. Name
+#: ../data/package-data-downloads-failed-permanently.in:2
+msgid "Data files for some packages could not be downloaded"
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"This is a permanent failure that leaves these packages unusable on your "
+"system.  You may need to fix your Internet connection, then remove and "
+"reinstall the packages to fix this problem."
+msgstr ""
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">Please enter your password to "
+#~ "access problem reports of system programs</span>"
+#~ msgstr ""
+#~ "<विस्तार भार=\"मोटा\" आकार=\"बड़ा\">तंत्र कार्यक्रम की समस्या रपट के लिए कृपया "
+#~ "अपना कूटशब्द दाखिल करे। </विस्तार>"
+
+#~ msgid "Addon volume detected"
+#~ msgstr "सहयुक्ति आयतन ज्ञात हुआ है."
+
+#~ msgid "Start addon installer"
+#~ msgstr "सहयुक्ति संस्थापक शुरू करे"
+
+#~ msgid "Internal error"
+#~ msgstr "आंतरिक त्रुटि"

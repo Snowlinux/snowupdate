@@ -1,0 +1,9 @@
+ui:
+* move all show_notification() in a single shared function
+
+update-hooks: 
+* rewrite rfc822 parser to be more glib friendly
+* use a g_hash_table for hook_files
+* remove hook-files that are no longer in the HOOK_DIR
+  from the hook_seen file (by discarding them when building 
+  the hook_files list)

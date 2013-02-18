@@ -1,0 +1,15 @@
+Priority: High
+_Name: Failure to download extra data files
+Terminal: True
+Command: pkexec /usr/lib/update-notifier/package-data-downloader
+_Description: 
+ The following packages requested additional data downloads after package
+ installation, but the data could not be downloaded or could not be
+ processed.
+ .
+ .
+   $packages
+ .
+ .
+ The download will be attempted again later, or you can try the download
+ again now.  Running this command requires an active Internet connection.

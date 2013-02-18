@@ -1,0 +1,21 @@
+# List of source files containing translatable strings.
+
+# *grumpf* [type=] does not work because intltool-update does not
+# know about anything but the types available in intltool-extract --help
+[type=gettext/Shell] data/notify-reboot-required
+data/apt_check.py
+data/apt-cdrom-check
+data/cddistupgrader
+src/crash.c
+src/avahi.c
+src/cdroms.c
+src/hooks.c
+src/reboot.c
+src/update.c
+src/update-notifier.c
+[type: gettext/glade]ui/hooks-dialog.ui
+[type: gettext/glade]ui/reboot-dialog.ui
+data/com.ubuntu.update-notifier.gschema.xml.in
+data/update-notifier.desktop.in
+[type: gettext/rfc822deb] data/package-data-downloads-failed.in
+[type: gettext/rfc822deb] data/package-data-downloads-failed-permanently.in

@@ -1,0 +1,2634 @@
+update-notifier (0.131) raring; urgency=low
+
+  * Remove obsolete and unused data/dbus-helper.
+  * Remove obsolete and unused data/upgrade-app.
+  * Fix typo in upgrader-patches directory name in cddistupgrader.
+  * Use g_clear_pointer/g_clear_object where appropriate.
+  * Fix leak of a GDir every time update-notifier notices that dpkg was run.
+  * Make debugging a bit more usable: correct type of control variables, and
+    (for now) automatically set G_MESSAGES_DEBUG=all if any of
+    update-notifier's debugging options are used.
+  * Remove unnecessary trailing newlines from all debugging messages.
+  * Adjust newest_log_file_timestamp to avoid an embedded newline in
+    debugging messages.
+  * Only create most indicators (or tray icons) when they're actually being
+    used, to save memory when idle.
+  * Tolerate hook files with a missing Terminal field, since it's documented
+    as optional.
+  * Don't call check_update_hooks from on_button_next_clicked; this is
+    unnecessary (show_hooks already calls check_update_hooks after the
+    dialog is closed) and causes recursive confusion.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 01 Feb 2013 15:09:41 +0000
+
+update-notifier (0.130) raring; urgency=low
+
+  [ Colin Watson ]
+  * Only create a single GSettings instance for com.ubuntu.update-notifier,
+    rather than several.
+  * Remove unused u_abort function.
+  * Make several more functions static that aren't used from other
+    compilation units.
+  * Correct a number of imprecise prototypes.
+  * Defer instantiating GtkBuilders until the corresponding user interfaces
+    actually need to be displayed, saving memory when they don't.
+  * Restore code to keep a handle to crash and reboot notifications, so that
+    they can be closed by later code (at least for notification-daemon
+    users).
+  * Fix several leaks of NotifyNotification objects.
+  * Don't call show_hooks (which now includes instantiating the
+    corresponding GtkBuilder) if there are no unseen hooks to show.
+
+  [ Brian Murray ]
+  * Remove calls to gnome-app-install and addon CD support (LP: #722887)
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 31 Jan 2013 03:32:33 +0000
+
+update-notifier (0.129) raring; urgency=low
+
+  [ Colin Watson ]
+  * Fix many typos for "running".
+  * Fix a number of compiler warnings.
+
+  [ Brian Murray ]
+  * Switch from using gksu for apport crashes to pkexec (LP: #1098235)
+
+ -- Brian Murray <brian@ubuntu.com>  Wed, 30 Jan 2013 09:43:09 -0800
+
+update-notifier (0.128) raring; urgency=low
+
+  * Fix incorrect glib pkg-config requirement.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 30 Jan 2013 01:11:22 +0000
+
+update-notifier (0.127) raring; urgency=low
+
+  [ Michael Vogt ]
+  * Rebuild cache in memory to avoid race condition 
+    (LP: #1016040). Thanks to James Hunt
+
+  [ Colin Watson ]
+  * Exit GTK+ main loop on receiving SIGINT, to make it easier to debug
+    update-notifier using valgrind.
+  * Fix memory leak in init_already_seen_hooks.
+  * Fix missing description field for "Start package manager" tray action.
+  * Stop using deprecated gdk_app_launch_context_new function.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 30 Jan 2013 00:47:31 +0000
+
+update-notifier (0.126) quantal; urgency=low
+
+  * Add build-dependencies on python, python-apt, and python-debian for the
+    test suite; and add runtime dependencies on python-{apt,debian},
+    unnoticed until now.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Tue, 09 Oct 2012 15:12:20 -0700
+
+update-notifier (0.125) quantal; urgency=low
+
+  * There are other buggy translations, revert those as well.
+  * Make sure our tests are actually run at build time.
+  * Add a new test for broken translations, and fix the test for the notifier
+    output which had not been kept in sync with the source.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Tue, 09 Oct 2012 20:59:55 +0000
+
+update-notifier (0.124) quantal; urgency=low
+
+  * Revert buggy translation of a variable name, addressing bug #1003100.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Tue, 09 Oct 2012 12:39:38 -0700
+
+update-notifier (0.123) quantal; urgency=low
+
+  * Updated launchpad translations
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 09 Oct 2012 18:05:11 +0200
+
+update-notifier (0.122) quantal; urgency=low
+
+  * Tell python-dbus to use glib's mainloop so it doesn't throw an exception
+    (LP: #946718).
+
+ -- Michael Terry <mterry@ubuntu.com>  Fri, 07 Sep 2012 09:11:53 -0400
+
+update-notifier (0.121ubuntu1) quantal; urgency=low
+
+  [ Michael Vogt ]
+  * lp:~nathwill/update-notifier/lp-934517:
+    - improve wording (LP: #934517), thanks to Nathan Williams 
+
+  [ Julian Taylor ]
+  * replace dict.has_key with key in dict (LP: #1040380)
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Sat, 25 Aug 2012 15:16:34 +0100
+
+update-notifier (0.120ubuntu2) quantal; urgency=low
+
+  * Add dependency on patch to update-notifier-common as it's called
+    from the cddistupgrader script when doing upgrades from an external
+    media. (LP: #1029531)
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Wed, 08 Aug 2012 17:24:38 -0400
+
+update-notifier (0.120ubuntu1) quantal; urgency=low
+
+  * Convert from libgdu to gio's GVolumeMonitor (LP: #1028040)
+
+ -- Michael Terry <mterry@ubuntu.com>  Mon, 23 Jul 2012 13:34:43 -0400
+
+update-notifier (0.119ubuntu15) quantal; urgency=low
+
+  * Undo the Python 3 conversion until python3-debian is ready
+
+ -- Michael Terry <mterry@ubuntu.com>  Mon, 02 Jul 2012 13:00:46 -0400
+
+update-notifier (0.119ubuntu14) quantal-proposed; urgency=low
+
+  [ Brian Murray ]
+  * Port to Python 3 
+    - Use the new python-apt API since the legacy API is not available
+      in Python 3.
+    - Various and pyflakes, whitespace, style, line length fixes.
+
+  [ Michael Terry ]
+  * Update to use new update-manager command line and
+    ubuntu-release-upgrader paths.
+
+ -- Michael Terry <mterry@ubuntu.com>  Fri, 29 Jun 2012 11:05:06 -0400
+
+update-notifier (0.119ubuntu13) quantal; urgency=low
+
+  * data/apt_check.py:
+    - modernize a bit for the 0.8 API
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 12 Jun 2012 11:08:52 +0200
+
+update-notifier (0.119ubuntu12) quantal; urgency=low
+
+  * src/uevent.c: Drop Jockey handling. This was only used for missing DVB
+    firmware, but the firmware is now shipped by default in linux-firmware.
+    Also, Jockey is being obsoleted.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 30 May 2012 15:06:17 +0200
+
+update-notifier (0.119ubuntu11) quantal; urgency=low
+
+  * po/*.po: the string '$packages' must not be translated, but we currently
+    have no way to mark the string as such in the input files.  LP: #1003100.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Tue, 22 May 2012 21:35:02 +0000
+
+update-notifier (0.119ubuntu10) quantal; urgency=low
+
+  * Merge in changes from 0.119ubuntu8.1 which had been uploaded to
+    precise-proposed.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Tue, 15 May 2012 16:20:43 -0700
+
+update-notifier (0.119ubuntu9) quantal; urgency=low
+
+  * fix data/Makefile.am to clean up all generated files.
+  * fix wrong intltool-merge invocation.
+  * data/package-data-downloads-failed{,-permanently}.in: work around a bug in
+    intltool-merge rfc822deb handling that causes wrong syntax when the first
+    line in the file is a translated field.  LP: #993672.
+  * use po2debconf instead of the upstream intltool-merge, since the latter
+    doesn't actually handle multi-paragraph description fields correctly.
+  * Fix package-data-downloader to do a correct timestamp comparison.  Thanks
+    to Loïc Minier for catching this.  LP: #986183.
+  * data/package-data-downloads-failed.in: use pkexec instead of gksudo, for
+    compatibility with Kubuntu.  Thanks to Jonathan Thomas for pointing out
+    the correct fix.  LP: #982032.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Tue, 15 May 2012 16:16:08 -0700
+
+update-notifier (0.119ubuntu8.1) precise; urgency=low
+
+  * data/notify-reboot-required: echo notification if gettext is not available
+    thanks to Richard Laager for the patch (LP: #644578)
+
+ -- Brian Murray <brian@ubuntu.com>  Thu, 19 Apr 2012 13:58:50 -0700
+
+update-notifier (0.119ubuntu8) precise; urgency=low
+
+  * po/*.po:
+    - updated to latest LP export to ensure that the translation-missing
+      window information is actually translated (LP: #562900)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 17 Apr 2012 16:32:08 +0200
+
+update-notifier (0.119ubuntu7) precise; urgency=low
+
+  * Use <proto>_proxy environment variables to choose the proxy to use for
+    data downloads, not the apt proxy settings, because apt may be
+    configured to point at a package-specific proxy.  This makes proxy
+    configuration a little less convenient than before for the
+    flashplugin-installer package, but it at least it makes it possible to
+    have a different proxy setting for packages vs. arbitrary data
+    downloads, which otherwise we don't have any way to support.
+    LP: #979477.
+  * Stop processing after a fatal download error, not just a transient one,
+    so that we can't be tricked into feeding a partial list of files to a
+    handler.  Thanks to Kees Cook for spotting the bug.  LP: #979426.
+  * Flush stdout before calling subprocess, so that log output makes more
+    sense.
+  * Print a more meaningful status message when downloading, instead of just
+    a bare URL.
+  * Check for existence of /usr/lib/update-notifier/package-data-downloader
+    before trying to run it from our cron job, so that the package doesn't
+    generate error messages when removed but not purged.
+  * The action for our notification should call gksu instead of trying to
+    run the command directly without root access.  This is imperfect because
+    kubuntu won't have gksudo available by default, but it's an improvement
+    over failing for everybody.  LP: #976761.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Fri, 13 Apr 2012 03:49:10 +0000
+
+update-notifier (0.119ubuntu6) precise; urgency=low
+
+  * data/package-data-downloader: Set urllib._urlopener to an instance of
+    urllib.FancyURLopener rather than urllib.URLopener, since the former
+    handles redirects (LP: #977812).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 10 Apr 2012 12:15:08 +0100
+
+update-notifier (0.119ubuntu5) precise; urgency=low
+
+  * Make sure /usr/lib/update-notifier/package-data-downloader is called on
+    package configuration as well, since a trigger is not guaranteed to
+    happen if the triggering package is configured first.  LP: #977178.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Mon, 09 Apr 2012 20:48:14 +0000
+
+update-notifier (0.119ubuntu4) precise; urgency=low
+
+  * Fix conffile removal handling for /etc/update-motd.d/20-cpu-checker; we
+    were deleting the file but it was still registered in dpkg's database as
+    obsolete.  dpkg-maintscript-helper can help with this.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Mon, 09 Apr 2012 11:26:57 -0700
+
+update-notifier (0.119ubuntu3) precise; urgency=low
+
+  * data/package-data-downloader: add support for a 'should-download' field
+    pointing to a debconf question that tells us whether or not the files
+    for this package should actually be downloaded.  Otherwise, we'll
+    always download the files for msttcorefonts even when the user hasn't
+    accepted the license.  LP: #876298.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Mon, 09 Apr 2012 05:36:00 +0000
+
+update-notifier (0.119ubuntu2) precise; urgency=low
+
+  * data/package-data-downloader, data/package-data-downloads-failed.in,
+    data/package-data-downloads-failed-permanently.in,
+    debian/update-notifier-common.{postinst,triggers}: add a new handler and
+    dpkg trigger to let packages queue data for download after package
+    install, so that network connectivity problems don't make installs
+    and upgrades unreliable.  LP: #876298.
+  * debian/update-notifier-common.cron.daily: add a cronjob to periodically
+    retry any failed downloads.
+  * src/update-notifier.c: when there are new hooks, check them whether or
+    not dpkg has run; this allows other packages to send us notifications
+    by ways other than running a package maintainer script.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Thu, 05 Apr 2012 22:04:05 -0700
+
+update-notifier (0.119ubuntu1) precise; urgency=low
+
+  * src/update-notifier.c: Consider both the "sudo" and "admin" groups as
+    administrator. (LP: #893842)
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Sun, 11 Mar 2012 10:29:28 +0100
+
+update-notifier (0.118.1ubuntu1) precise; urgency=low
+
+  * add support to apply patches when running the release upgrader
+  * change default release upgrade check interval to 14 days
+    (LP: #918062)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 18 Jan 2012 09:36:47 +0100
+
+update-notifier (0.118ubuntu1) precise; urgency=low
+
+  * fix "fsck doesn't update system info on login" LP: #692355
+    Thanks to Paul McEnery
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 09 Jan 2012 12:58:55 +0100
+
+update-notifier (0.117ubuntu3.1) oneiric-proposed; urgency=low
+
+  * src/trayappletui.c:
+    - fix overlong menu entries (LP: #871691)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 13 Oct 2011 09:27:26 +0200
+
+update-notifier (0.117ubuntu3) oneiric; urgency=low
+
+  * add #include "trayappletui.h" to ensure the prototypes are
+    correct (fixes FTBFS)
+  * fix -Wall warnings
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 05 Oct 2011 20:56:14 +0200
+
+update-notifier (0.117ubuntu2) oneiric; urgency=low
+
+  * port to libappindicator (LP: #779382) to ensure its visible
+    under unity{,-2d} for users with the auto_open key set to
+    false
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 05 Oct 2011 12:18:49 +0200
+
+update-notifier (0.117ubuntu1) oneiric; urgency=low
+
+  * data/backend-helper.py: add helper that can dynamically 
+    choose what package manager to use
+  * switch recommends to python-aptdaemon.gtk3widgets | synpatic
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 10 Aug 2011 15:50:40 +0200
+
+update-notifier (0.116ubuntu1) oneiric; urgency=low
+
+  *  Fixed restart required notification wording. (LP: #680685)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 27 Jul 2011 14:24:37 +0200
+
+update-notifier (0.115ubuntu2) oneiric; urgency=low
+
+  * set the default release-upgrade check time to 7 days
+    to be in line with the updates check interval
+    (foundations-o-update-manager-release-announcements spec)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 19 Jul 2011 09:00:29 +0200
+
+update-notifier (0.115ubuntu1) oneiric; urgency=low
+
+  [ Michael Terry ]
+  * port to gtk3/gsettings/gdbus
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 14 Jul 2011 09:36:56 +0200
+
+update-notifier (0.112ubuntu2) oneiric; urgency=low
+
+  * data/update-notifier.desktop.in:
+    - Don't show in "Startup Applications" (LP: #803917)
+
+ -- Michael Terry <mterry@ubuntu.com>  Fri, 01 Jul 2011 13:42:50 +0100
+
+update-notifier (0.112ubuntu1) oneiric; urgency=low
+
+  * Port to current libnotify 0.7 API. Bump libnotify-dev build dependency.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 08 Jun 2011 09:22:22 +0200
+
+update-notifier (0.111ubuntu2) natty; urgency=low
+
+  [ Till Kamppeter ]
+  * src/uevent.c: 
+    - HP laser printers which require firmware can also have the
+      product ID "xx2a" now. (LP: #734822)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 31 Mar 2011 11:21:51 +0200
+
+update-notifier (0.111ubuntu1) natty; urgency=low
+
+  * data/apt-cdrom-check, data/cddistupgrader:
+    - support upgrades from filesystems without the "stable" and 
+      "ubuntu" symlinks (like vfat)
+  * src/gdu.c:
+    - check all removable devices for a upgrader
+    - when detecting a upgrade CD skip the "Run package manager"
+      step as its recommended to use the release upgrader
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 09 Mar 2011 16:00:19 +0100
+
+update-notifier (0.110.4ubuntu1) natty; urgency=low
+
+  * src/hooks.c:
+    - use x-terminal-emulator instead of hardcoding gnome-terminal
+      (LP: #365796)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 16 Feb 2011 19:37:04 +0100
+
+update-notifier (0.110.3ubuntu3) natty; urgency=low
+
+  * data/update-motd-fsck-at-reboot: fix logic for getting mount list,
+    add defensive 0 sets, add "never check" special cases (LP: #718469).
+
+ -- Kees Cook <kees@ubuntu.com>  Sun, 13 Feb 2011 16:46:32 -0800
+
+update-notifier (0.110.3ubuntu2) natty; urgency=low
+
+  * src/reboot.c: use consolekit instead of hal when gnome-session is
+    not available. lp: #716905
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sun, 13 Feb 2011 13:39:15 +0100
+
+update-notifier (0.110.3ubuntu1) natty; urgency=low
+
+  * merged lp:~brian-murray/update-notifier/error-message-string-fix,
+    many thanks!
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 25 Jan 2011 11:32:56 +0100
+
+update-notifier (0.110.2ubuntu1) natty; urgency=low
+
+  * debian/90-updates-available, debian/98-fsck-at-reboot,
+    debian/98-reboot-required:
+    - check if the scripts exist before using them (thanks to
+      Kees Cook)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 10 Jan 2011 19:01:35 +0100
+
+update-notifier (0.110.1ubuntu3) natty; urgency=low
+
+  * src/crash.c:
+    - add dialog when system crashes are detected to avoid fullscreen
+      gksu window
+    - fix incorrect bits from the previous merge (thanks to Sebastien Bacher)
+    - honor the /apps/update-notifier/auto_launch gconf key, if that is
+      set never display a notifcation area icon but instead always fire
+      up apport, if set, do the opposite and always show notifcation
+      area icon and never fire up apport automatically
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 04 Jan 2011 14:20:33 +0100
+
+update-notifier (0.110.1ubuntu2) natty; urgency=low
+
+  [ Sebastien Bacher ]
+  * src/crash.c: if there is no systray report at least the user issues.
+    The code should still be ported to use an indicator later on.
+  * src/crash.c: Don't spam the session log with the crash names either.
+  * src/crash.c, src/reboot.c, src/update-notifier.c:
+    - clear some debug calls to keep the session log clean
+  
+  [ Michael Vogt ]
+  * src/update-notifier.c:
+    - move debug calls into g_debug and hide that by default
+    - add new --debug-misc call that is a catch-all bucket for 
+      uncategorized messages
+  * src/crash.c:
+    - use g_spawn_sync() instead of g_spawn_sync_command_line and
+      pass G_SPAWN_STDOUT_TO_DEV_NULL|G_SPAWN_STDERR_TO_DEV_NULL
+    
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 04 Jan 2011 09:14:03 +0100
+
+update-notifier (0.110.1ubuntu1) natty; urgency=low
+
+  [ Michael Vogt ]
+  * data/update-motd-fsck-at-reboot:
+    - fix small issues in the script that I introduced in the
+      merge
+  * add recommends to aptdaemon (thanks to Michael Terry)
+    LP: #600745
+
+  [ Kees Cook ]
+  * data/update-motd-cpu-checker, data/Makefile.am, debain/control,
+    debian/20-cpu-checker, debian/update-notifier-common.{install,postinst}:
+    drop cpu-checker since kernel will unmask BIOS filtering of NX now.
+
+ -- Kees Cook <kees@ubuntu.com>  Wed, 17 Nov 2010 11:35:00 -0800
+
+update-notifier (0.110ubuntu1) natty; urgency=low
+
+  [ Loïc Minier ]
+  * Update description to not mention adept/adept-notifier anymore, but "other
+    packages" and "server use cases" as adept doesn't exist anymore.
+
+  [ Michael Terry ]
+  * Add --disable-deprecations configure flag to test for deprecated API use
+  * Don't use deprecated API, and update required version of GTK+ to match
+    LP: #655231
+  
+  [ Michael Vogt ]
+  * merged lp:~shiyee/update-notifier/fsck-at-reboot, thanks to
+    Mads Chr. Olesen
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 11 Nov 2010 10:11:11 +0100
+
+update-notifier (0.105ubuntu1) maverick; urgency=low
+
+  * src/reboot.c:
+    - avoid triggering a aptdaemon launch when checking for
+      pending transactions (LP: #587004)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 03 Sep 2010 10:00:54 +0200
+
+update-notifier (0.104ubuntu1) maverick; urgency=low
+
+  [ Sebastian Geiger ]
+  * src/update.c:
+    - fix missing init of GError
+  * updated to use xdg config dirs (thanks to Christian Klein)
+  
+  [ Michael Vogt ]
+  * move hooks file over to the new location if
+    it exists
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 25 Aug 2010 21:16:28 +0200
+
+update-notifier (0.103ubuntu1) maverick; urgency=low
+
+  [ Michael Vogt ]
+  * add /usr/share/update-notifier/plugins/cache-changed dir
+    that can be used to trigger scripts on cache change (update,
+    install, remove, upgrade) that are run within the users
+    context (e.g. oneconf) 
+
+  [ Didier Roche ]
+  * sort and launch scripts one after another in async mode on cache change
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 21 Jul 2010 15:01:58 +0200
+
+update-notifier (0.102ubuntu1) maverick; urgency=low
+
+  * Generalize firmware backend to be more easily extensible for other types
+    of uevents:
+    - Rename firmware.{h,c} to uevent.{h,c} and rename the functions
+      accordingly.
+    - configure.in, src/Makefile.am, src/update-notifier.c: Fix references for
+      name changes above.
+    - uevent.c: Split out the "missing general firmware" specific bits into a
+      new function deal_with_missing_firmware(). This makes the on_uevent()
+      function very small and clean, and easy to extend.
+  * src/uevent.c: Add new function deal_with_scp() to launch
+    system-config-printer when a printer is added or present at startup, and
+    s-c-p is not running yet. This must explicitly enabled with the new
+    --enable-system-config-printer configure option, and is disabled by
+    default. OEMs and derivatives can enable it easily and drop s-c-p's
+    autostart .desktop file.
+  * src/uevent.c: Fix a memory leak, properly free the list items and list
+    from g_udev_client_query_by_subsystem().
+  * debian/control: Bump Standards-Version to 3.8.4 (no changes necessary).
+  * Add debian/source/format: 3.0 (native).
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Fri, 25 Jun 2010 12:19:04 +0200
+
+update-notifier (0.101ubuntu1) maverick; urgency=low
+
+  * src/update.c:
+    - run apt-check with nice and ionice (thanks to dbarth)
+  * README:
+    - updated, add information on /etc/apt/apt.conf.d/10periodic,
+      /etc/apt/apt.conf.d/20archive. Thanks to Michael Schuerig
+      for suggesting this
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 10 Jun 2010 15:06:12 +0200
+
+update-notifier (0.100ubuntu1) maverick; urgency=low
+
+  * properly integrate with check-release-upgrade-gtk and support
+    --devel-release
+  * merged from debian, many thanks to Julian Andres Klode
+  * switch back to auto-open mode 
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 01 Jun 2010 15:38:26 +0200
+
+update-notifier (0.99.3debian4) unstable; urgency=low
+
+  * Show the tray icon instead of running update-manager (Closes: #578717),
+    the update-manager mode does not even work currently due to Bug#579789.
+
+ -- Julian Andres Klode <jak@debian.org>  Wed, 05 May 2010 12:11:01 +0200
+
+update-notifier (0.99.3debian3) unstable; urgency=low
+
+  * Do not ship /var/crash as it is not needed.
+  * debian/update-notifier-common.install:
+    - Install /etc/apt/apt.conf.d/ files here instead of using debian/rules.
+  * debian/rules: Simplify and remove unneeded parts.
+  * autogen.sh: Run intltool-update -p here.
+  * data/apt_check.py:
+    - Detect security updates for Debian [and gNewSense] (Closes: #493653).
+  * Run notify-reboot-required in kernel postinst.d (Closes: #502396).
+  * data/notify-reboot-required: Also work if /var/run is no mountpoint,
+    it will be cleaned up on boot anyway (Closes: #462002).
+  * Recommend synaptic and software-properties-gtk and only use them if
+    they are installed (Closes: #559000, #448534).
+  * Recommend anacron to have up-to-data package lists (Closes: #414155).
+  * debian/99update-notifier: Fix syntax.
+  * Update translations from Launchpad and create ALL_LINGUAS dynamically.
+  * data/Makefile.am: Do not run gconftool-2, it just prints warnings.
+  * Fix compiler warnings.
+
+ -- Julian Andres Klode <jak@debian.org>  Sun, 18 Apr 2010 18:18:36 +0200
+
+update-notifier (0.99.3debian2) unstable; urgency=low
+
+  * configure.in: Remove gdu and gudev-1.0 from the common module list.
+
+ -- Julian Andres Klode <jak@debian.org>  Sat, 17 Apr 2010 13:19:56 +0200
+
+update-notifier (0.99.3debian1) unstable; urgency=low
+
+  * Rebase packaging on Ubuntu's one (Closes: #568476); differences:
+    - Depend on update-manager-gnome instead of update-manager.
+    - Only recommend cpu-checker as it's not in the archive (yet).
+  * data/apt_check.py: Upgrade to new python-apt API (Closes: #572351).
+  * Disable gudev and gdu stuff on non-Linux architectures.
+  * debian/control: Update Standards-Version and have -common depend on python.
+  * debian/update-notifier-common.preinst: Add missing #DEBHELPER# line.
+
+ -- Julian Andres Klode <jak@debian.org>  Fri, 16 Apr 2010 19:41:27 +0200
+
+update-notifier (0.99.2) lucid; urgency=low
+
+  * 20-cpu-checker, 90-updates-available, 98-reboot-required,
+    update-notifier-common.install, update-notifier-common.links:
+    symlinking scripts into /etc/update-motd.d causes them *not*
+    to be considered conffiles, so admins can't really edit or
+    remove them to their liking; instead, install simple "exec"
+    shell wrappers, LP: #559194
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 09 Apr 2010 12:44:13 -0500
+
+update-notifier (0.99.1) lucid; urgency=low
+
+  [ Michael Vogt ]
+  * data/notify-reboot-required:
+    - make sure to record the maintainer script that requested the
+      reboot in /var/run/reboot-required.pkgs (LP: #538253)
+  * silence debug messages by default (unless one of the 
+    --debug switches is used)
+  * debian/control:
+    - point Vcs-Bzr to lucid branch
+
+  [ Dustin Kirkland ]
+  * debian/update-notifier-common.links: move reboot-required
+    from update-motd position 99 to 98, since 99 is now a (typically
+    empty) admin-controlled footer
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 24 Mar 2010 14:59:04 +0100
+
+update-notifier (0.99) lucid; urgency=low
+
+  * src/firmware.c:
+    - move hplip firmware loading here and watch for udev 
+      events from printers that need to load a firmware. Call 
+      hp-plugin-ubuntu in this case automatically.
+  * src/hplip.{c,h}:
+    - dropped in favor of doing this in the firmware.c code
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 19 Mar 2010 17:21:04 +0100
+
+update-notifier (0.98) lucid; urgency=low
+
+  * data/update-motd-cpu-checker: update path to the now external checker.
+
+ -- Kees Cook <kees@ubuntu.com>  Thu, 11 Mar 2010 01:16:49 -0800
+
+update-notifier (0.97) lucid; urgency=low
+
+  * debian/control, data/update-motd-cpu-checker: move motd updater into
+    the data/ tree and add to build system now that check-bios-nx is part
+    of the external cpu-checker package.
+
+ -- Kees Cook <kees@ubuntu.com>  Wed, 10 Mar 2010 23:03:25 -0800
+
+update-notifier (0.96) lucid; urgency=low
+
+  * debian/cpu-checker/check-bios-nx: adjust informational URL, eliminate
+    "filter" language in favor of "disable".
+
+ -- Kees Cook <kees@ubuntu.com>  Thu, 18 Feb 2010 12:23:28 -0800
+
+update-notifier (0.95) lucid; urgency=low
+
+  * debian/cpu-checker/*, debian/rules, debian/update-notifier-common.links:
+    add NX bit sanity checker to be included in motd updates.
+
+ -- Kees Cook <kees@ubuntu.com>  Wed, 17 Feb 2010 15:05:16 -0800
+
+update-notifier (0.94) lucid; urgency=low
+
+  * Add src/hplip.{h,c}:
+    -  listen to com.hp.hplip.NeedPlugin events
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 11 Feb 2010 13:34:08 +0100
+
+update-notifier (0.93) lucid; urgency=low
+
+  * data/update-notifier.desktop:
+    - drop the --startup-delay command line option and use the new 
+      X-GNOME-Autostart-Delay autostart key instead
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 01 Feb 2010 15:36:10 -0800
+
+update-notifier (0.92) lucid; urgency=low
+
+  * Add src/firmware.{h,c}: Listen to "firmware" subsystem events, check if
+    requested firmware is present, and call jockey --check if not.
+    (LP: #425821, UbuntuSpec:desktop-lucid-jockey-hotplug-support)
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Thu, 26 Nov 2009 11:09:42 +0100
+
+update-notifier (0.91) lucid; urgency=low
+
+  [ Michael Vogt ]
+  * src/reboot.c:
+    - do not auto-open restart required dialog, do this check in
+      the calling clients (like update-manager) instead
+
+  [ Loïc Minier ]
+  * Drop a couple of useless AC_SUBSTs.
+  * src/Makefile.am: use $(PACKAGE_CFLAGS) and _LIBS instead of
+    @PACKAGE_CFLAGS@ and _LIBS to allow overriding on the cmdline.
+  * configure.in: add "x11" to pkg_modules since src/clipboard.c calls X11
+    functions directly; fixes build issue with binutils-gold; thanks Peter
+    Fritzsche for the report; Debian #556515.
+  * Build-dep on libx11-dev explicitly.
+  * Wrap build-deps and deps to get cleaner diffs.
+  * Cleanup rules, mostly dropping boilerplate.
+  * Pass -s to dh_* in binary-arch.
+  * Don't overwrite CFLAGS from the env.
+  * Don't set INSTALL_PROGRAM, not needed with dh_strip.
+  * Only pass --host to configure if DEB_BUILD_GNU_TYPE and DEB_HOST_GNU_TYPE
+    differ.
+  * Pass LDFLAGS down to configure.
+  * Build-dep on autotools-dev to ensure config.sub and config.guess are
+    present.
+  * Don't ignore errors from distclean.
+  * Update FSF address in copyright and misc src/*.[ch] files.
+  * "set -e" in debian/preinst, postinst, and postrm.
+  * Cleanup and simplify debian/update-notifier-common.postinst.
+  * Use Vcs-Bzr instead of XS-Vcs-Bzr.
+  * Bump up Standards-Version to 3.8.3.
+  * Comment out --with-pkg-manager= configure flag as it's dnl-ed out in
+    configure.in.
+  * Drop useless DEBVER from rules.
+  * Move to debhelper 7; bump bdep and compat.
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 23 Nov 2009 09:19:46 +0100
+
+update-notifier (0.90) karmic; urgency=low
+
+  * data/update-notifier.schemas.in:
+    - fix typo (LP: #400214)
+  * debian/update-notifier-common.dirs:
+    - do not ship /var/crash here (LP: #449738)
+  * debian/rules:
+    - create /var/crash with the right permissions
+  * debian/update-notifier-common.postinst:
+    - fixup if permissions of /var/crash are incorrect due to
+      update-notifier-common (LP: #449738)
+  * data/apt-cdrom-check:
+    - only offer addon-cd if gnome-app-install is installed
+      (software-center does not yet support addon CDs)
+  * src/update.c:
+    - use gtk-dialog-warning-panel by default and use gtk
+      fallback mechanism to use the gtk-dialog-warning stock icon
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 15 Oct 2009 17:15:35 +0200
+
+update-notifier (0.89) karmic; urgency=low
+
+  [ Mario Limonciello ]
+  * src/reboot.c:
+    - Fallback to HAL if possible to reboot (LP: #437333)
+  
+  [ Michael Vogt ]
+  * src/reboot.c:
+    - wait for pending aptdaemon transactions before showing
+      the reboot required dialog (LP: #445634)
+  * src/update.c:
+    - fix small memleak
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 09 Oct 2009 16:40:44 +0200
+
+update-notifier (0.88) karmic; urgency=low
+
+  * ui/reboot-dialog.ui:
+    - simplify text in the restart required UI (LP: #397324),
+      thanks to Scott Ritchie
+  * src/hal.c:
+    - more robustness again failure in gdu_pool_new() 
+  * src/upate-notifier.c: 
+    - when gdu can not be initialized, do not fail but log a 
+      warning instead (LP: #418691)
+  * data/update-notifier.schemas.in:
+    - fix typo (LP: #411511), thanks to Rakesh 'arky' Ambati
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 10 Sep 2009 18:41:30 +0200
+
+update-notifier (0.87) karmic; urgency=low
+
+  [ Dustin Kirkland ]
+  * debian/control: recommend libpam-modules rather than update-motd,
+    LP: #399071
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Thu, 16 Jul 2009 17:18:45 -0500
+
+update-notifier (0.86) karmic; urgency=low
+
+  [ Sebastien Bacher ]
+  * debian/rules:
+    - build using --as-needed to reduce the depends
+
+  [ Dustin Kirkland ]
+  * debian/update-notifier-common.dirs: update-notifier-common
+    needs /etc/update-motd.d, rather than /etc/update-motd.d/hourly;
+    causes this directory to *not* be removed on update-motd package
+    removal/upgrade
+
+  [ Michael Vogt ]
+  * src/update-notifier.c:
+    - if display can not be opened, show a propper error message
+      and do not crash (LP: #317745)
+  * src/apt_check.py:
+    - count security updates correctly even when they are "shadowed"
+      by a regular update (LP: #394958)
+    - fix typo (thanks to Hew McLachlan)
+  * data/update-motd-updates-available, debian/99update-notifier:
+    - move updates available from /var/run to /var/lib/update-notifier
+      to make it persistent over reboots
+  * src/update-notifier.c:
+    - make the timeout for no-activity from apt bigger (LP: #274001)
+  * data/update-notifier.desktop.in:
+    - better description for the auto startup (LP: #146918)
+  * src/update-notifier.c:
+    - use GAppInfo/GAppLaunchContext to provide startup notification
+      support (LP: #46258)
+  
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 14 Jul 2009 16:50:46 +0200
+
+update-notifier (0.85) karmic; urgency=low
+
+  * src/reboot.c:
+    - use the gnome-session dbus interface for reboots
+  * src/hal.c -> src/gdu.c:
+    - ported from hal to gnome-disk-utils (libgdu-dev)
+  * drop libgnome from the build-depends and switch to
+    the new gnome-session dbus interface entirely
+  * debian/control:
+    - drop libgnome-dev, libhal-dev
+  * src/update.c:
+    - when checking for apt/dpkg logs, ignore empty ones, 
+      they are most likely caused by logrotate (thanks to
+      Dan Kegel)
+    - when checking apt/dpkg logs, glob() for the old(er)
+      ones too (thanks to Dan Kegel)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 08 Jul 2009 17:25:16 +0200
+
+update-notifier (0.80) karmic; urgency=low
+
+  * add /apps/update-notifier/hide_reboot_notification
+    gconf key to hide the reboot required messages 
+    (as suggested by tjaalton)
+  * when running in auto-launch mode, check if security
+    updates are installed unattended and if so, use the normal
+    launch interval (LP: #369706)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 06 Jul 2009 13:23:06 +0200
+
+update-notifier (0.79) karmic; urgency=low
+
+  [ Sebastien Bacher ] 
+  * ported from glade to gtkbuilder
+  
+  [ Michael Vogt ]
+  * data/apt_check.py:
+    - ensure that updates in both -updates and -security are
+      only counted once (thanks to Emmet)
+  * debian/control:
+    - add strict dependency on update-notifier-common
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 29 Jun 2009 14:11:25 +0200
+
+update-notifier (0.78) karmic; urgency=low
+
+  * src/update.c:
+    - better debug output
+    - add AUTOLAUNCH_MINIMAL_SECURITY_INTERVAL (LP: #369198)
+  * src/update-notifier.c:
+    - fix typo (#365314)
+  * data/apt_check.py:
+    - check for security updates in the current running
+      distro release (deals with cases where people have
+      two distros in their sources.list)
+  * remove some debug output
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 24 Apr 2009 15:39:34 +0200
+
+update-notifier (0.76.7) jaunty; urgency=low
+
+  * fix crash in --debug mode (LP: #348883, #348110)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 26 Mar 2009 11:01:09 +0100
+
+update-notifier (0.76.6) jaunty; urgency=low
+
+  * src/update.c:
+    - do not auto-launch if the dpkg lock is taken
+      by another process (LP: #334935)
+  * rework the debug options and support --debug-inotify,
+    --debug-updates, --debug-hooks
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 11 Mar 2009 14:11:12 +0100
+
+update-notifier (0.76.5) jaunty; urgency=low
+
+  * debian/99update-notifier: write an empty /var/run/updates-available,
+    rather than removing it;  empty indicates that we *know* that there are
+    no updates available, whereas missing/remove indicates that the status
+    is unknown, LP: #339066
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Sat, 07 Mar 2009 00:32:56 -0600
+
+update-notifier (0.76.4) jaunty; urgency=low
+
+  * fix corner cases when the update icon still
+    appears even if run in auto launch mode (thanks to
+    Steve Langasek)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 04 Mar 2009 09:37:20 +0100
+
+update-notifier (0.76.3) jaunty; urgency=low
+
+  * use the gconf /apps/update-manager/launch_time key
+    to detect the last lauch time. this means the autolaunch
+    time is reset on each manual update-manager run too
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 03 Mar 2009 14:57:27 +0100
+
+update-notifier (0.76.2) jaunty; urgency=low
+
+  * src/reboot.c:
+    - show the reboot required dialog only once per
+      session (thanks to mdz for the report)
+  * src/update.c:
+    - when checking if update-manager needs to be auto launched,
+      take the time of the last package installs/removals into
+      consideration as well (as requested by the DX team)
+    - when auto launching update-manager, run with nice and 
+      ionice -c3
+  * src/update-notifier.c:
+    - add --debug-autolaunch switch
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 02 Mar 2009 15:38:28 +0100
+
+update-notifier (0.76.1) jaunty; urgency=low
+
+  * ui/reboot-reqruied.glade:
+    - add dialog title for auto-launching
+  * data/update-notifier.schemas.in:
+   - set default launch interval to 7 days now (as asked for
+     by the DX team) 
+  * data/apt_check.py:
+    - fix i18n plural forms (LP: #325251)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 23 Feb 2009 20:47:37 +0100
+
+update-notifier (0.76) jaunty; urgency=low
+
+  * make "auto_launch" update-manager mode the default (as asked
+    for by the DX team)
+  * set "regular_auto_launch_interval" to 2 days for the development
+    release. this default will change to 7 days for the stable
+    release
+  * run update-manager with "--no-focus-on-map" when in 
+    "auto_launch" mode
+  * add "/apps/update-notifier/regular_auto_launch_interval" gconf
+    key that controls at what intervals (in days) update-manager is 
+    automatically launched for regular updates (security updates 
+    will be launched immediately). This only affects users that use
+    "/apps/update-notifier/auto_launch"
+  * make the interactive upgrade hooks dialog open up immediately
+    if "auto_launch" is enabled
+  * make the reboot required dialog open up immediately if "auto_launch" 
+    is enabled
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 16 Feb 2009 17:06:56 +0100
+
+update-notifier (0.75.10) jaunty; urgency=low
+
+  * add gconf "/apps/update-notifier/auto_launch" option that 
+    can automatically launch update-manager (defaults to 
+    "false" for now until focus it not stolen)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 06 Feb 2009 14:33:06 +0100
+
+update-notifier (0.75.9) jaunty; urgency=low
+
+  * debian/99update-notifier:
+    - remove /var/run/updates-available after package installation
+      (LP: #319438)
+  
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 04 Feb 2009 16:36:27 +0100
+
+update-notifier (0.75.8) jaunty; urgency=low
+
+  * debian/update-notifier.docs:
+    - fix filename and use it again (LP: #319194)
+  * fix reboot action (LP: #314409)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 23 Jan 2009 15:21:02 +0100
+
+update-notifier (0.75.7) jaunty; urgency=low
+
+  [ Michael Vogt ]
+  * src/hal.c: 
+    - fix incorrect capitalization (LP: #186594) 
+    
+  [ Chris Coulson ]
+  * src/update-notifier.c:
+    - Revert an earlier change to call gnome_program_init()
+      again. reboot.c still depends on this (LP: #302326)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 20 Jan 2009 19:59:20 +0100
+
+update-notifier (0.75.6) jaunty; urgency=low
+
+  * data/update-notifier.desktop.in:
+    - work with other DEs than gnome,xfce (LP: #300463)
+  * po/POTFILES.in:
+    - add missing file (LP: #298806)
+  * src/update-notifier.c:
+    - make "--force" start u-n even for system users (LP: #294569)
+    - add gconf-key /apps/update-notifier/end_system_uids to make
+      this configurable
+  * src/update.{cc,h}:
+    - show amount of updates available in notification 
+      (LP: #243695) as well
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 25 Nov 2008 21:24:31 +0100
+
+update-notifier (0.75.5) jaunty; urgency=low
+
+  * data/notify-reboot-required:
+    - fix breakage when gettext-base is not installed
+      (thanks to StevenK)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 18 Nov 2008 09:57:35 +0100
+
+update-notifier (0.75.4) jaunty; urgency=low
+
+  [ Dustin Kirkland ]
+  * data/Makefile.am: install 
+    - update-motd-reboot-required and 
+    - update-motd-updates-available
+  * data/notify-reboot-required: 
+    - write human-readable, translatable output to /var/run/reboot-required
+  * data/update-motd-reboot-required: 
+    - standalone shell script for use in update-motd
+  * data/update-motd-updates-available: 
+    - standalone shell script to call apt-check with --human-readable option; 
+      hook for use in update-motd
+  * debian/control: 
+    - recommend update-motd (>= 1.9), which contains fine grained motd
+      update frequency control
+  
+  [ Michael Vogt ]
+  * po/POTFILES.in:
+    - add data/notify-reboot-required
+  * data/update-motd-updates-available:
+    - add checks so that apt-check only runs if the sources.list or the
+      package lists changed
+  * debian/rules:
+    - byebye arch-build target
+  * .bzr-builddeb/default.conf:
+    - welcome "[HOOKS]\npre-build"
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 11 Nov 2008 16:52:31 +0100
+
+update-notifier (0.75.3) jaunty; urgency=low
+
+  * data/apt_check.py:
+    - add "--human-readable" that gives the output
+      in a human readable format (useful for e.g. scripts)
+  * po/POTFILES.in:
+    - updated
+    - re-run make update-po
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 10 Nov 2008 20:59:04 +0100
+
+update-notifier (0.75.2) jaunty; urgency=low
+
+  * data/apt_check.py:
+    - make it a module so that it be shared with
+      update-notifier-kde
+    - rename so that it can be imported by update-notifier-kde
+    - create compat symlink
+    - use dgettext() so that it can be used from a different
+      gettext domain that update-notifier
+    - move the option parser out of run()
+  * po/POTFILES.in:
+    - add missing files
+  * debian/update-notifier-common.install:
+    - move the translations into this package
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 10 Nov 2008 20:15:11 +0100
+
+update-notifier (0.75.1) jaunty; urgency=low
+
+  * debian/update-notifier-common.install:
+    - move apt-check, apt-cdrom-check and cdromdistupgrade
+      into update-notifier-common
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 10 Nov 2008 18:59:24 +0100
+
+update-notifier (0.75) jaunty; urgency=low
+
+  * debian/15update-stamp:
+    - make it cooperate with other update-success hooks
+  * data/cddistupgrader:
+    - fix quoting issues
+  * src/update-notifier.c:
+    - honor "--force" again and show the update-notifications
+      then even for users not in the admin group (LP: #288099)
+    - merge the gio branch
+    - change statup delay to be calculated in seconds
+    - change default to 5
+  * data/update-notifier.desktop.in:
+    - set delay to 60 sec
+  * do not use GnomeClient anymore on all places where this is
+    possible - we can not remove it entirely (yet) because
+    reboot.c depends on it to do a cross desktop session exit
+    request
+  * src/update-notifier.c:
+    - move package manager to foreground if possible (LP: #274562), 
+      thanks to Muhammad Ameen
+  * use the glib checksum functions instead of home grown 
+    implementation (thanks to Bruce Cowan)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 05 Nov 2008 10:24:01 +0100
+
+update-notifier (0.71.8) intrepid; urgency=low
+
+  * src/hooks.c:
+    - when looking for inline translations in the notes file, 
+      check for keys with the CODESET added too to match what
+      intltool-debian outputs (LP: #287556)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 22 Oct 2008 22:34:50 +0200
+
+update-notifier (0.71.7) intrepid; urgency=low
+
+  * src/update-notifier.c:
+    - check for all system user UIDs and do not start in this case
+      (LP: #286037)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 20 Oct 2008 15:13:27 +0200
+
+update-notifier (0.71.6) intrepid; urgency=low
+
+  * ui/hooks-dialog.glade:
+    - make it avaialble via alt-tab
+  * src/update.c, src/update-notifier.c:
+    - allow running for non-admin users so that they can
+      see the hook notifications too (LP: #281837)
+    - ensure that its not run for the gdm guest user
+  * src/hooks.c:
+    - add optional "OnlyAdminUsers" key (defaults to "true")
+      so that non-admin users get not swamped with old 
+      notifications after the ugprade to intrepid
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 16 Oct 2008 18:27:43 +0200
+
+update-notifier (0.71.5) intrepid; urgency=low
+
+  * data/apt-cdrom-check:
+    - fix incorrect quoting in release upgrade disk
+      detection
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 14 Oct 2008 16:51:51 +0200
+
+update-notifier (0.71.4) intrepid; urgency=low
+
+  * src/hooks.c:
+    - support "ButtonText" tag in note
+    - deal with empty "Name" tag
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 10 Oct 2008 20:00:52 +0200
+
+update-notifier (0.71.3) intrepid; urgency=low
+
+  * src/hal.c:
+    - check for already mounted CDs when starting up (LP: #276728)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 01 Oct 2008 16:53:41 +0200
+
+update-notifier (0.71.2) intrepid; urgency=low
+
+  * src/update.c:
+    - do not start two update-managers on double click
+      (LP: #258128)
+    - wording fixes (LP: #254313), thanks to Gabor Kelemen
+  * src/reboot.c:
+    - change the way gnome_client_request_save() is run
+      to work with the latest gnome-session (LP: #214446)
+    - better wording in the reboot dialog (LP: #211616)
+  * data/apt-cdrom-check:
+    - fix edubuntu addon CD detection
+  * po/zh_CN:
+    - new translation (thanks to Deng Xiyue, closes: #497957)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 05 Sep 2008 21:05:08 +0200
+
+update-notifier (0.71.1) intrepid; urgency=low
+
+  * src/update.c:
+    - make the "repository-outdated" nag message more clear
+      and mention that unavailable repositores may cause the
+      problem (LP: #243876)
+  * data/apt-check:
+    - fix incorrect display of number of updates (LP: #251494)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 28 Jul 2008 14:32:47 +0200
+
+update-notifier (0.71) intrepid; urgency=low
+
+  * data/apt-check:
+    - check for intermediate version when checking if a upgrade
+      is security releated or not. its possible that a upgrade
+      is available in -security and a newer one in -updates that
+      has the security fixes applied as well but shows up in 
+      update-notifier as a normal update instead of a security
+      releated one (LP: #239673)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 30 Jun 2008 17:37:20 +0200
+
+update-notifier (0.70.7.debian-7) unstable; urgency=low
+
+  [ Emilio Pozuelo Monfort ]
+  * debian/control.in: Depend on dbus-x11 rather than dbus-1-utils.
+    Closes: #451449.
+  
+  [ Stephan Peijnik ]
+  * debian/patches/08_gksu_preserve_environment.diff: Added patch that makes
+    gksu preserve its environment (-k switch). Fixes an issue with 
+    update-manager-gnome.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Mon, 21 Sep 2009 19:04:50 +0200
+
+update-notifier (0.70.7.debian-6) unstable; urgency=low
+
+  [ Loic Minier ]
+  * Use lt-nl instead of lt in README.reboot-required.Debian for robustness.
+
+  [ Emilio Pozuelo Monfort ]
+  * Depend on update-manager-gnome rather than update-manager since it's
+    been renamed. Closes: #544325.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Sun, 30 Aug 2009 22:04:01 +0200
+
+update-notifier (0.70.7.debian-5) unstable; urgency=low
+
+  [ Hideki Yamane ]
+  * debian/update-notifier-common.install
+    - add localized message 
+      (as /usr/share/locale/*/LC_MESSAGES/update-notifier.mo)
+  * debian/patches/002_i18n_update.diff
+    - update ja.po
+  * debian/patches/04_fix_gksu_usage.diff
+    - remove unnecessary patch line for src/update-notifier.c.orig.rej
+
+  [ Josselin Mouette ]
+  * Add version mangling to watch file.
+  * Require debhelper 5.0.51 for dh_icons.
+  * Make update-notifier-common depend on python for the scripts.
+  * update-notifier.1:
+    + Fix whatis entry.
+    + Fix a typo.
+  * Add set -e to preinst, postinst, postrm.
+  * postrm:
+    + Don’t use -a in the test.
+    + Remove the stamp directory after purge.
+  * Fix spelling of Xfce.
+  * rules:
+    + Remove unused arch-build target.
+    + Don’t ignore errors in make distclean.
+    + Move dh_icons to the appropriate place.
+    + Correctly split binary-arch and binary-indep targets.
+    + Remove the config.{sub,guess} dance, it’s handled by cdbs.
+  * Add -g to CFLAGS for gdm-signal.
+  * gdm-logout-action.[ch]: updated from gnome-panel, so that they are 
+    adapted to the new GDM protocol.
+  * autodown.c: remove references to hibernate.
+  * Install gdm-signal with the 755 permissions (lol).
+  * 002_i18n_update.diff: update fr.po.
+
+ -- Josselin Mouette <joss@debian.org>  Wed, 22 Oct 2008 13:59:28 +0200
+
+update-notifier (0.70.7.debian-4) unstable; urgency=low
+
+  * 002_i18n_update.diff:
+    + updated Spanish translation from Javier Fernández-Sanguino Peña. 
+      Closes: #492433.
+    + updated Finnish translation from Timo Jyrinki. Closes: #497716.
+    + simplified Chinese translation from Deng Xiyue. Closes: #497957.
+  * Remove useless build-dependency on libgamin-dev.
+
+ -- Josselin Mouette <joss@debian.org>  Thu, 18 Sep 2008 18:25:36 +0200
+
+update-notifier (0.70.7.debian-3) unstable; urgency=low
+
+  [ Emilio Pozuelo Monfort ]
+  * debian/control.in:
+    - update-notifier-common replaces update-manager, as it's
+      now shipping /etc/apt/apt.conf.d/10periodic.
+    - Remove Conflicts in update-notifier-common, they are not needed.
+
+  [ Alan Baghumian ]
+  * Bump standards version to 3.8.0, no extra change is needed
+  * Updated 07_improve_readme.diff to fix examples reference 
+  * Fixed wrong executable check in update-notifier.cron.daily example
+    script. Closes: #489954.
+
+ -- Alan Baghumian <alan@technotux.org>  Wed, 09 Jul 2008 09:05:22 +0200
+
+update-notifier (0.70.7.debian-2) unstable; urgency=low
+
+  * debian/control.in:
+    - Fix Conflicts/Replaces versioning. Closes: #489592.
+
+ -- Emilio Pozuelo Monfort <pochu@ubuntu.com>  Tue, 08 Jul 2008 02:33:42 +0200
+
+update-notifier (0.70.7.debian-1) unstable; urgency=low
+
+  [ Alan Baghumian ]
+  * New upstream stable releases
+  * debian/changelog.ubuntu:
+    - updated from the Ubuntu package
+  * debian/control*:
+    - bump standards version to 3.7.3
+    - bump minimum libgtk2.0-dev build-dep to >= 2.10.0
+    - bump minimum libdbus-glib-1-dev build-dep to >= 0.60
+    - added update-notifier-common to put shared things there
+    - added update-notifier-common to update-notifier's deps
+    - updated my email address
+    - updated uploaders/maintainers
+  * Added debian/15update-stamp:
+    - move the update stamp hook into its own configuration
+      (LP: #181189)
+  * Updated debian/*.install for proper locations
+  * debian/rules:
+    - merged upstream changes
+    - extra space clean-ups
+  * Updated 04_fix_gksu_usage.diff:
+    - call update-manager with gksu
+    - refreshed to be applied correctly
+  * Rename upgrade-notifier.cron.daily to update-notifier.cron.daily
+    as mentioned in the manpage
+  * Removed debian/install: obsolete, merged with
+    update-notifier-common.install
+
+  [ Alan Baghumian ]  
+  * Dropped 05_fix_monitored_dirs.diff, merged upstream
+  * Refreshed 02_reboot_use_my_gdm_signal, 002_i18n_update,
+    04_fix_gksu_usage and 06_port_to_gtk2.10 to be applied
+    cleanly
+
+  [ Gustavo Noronha Silva ]
+  * debian/control:
+  - Make GNOME team the maintainer, I can no longer be involved
+  - Add VCS information
+
+ -- Alan Baghumian <alan@technotux.org>  Sun, 06 Apr 2008 17:06:41 +0200
+
+update-notifier (0.70.7) hardy; urgency=low
+
+  * src/update-notifier.c:
+    - support running for non-admin users too
+    - support forcing gksu 
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 04 Apr 2008 23:15:31 +0200
+
+update-notifier (0.70.6) hardy; urgency=low
+
+  * src/update-notifier.c:
+    - monitor the apt-get update stamp file too (LP: #206360)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 01 Apr 2008 16:49:48 +0200
+
+update-notifier (0.70.5) hardy; urgency=low
+
+  * src/update-notifier.c:
+    - delay statup checks for updates etc for 60s to avoid
+      slowing down the desktop startup (for Seb128)
+    - fix typo in monitored directories (LP: #188201)
+  * src/update.c, src/crash.c, src/hooks.c:
+    - ensure to not show notification if the icon is already
+      gone (LP: #187744)
+  * src/hal.c:
+    - setup sensible default actions (LP: #186595)
+    - do not keep the cdrom detected window on top of
+      other windows (LP: #186593) and make sure it appears
+      in the taskbar
+  * src/reboot.c:
+    - use bigger icon (LP: #149380)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 13 Mar 2008 18:24:07 +0100
+
+update-notifier (0.70.4) hardy; urgency=low
+
+  * src/update.c, debian/15update-stamp:
+    - run in the new APT::Update::Post-Invoke-Success slot
+    - use /var/lib/apt/periodic/update-success-stamp stamp
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 06 Feb 2008 19:16:58 +0100
+
+update-notifier (0.70.3) hardy; urgency=low
+
+  * src/update.c:
+    - string fix (thanks to Brian Murray, LP: #181375)
+    - do not display a error when running on the live-cd
+      and apt-check is symlinked to /bin/true
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 10 Jan 2008 22:16:15 +0100
+
+update-notifier (0.70.2) hardy; urgency=low
+
+  * debian/control:
+    - fix typo in Vcs-Bzr header (thanks to Brian Murray)
+  * src/update.c:
+    - remove debug output
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 09 Jan 2008 09:45:14 +0100
+
+update-notifier (0.70.1) hardy; urgency=low
+
+  * debian/15update-stamp:
+    - move the update stamp hook into its own configuration
+      (LP: #181189)
+  * src/hal.c:
+    - do not spam .xsession-erors if no cdrom can be found
+      (LP: #177437)
+  * src/update.c:
+    - fix incorrect initialization of GString
+    - always show icon when apt is working (LP: #173149)
+    - fix in the insensitve code
+  * src/update-notifier.h:
+    - fix timeouts for outdated repository information
+  * po/POTFILES.in:
+    - remove unused ui/upgrade-dialog.glade (LP: #157416)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 08 Jan 2008 15:14:35 +0100
+
+update-notifier (0.70) hardy; urgency=low
+
+  * use icon theme names "software-update-available" and
+    "software-update-urgent" to show that updates are
+    available and use the "-urgent" icon on security 
+    updates
+  * show a warning icon if the last refresh of the
+    repository information is older than 7 days
+  * debian/10periodic:
+    - install APT::Update::Post-Invoke handler so that the 
+      update-stamp is always updated after a successful update
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 04 Jan 2008 16:27:34 +0100
+
+update-notifier (0.67) hardy; urgency=low
+
+  * Call this *#(*$# arch-build to generate the autotools files.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 28 Nov 2007 12:48:27 +0100
+
+update-notifier (0.66) hardy; urgency=low
+
+  * data/update-notifier.schemas.in: Enable apport for Hardy.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 28 Nov 2007 12:46:56 +0100
+
+update-notifier (0.65) hardy; urgency=low
+
+  * use getgroups() instead of getgrouplist() to work better
+    with stuff from pam_groups (thanks to Sebastian Dröge)
+  * add 22x22 and 24x24 icons (thanks to Alan Baghumian)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 16 Nov 2007 10:18:09 +0100
+
+update-notifier (0.61) gutsy; urgency=low
+
+  * data/update-notifier.schemas.in: 
+    - fix typo
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 08 Oct 2007 21:36:31 +0200
+
+update-notifier (0.60) gutsy; urgency=low
+
+  * data/update-notifier.schemas.in: 
+    - Disable apport for RC
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 08 Oct 2007 16:27:01 +0200
+
+update-notifier (0.59.6) gutsy; urgency=low
+
+  * debian/rules:
+    - call dh_gconf after the schemas installation so it's registred correctly,
+      that makes apport integration works again
+
+ -- Sebastien Bacher <seb128@canonical.com>  Mon, 24 Sep 2007 17:20:32 +0200
+
+update-notifier (0.59.5.debian-1) unstable; urgency=low
+
+  [ Kilian Krause ]
+  * New upstream release.
+
+  [ Gustavo Noronha Silva ]
+  * debian/patches/06_port_to_gtk2.10.diff:
+  - added to conditionaly use a gtk2.12-only function, which does
+    not seem to break update-notifier if removed
+  * debian/control.in, debian/update-notifier.1,
+    debian/update-notifier.examples, debian/patches/07_improve_readme.diff:
+  - accepted (slightly reworked) patch by Javier Fernández-Sanguino Peña
+    to make it clear that update-notifier depends on external services
+    to actually notice that updates are available (Closes: #439239)
+  * debian/changelog.ubuntu:
+  - updated from the Ubuntu package
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Tue, 04 Sep 2007 21:40:19 -0300
+
+update-notifier (0.59.5) gutsy; urgency=low
+
+  * code cleanups
+  * fix incorrect tooltip when package manager was
+    running (LP: #134959)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 27 Aug 2007 13:31:44 +0200
+
+update-notifier (0.59.4.debian-1) unstable; urgency=low
+
+  [ Gustavo Noronha Silva ]
+  * New upstream version
+  * Fix Uploaders field syntax (Closes: #431667)
+  * Fix source package naming to indicate we modify it for Debian
+  * debian/patches/05_fix_monitored_dirs.diff:
+  - avoid monitoring non-existing directories (Debian-wise)
+
+  [ Loic Minier ]
+  * Use ubuntu-get-source instead of gnome-get-source; build-dep on
+    gnome-pkg-tools >= 0.12.3.
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Tue, 21 Aug 2007 22:30:00 -0300
+
+update-notifier (0.59.4) gutsy; urgency=low
+
+  * Don't install notify-reboot-required in update-notifier
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 16 Aug 2007 18:39:38 +0100
+
+update-notifier (0.59.3) gutsy; urgency=low
+
+  * Add update-notifier-common conflicts and replaces 
+    on old update-notifier
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 16 Aug 2007 15:45:29 +0100
+
+update-notifier (0.59.2) gutsy; urgency=low
+
+  * Re-libtoolise before upload, fix fail to compile
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 16 Aug 2007 12:18:40 +0100
+
+update-notifier (0.59.1) gutsy; urgency=low
+
+  [Jonathan Riddell]
+  * Split some files into update-notifier-common for sharing
+    with adept-notifier
+  
+  [Michael Vogt]
+  * fix schema location to /usr/share/gconf/schemas
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 15 Aug 2007 19:01:27 +0200
+
+update-notifier (0.59) gutsy; urgency=low
+
+  * fix crash in leftover from pre-GtkStatusIcon code (LP: #127965)
+  * consitently use notify_notification_new_with_status_icon()
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 27 Jul 2007 22:28:30 +0200
+
+update-notifier (0.58) gutsy; urgency=low
+
+  * use GtkStatusIcon instead of EggTrayIcon, that makes
+    the code significantly simpler
+  * debian/rules: 
+    - use dh_icons instead of dh_iconcache
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 17 Jul 2007 15:30:42 +0100
+
+update-notifier (0.57.3-1) unstable; urgency=low
+
+  [ Alan Baghumian ]
+  * New upstream release (Closes: #422507).
+  * Merged with the previous changelog entry.
+  * Removed 001_all_linguas.diff, merged upstream
+  * Updated changelog.ubuntu
+  * Updated 002_i18n_update.diff, 03_detect_debian_cd.diff
+  * Updated debian/control*
+    - Added myself to the uploaders
+    - Wrapped deps and build-deps
+
+  [ Loic Minier ]
+  * Add a get-orig-source target to retrieve the upstream tarball.
+
+  [ Sven Arvidsson ]
+  * Add a man page (Closes: #404814).
+
+  [ Gustavo Noronha Silva ]
+  * debian/patches/03_detect_debian_cd.diff:
+  - reupdated for 0.57.3 (Alan had updated this for 0.57.1)
+  * debian/patches/04_fix_gksu_usage.diff:
+  - do not use full path for update-manager when calling it;
+    the path for update-manager has changed from /usr/sbin
+    in earlier releases, and if we change the path to that here
+    we'll have to bump deps, which may not be desired; same
+    goes for software-properties
+  - tell the code that update-manager needs gksu
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Wed, 27 Jun 2007 21:19:35 -0300
+
+update-notifier (0.57.3) gutsy; urgency=low
+
+  * data/update-notifier.schemas.in: Enable apport again for Tribe-2.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 26 Jun 2007 13:00:35 +0200
+
+update-notifier (0.57.2) gutsy; urgency=low
+
+  * fix spelling mistake in addon CD detection (LP#110352)
+  * fix incorrect desktop file name 
+  * add AptOnCD media detection (thanks to Rafael Proenca)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 20 Jun 2007 21:24:34 +0200
+
+update-notifier (0.57.1) gutsy; urgency=low
+
+  * remove dbus-1-utils dependency
+  * use gtk-yes for restart notification (LP#103710)
+  * fix spelling mistakes (LP#64485)
+  * fix memory-leak in in_admin_group()
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 23 May 2007 13:00:45 +0200
+
+update-notifier (0.57) gutsy; urgency=low
+
+  * fix cdrom detection for cdrom mountpoints with spaces (LP#114593)
+  * implemented new "Title" key in the UpgradeHooks file 
+    (for IncreaseHardwareDatabasePariticipation spec)
+  
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 10 May 2007 15:55:19 +0200
+
+update-notifier (0.56.3) feisty; urgency=low
+
+  * data/update-notifier.schemas.in: Flip apport crash reporting default to
+    'false' for the release.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Mon,  9 Apr 2007 14:20:49 +0200
+
+update-notifier (0.56.2) feisty; urgency=low
+
+  * debian/control: Add X-Vcs-Bzr.
+  * Add data/update-notifier.schemas.in with a key to enable/disable apport
+    report displaying (/apps/update-notifier/show_apport_crashes). Add
+    necessary autotools infrastructure for i18n and installation.
+  * src/crash.c: Do not show apport crash reports if above gconf key is false.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Wed,  4 Apr 2007 17:47:50 +0200
+
+update-notifier (0.56.1) feisty; urgency=low
+
+  * src/update.c:
+    - pass the correct with_gksu flag on right-click (LP:#88825)
+    - fix software-properties call (LP#93909)
+    - fix race in file_monitor_periodic_check() (LP#91277)
+  * data/apt-check.py:
+    - use the system python (LP#94434)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 22 Mar 2007 10:15:51 +0100
+
+update-notifier (0.56) feisty; urgency=low
+
+  [ Jonathan Riddell ]
+  * src/crash.c: Fix spelling.
+
+  [ Martin Pitt ]
+  * src/update-notifier.c: Now that we have it, use apport's native icon
+    instead of the bomb.
+  * Remove pixmaps/16x16/crashreport-notifier.png, obsolete.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Thu, 22 Feb 2007 13:56:12 +0100
+
+update-notifier (0.55) feisty; urgency=low
+
+  * src/rfc822.c:
+    - fix the parser to deal with ' .\n' lines properly
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 16 Feb 2007 15:02:00 +0100
+
+update-notifier (0.54) feisty; urgency=low
+
+  * src/hooks.c:
+    - added Gettext-Domain key support 
+    - added DisplayIf command support
+     (IncreaseHardwareDatabaseParticipation)
+  * src/hwdb_client.[ch]: 
+    - removed, the notification will be done via the hooks
+  * src/update-notifier.c:
+    - remove hwdb_client_check() 
+    - "--debug-hooks" does not take a argument anymore
+  * HOOKS: updated the documentation 
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 16 Feb 2007 10:48:05 +0100
+
+update-notifier (0.53) feisty; urgency=low
+
+  * detection for addon CDs added (as speced in EdubuntuOnTwoCDs)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue,  6 Feb 2007 12:47:17 +0100
+
+update-notifier (0.52) feisty; urgency=low
+
+  * INSTALL: Update to automake 1.10 version.
+  * src/hwdb_client.c: Check for hwdb-gui before displaying notification.
+  * src/hwdb_client.c: Do not display notification if
+    /var/lib/hwdb-client-common/no-notification exists.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Mon,  5 Feb 2007 13:31:48 +0100
+
+update-notifier (0.51) feisty; urgency=low
+
+  * Add src/hwdb_client.[hc]: Implement notification bubble for hwdb-client.
+    The notification triggers on a live sytem (/proc/cmdline contains
+    "boot=casper") and the first time the user with uid=1000 logs in.
+  * INSTALL: Update to current FSF version.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Thu,  1 Feb 2007 16:16:09 +0100
+
+update-notifier (0.50.3) feisty; urgency=low
+
+  * src/crash.c: Only show a notification for system crash reports, do not
+    immediately throw gksu into the user's face unexpectedly and steal the
+    focus.
+  * src/update-notifier.h: Add a third argument to invoke_with_gksu which uses
+    'descr' as the complete message instead of just the desktop file name. Fix
+    all calls to it.
+  * src/crash.c: Use a more meaningful message for gksu'ing to access system
+    crash reports.
+  * autogen.sh: Call autoreconf/intltoolize/aclocal instead of
+    gnome-autogen.sh, since the latter just breaks randomly and doesn't
+    actually do anything useful for us.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Mon, 22 Jan 2007 15:24:20 +0100
+
+update-notifier (0.50.2) feisty; urgency=low
+
+  [Martin Pitt]
+  * src/crash.c: If the user is an admin, also check for crashes of system
+    programs (apport-checkreports --system) and invoke apport-gtk through gksu
+    for them. Closes: LP#62316
+  [Michael Vogt]
+  * data/apt-cdrom-check:
+    - fix bashism in detection code
+    - use gpgv instead of gpg for signature verification
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 12 Jan 2007 18:50:56 +0100
+
+update-notifier (0.50.1) feisty; urgency=low
+
+  * src/avahi.c: Fix string quotes to fix FTBFS on the buildds (worked just
+    fine on local feisty, duh).
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 12 Dec 2006 16:39:08 +0100
+
+update-notifier (0.50) feisty; urgency=low
+
+  * Add check for /var/run/avahi-daemon/disabled-for-unicast-local, which
+    indicates that Avahi was disabled due to an already existing unicast
+    .local domain. This is invalid and breaks that domain, thus Avahi gets
+    disabled in that case. Inform the user about it, as per
+    https://wiki.ubuntu.com/ZeroConfNetworking.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 12 Dec 2006 12:14:10 +0100
+
+update-notifier (0.43.3) UNRELEASED; urgency=low
+
+  * Add check for /var/run/avahi-daemon/disabled-for-unicast-local, which
+    indicates that Avahi was disabled due to an already existing unicast
+    .local domain. This is invalid and breaks that domain, thus Avahi gets
+    disabled in that case. Inform the user about it, as per
+    https://wiki.ubuntu.com/ZeroConfNetworking.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 12 Dec 2006 12:14:10 +0100
+
+update-notifier (0.43.2) edgy; urgency=low
+
+  * data/apt-cdrom-check:
+    - fix problem in the dist-upgrade cdrom detection
+  * po/POTFILES.in:
+    - missing missing file in POTFILES.in (lp: #63151)
+  * src/hooks.c:
+    - support for urls in the hooks
+  * ui/reboot.glade:
+    - fix typos (lp: #61537)
+  * ui/hooks-dialog.glade:
+    - make the string simpler (lp: #42733)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon,  2 Oct 2006 16:53:21 +0200
+
+update-notifier (0.43.1) edgy; urgency=low
+
+  * data/cddistupgrade, data/apt-cdrom-check:
+    - fixes in cdrom based dist-upgrade code 
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Sun,  3 Sep 2006 11:33:37 +0200
+
+update-notifier (0.43) edgy; urgency=low
+
+  * support for CDs with a dist-upgrader (see the CDRomBasedUpgradesSpec
+    for details)
+  * don't run update-manager as root (it works fine as user now)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri,  1 Sep 2006 17:22:48 +0200
+
+update-notifier (0.42.13build1) edgy; urgency=low
+
+  * Rebuild against dbus 0.90
+
+ -- Sebastian Dröge <slomo@ubuntu.com>  Mon, 28 Aug 2006 19:59:24 +0200
+
+update-notifier (0.42.13) edgy; urgency=low
+
+  * po/sv.po:
+    - new translation (thanks to Daniel Nylander and Gustavo N. Silva)
+  * really hide the crash icon after runing apport-gtk
+  * made the branding more neutral in the CD detection (thanks to 
+    Gustavo Noronha Silva)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 28 Aug 2006 17:07:23 +0200
+
+update-notifier (0.42.12-3) unstable; urgency=low
+
+  * debian/patches/002_i18n_update.diff:
+  - updated, including the translation update on es.po done by
+    Javier Fernández-Sanguino Peña <jfs@computer.org>
+    (Closes: #397132)
+  * debian/docs:
+  - also install debian/README.reboot-required.Debian, written by
+    the same Javier above, explaining the reboot required feature
+    of update-notifier for users and developers (Closes: #404810)
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Thu, 28 Dec 2006 21:29:17 -0200
+
+update-notifier (0.42.12-2) unstable; urgency=low
+
+  * debian/patches/03_detect_debian_cd.diff:
+  - instead of a hack to replace the distribution name
+    string, accept suggestions by Christian Perrier and
+    C. Gatzemeier on the wording of the sentences
+  * debian/patches/002_i18n_update.diff:
+  - added; includes all the i18n updates, including the ones
+    listed in the removed patches and an update-po, so all
+    languages have up-to-date pofiles after an 'apply-patches'
+  * debian/patches/
+                   002_pt_BR_update.diff
+                   003_sv_add.diff:
+  - removed, see change above
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Sun, 13 Aug 2006 14:49:47 -0300
+
+update-notifier (0.42.12-1) unstable; urgency=low
+
+  * New upstream version
+  * debian/docs, debian/changelog.ubuntu:
+  - include the ubuntu changelog as part of the docs
+  * debian/patches/01_notify_reboot_dont_check_for_mount.diff:
+  - added; make notify-reboot-needed not check whether /var/run is a
+    mountpoint, since it not always is, in Debian
+  * debian/rules, debian/copyright, debian/gdm-signal,
+    debian/patches/02_reboot_use_my_gdm_signal.diff,
+    debain/update-notifier.install:
+  - provide a /usr/lib/update-notifier/gdm-signal, imported
+    from the ubuntu package, which in turn used gnome panel's
+    and Rob Taylor as sources; use that to send the 'reboot'
+    request
+  * Two changesets above (Closes: #353121)
+  * debian/patches/
+                   001_all_linguas.diff
+                   002_pt_BR_update.diff
+		   003_sv_add.diff:
+  - added, including the sv translation (Closes: #381947), and
+    updating the pt_BR translation;
+  * debian/patches/03_detect_debian_cd.diff:
+  - patches update-notifier and apt-cdrom-check to also detect
+    Debian CDs, as oposed to only detecting Ubuntu CDs
+  * debian/control.in:
+  - added python as a dependency
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Sat, 12 Aug 2006 18:45:56 -0300
+
+update-notifier (0.42.12) edgy; urgency=low
+
+  * always hide the crash icon after runing apport-gtk
+    (lp: #56030)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 11 Aug 2006 16:16:23 +0200
+
+update-notifier (0.42.11) edgy; urgency=low
+
+  * src/crash.c:
+    - use apport-checkreports to figure if reports are 
+      interessting for us
+    - don't display a crash icon if no report application is 
+      found (apport-gtk) (lp: #55791)
+  * src/update.c:
+    - don't save the last righ-click user action as new default
+      (caused too much confusion). Thanks to Seb128 for this.
+  * debian/control:
+    - recommends "apport-gtk" now
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 10 Aug 2006 11:26:07 +0200
+
+update-notifier (0.42.10) edgy; urgency=low
+
+  * improved the crash report handling:
+    - only consider size > 0 
+    - wording
+    - start apport-gtk immediately when new reports come in
+    - show a "crashreports found" icon if old reports are availale 
+      on startup
+    - fix incorrect tooltip
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue,  8 Aug 2006 10:05:28 +0200
+
+update-notifier (0.42.9) edgy; urgency=low
+
+  * fix the crash-report tool location
+  * removed libgamin-dev from the build-depends (we use gnome-vfs now)
+  * switch to use GtkIconTheme
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 27 Jul 2006 15:40:41 +0200
+
+update-notifier (0.42.8) edgy; urgency=low
+
+  * basic support for crash reports added (AutomatedProblemReporting spec)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 24 Jul 2006 14:46:44 +0200
+
+update-notifier (0.42.7) edgy; urgency=low
+
+  * data/apt-check:
+    - fix the "clean" method and make it more efficient with the new
+      apt (with auto-mark support)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue,  4 Jul 2006 11:11:44 +0200
+
+update-notifier (0.42.6-1) unstable; urgency=low
+
+  * New upstream version
+  - fixes '100% cpu usage' problem; fix was done in upstream
+    0.41.7, according to the launchpad bug; (Closes: #364518)
+  - includes a .desktop file to auto-start (Closes: #366139)
+  * debian/patches/01_use_gksu.diff:
+  - removed; upstream is already calling gksu
+  * debian/control.in:
+  - added gksu as a Dependency (Closes: #356216)
+  - becoming the maintainer
+  - updating to Standards-Version 3.7.2 with no changes
+  * debian/rules, debian/install[new]:
+  - converted to cdbs
+  * debian/watch:
+  - added to monitor new upstream versions
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Sun,  4 Jun 2006 16:36:56 -0300
+
+update-notifier (0.42.6) dapper; urgency=low
+
+  * pixmaps/update-icon.png:
+    - new icon (thanks to dholbach and the artwork team)
+  * src/update-notifier.c:
+    - use "gksu" instead of "gksudo" (we set /apps/gksu/sudo-mode=true)
+      in gksu by default
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 26 May 2006 11:31:44 +0200
+
+update-notifier (0.42.5) dapper; urgency=low
+
+  * pixmaps/hook-notifier.png:
+    - new icon (thanks to dholbach and the artwork team)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 24 May 2006 13:13:27 +0200
+
+update-notifier (0.42.4) dapper; urgency=low
+
+  * src/update-notifier.c:
+    - increase the timeout for apt operation detection to better
+      support slower systems (#31311)
+    - fix bug in GOptionsEntry array (#44747)
+    - fix double-click (#43774)
+  * src/update.c:
+    - fix consistency problem with update-manager (ubuntu #38382)
+  * pixmaps/reboot.png:
+    - use the new Human icon (ubuntu: #41155)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 18 May 2006 10:38:04 +0200
+
+update-notifier (0.42.3) dapper; urgency=low
+
+  * ui/reboot-dialog.glade:
+    - fixed missing "Translatable" property (*sigh*) (ubuntu: #43522)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 11 May 2006 17:07:51 +0200
+
+update-notifier (0.42.2) dapper; urgency=low
+
+  * po/POTFILES.in:
+    - added missing ui/reboot-dialog.glade (ubuntu: #43522)
+  * data/update-notifier.desktop.in:
+    - added XFCE to list of autostart desktop environments (ubuntu: #43079)
+  * use the desktop file when runing gksu (thanks to Sebastian Heinlein)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon,  8 May 2006 14:21:47 +0200
+
+update-notifier (0.42.1) dapper; urgency=low
+
+  * src/update.c:
+    - add a missing gtk_widget_unrealize() (ubuntu: #5752)
+    - fix start of software-properties tool (ubuntu: #41842)
+  * src/trayicon.c:
+    - apply patch from upstream to fix issues with transparent
+      panels (ubuntu: 32173)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue,  2 May 2006 10:42:59 +0200
+
+update-notifier (0.42) dapper; urgency=low
+
+  * pixmaps/reboot-icon.png, pixmaps/update-icon.png:
+    - new icons from the icon designer
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 18 Apr 2006 09:58:53 +0200
+
+update-notifier (0.41.15) dapper; urgency=low
+
+  * data/apt-check fix typo (ubuntu: #39153)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 11 Apr 2006 19:50:41 +0200
+
+update-notifier (0.41.14) dapper; urgency=low
+
+  * src/update.c: wording fixes (ubuntu: #38572, #38138)
+  * debian/control: added gksu dependency (ubuntu: #35412)
+  * add a warning about unsaved work to the reboot dialog (ubuntu: #35443)
+  * data/apt-check: better error handling for cache errors 
+    (ubuntu: #29295,#34895)
+  * fix the 1px space in the notification area (ubuntu: #5752, thanks
+    to Crispin Flowerday)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 10 Apr 2006 17:06:25 +0200
+
+update-notifier (0.41.13) dapper; urgency=low
+
+  * data/apt-check: fix a exception in the saveDistUpgrade code
+  * src/hooks.c: show the hook notification with a bit of delay
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri,  7 Apr 2006 11:33:14 +0200
+
+update-notifier (0.41.12) dapper; urgency=low
+
+  * fix FTBFS because of missing cleanup in debian/rules arch-build
+    target
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed,  5 Apr 2006 16:59:48 +0200
+
+update-notifier (0.41.11) dapper; urgency=low
+
+  * various internal fixes
+  * added notification on available hooks
+  * dont show/close the updates notification when apt is runing
+  * close the notification when the icon is clicked
+  
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed,  5 Apr 2006 12:08:45 +0200
+
+update-notifier (0.41.10) dapper; urgency=low
+
+  * added to /etc/xdg/autostart
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 13 Mar 2006 11:34:29 +0000
+
+update-notifier (0.41.9) dapper; urgency=low
+
+  * fix a typo (ubuntu #28672)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu,  2 Mar 2006 14:41:21 +0100
+
+update-notifier (0.41.8) dapper; urgency=low
+
+  * po/pt_BR.po: updated translation, thanks to 
+    Carlos Eduardo Pedroza Santiviago
+  * po/fi.po: updated finnish translation (thanks to Timo Jyrinki)
+  * data/apt-check: be more precise when calculating the upgrade
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 20 Feb 2006 22:16:29 +0100
+
+update-notifier (0.41.7.cln) dapper; urgency=low
+
+  * Minor cleanup.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Fri, 17 Feb 2006 19:27:13 +0100
+
+update-notifier (0.41.7) dapper; urgency=low
+
+  * updated eggtrayicon to latest cvs
+  * wait before creating the icon to give the trayapplet a chance to appear
+    (another reason that may cause the 100% cpu problem)
+  * fix a problem that may have caused the icon to appear sensitive while
+    apt was runing (#31311)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 14 Feb 2006 09:17:00 +0100
+
+update-notifier (0.41.6) dapper; urgency=low
+
+  * fix a problem that can lead to 100% on panel restarts
+  * fix remaining bits to not show reboot-notification during 
+    install/upgrades  
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 10 Feb 2006 12:51:35 +0100
+
+update-notifier (0.41.5) dapper; urgency=low
+
+  * src/update-notifier.c:
+    - rework the way gnome-vfs is used, this hopefully fixes the
+      "it uses 100% cpu" bugs
+    - ensure that the "reboot required" does not come up in the middle
+      of the installation/update
+  * src/update.c:
+    - small fix in the way the notification is displayed, should fix  
+      the truncated windows
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu,  9 Feb 2006 13:36:19 +0100
+
+update-notifier (0.41.4) dapper; urgency=low
+
+  * src/update.c: make the blury icon go away
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon,  6 Feb 2006 23:50:55 +0100
+
+update-notifier (0.41.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control.in:
+  - improved description (Closes: #343582)
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Sun,  5 Feb 2006 15:50:16 -0200
+
+update-notifier (0.41.3) dapper; urgency=low
+
+  * switch depends to notification-daemon
+  * added build-dep on libnotify-dev >= 0.3.2-0ubuntu2
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 24 Jan 2006 15:29:37 +0100
+
+update-notifier (0.41.2) dapper; urgency=low
+
+  * Only touch the "Reboot Required" file if /var/run is a mountpoint,
+    otherwise we can't guarantee that it'll disappear after a reboot.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Mon, 23 Jan 2006 15:02:02 +0000
+
+update-notifier (0.41.1) dapper; urgency=low
+
+  * src/update.c: typo fix (ubuntu: #28672)
+  * switched from libgamin to libgnome-vfs for the monitoring
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 17 Jan 2006 14:33:07 +0100
+
+update-notifier (0.41.0-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+  * debian/control.in:
+  - updated build-deps to require libnotify >= 0.3.0
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Fri, 13 Jan 2006 00:28:32 -0200
+
+update-notifier (0.41.0) dapper; urgency=low
+
+  * Introduce new "Restart Required" notification icon and dialog.
+    This is implemented separately to the "hooks" system we currently use,
+    but using the same trigger binary.  This should retain compatibility
+    with existing code, and free up the hooks for less important notifications
+    that the user can read at their leisure.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Wed, 11 Jan 2006 18:16:51 +0000
+
+update-notifier (0.40.18) dapper; urgency=low
+
+  * ported to new libnotify api, build-depend on (>= 0.3.0)
+  * depends on notify-daemon now (instead of notification-daemon)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon,  2 Jan 2006 16:09:24 +0100
+
+update-notifier (0.40.17build1) dapper; urgency=low
+
+  * rebuild against latest dbus, updated dependencies
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 20 Dec 2005 21:13:31 +0100
+
+update-notifier (0.40.17) dapper; urgency=low
+
+  * changes to the notification bubble (to implements the u-n bits 
+    of the "DapperDesktopPlan" spec), removed the blue links
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 14 Dec 2005 11:43:23 +0100
+
+update-notifier (0.40.16) dapper; urgency=low
+
+  * don't start if the user is not in admin group (see HideAdminTools 
+    spec)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu,  1 Dec 2005 17:31:03 +0100
+
+update-notifier (0.40.15-2) experimental; urgency=low
+
+  * debian/control.in:
+  - added ${python:Depends} to update-notifier's Depends
+  * debian/rules:
+  - removed unneeded dh_'s and uncommented dh_python
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Mon,  5 Dec 2005 22:08:31 -0200
+
+update-notifier (0.40.15-1) experimental; urgency=low
+
+  * First Debian upload based on the work by Ubuntu
+    (Closes: #301718)
+  * debian/rules:
+  - only update config.{sub,guess} if they exist
+  * debian/copyright:
+  - detail the copyright/license information
+  * debian/rules, debian/control.in:
+  - added simple-patchsys and gnome-pkg-tools support
+  * debian/control.in:
+  - raising Standards-Version to 3.6.2, no changes
+  * debian/patches/01_use_gksu.diff:
+  - added, use gksu instead of gksudo through update-notifier
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Fri,  2 Dec 2005 00:08:41 -0200
+
+update-notifier (0.40.15) breezy; urgency=low
+
+  * debian/99update-notifier:
+    - added if [ -d /var/lib/update-notifier/ ]; then 
+      around the touch dpkg-was-run stamp file (makes a purge possible 
+      without dpkg error). Thanks to Kamion for reviewing it.
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 10 Oct 2005 14:02:48 +0200
+
+update-notifier (0.40.14) breezy; urgency=low
+
+  * debian/99update-notifier:
+    - only touch the dpkg-run-stamp if /var/lib/update-notifier/ 
+      actaully exists (makes a purge possible without dpkg error)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 10 Oct 2005 09:50:52 +0200
+
+update-notifier (0.40.13) breezy; urgency=low
+
+  * src/hooks.c:
+    - skip deleted hook files (ubuntu #17067, #17205)
+    - fix a bug in the "supress-duplicates" logic that caused
+      already seen hooks to be seen again and again (ubuntu #17091)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed,  5 Oct 2005 12:29:25 +0200
+
+update-notifier (0.40.12) breezy; urgency=low
+
+  * src/hooks.c:
+    - fix a bug that prevented the summary to be displayed (thanks to 
+      pitti for noticing)
+    - make sure that the notification is shown after the upgrade
+      (ubuntu #16759)
+    - make sure to init the md5sums of already seen hooks to avoid
+      showing duplicated entries (like e.g. from the kernel)
+  * src/update.c:
+    - if "show notifications" is unchecked hide a possible open 
+      notification too (ubuntu #16803)
+    - hide the notification bubble if the updates are finished 
+      (ubuntu #14663, #16179)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue,  4 Oct 2005 12:24:58 +0200
+
+update-notifier (0.40.11) breezy; urgency=low
+
+  * src/hooks.c:
+    - be even more carefull with the hook list managment
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 26 Sep 2005 23:28:35 +0200
+
+update-notifier (0.40.10) breezy; urgency=low
+
+  * po/hu.po:
+    - added Hungarian translation (thanks to Gabor Kelemen)
+  * src/update.c:
+    - typo fix (malone #2464)
+  * src/hal.c:
+    - automatic upgrading from the cd disabled until this is properly
+      speced 
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 21 Sep 2005 15:08:06 +0200
+
+update-notifier (0.40.9) breezy; urgency=low
+
+  * src/hooks.c:
+    - be more carefull about the hook lists (ubuntu #14077)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 19 Sep 2005 10:37:54 +0200
+
+update-notifier (0.40.8) breezy; urgency=low
+
+  * src/update.c:
+    - don't show a notification-bubble if the upgrade already finished
+      (ubuntu #15550)
+  * src/hooks.c:
+    - don't show identical notifications more than once (e.g. it's common
+      to have multiple kernel notifications)
+  * debian/control:
+    added dependencies to: hal, notification-daemon (ubuntu #15526)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 16 Sep 2005 13:28:23 +0200
+
+update-notifier (0.40.7) breezy; urgency=low
+
+  * src/update.c:
+    - make the g_timeout for the update-bubble 5 secs (instead of 0.5s)
+      (ubuntu #14479)
+  * src/hooks.c:
+    - added "DontShowAfterReboot" key to the hook file for e.g. 
+      kernel notifications (ubuntu #13886)
+    - type: "informations" -> "information" (ubuntu #7052)
+  * typo fixes (ubuntu #15259)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 13 Sep 2005 20:11:59 +0200
+
+update-notifier (0.40.6) breezy; urgency=low
+
+  * added src/hal.c to po/POTFILES.in (thanks Kamion)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 31 Aug 2005 17:39:47 +0200
+
+update-notifier (0.40.5) breezy; urgency=low
+
+  * bugfixes:
+    - improve the popup-notifications (thanks to mpt for his feedback)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 25 Aug 2005 18:15:24 +0200
+
+update-notifier (0.40.4) breezy; urgency=low
+
+  * bugfixes:
+    - better dbus reconnect support 
+    - typo fix (ubuntu #13391)
+    - be more carefull about the placement of the notification send
+      with libnotify
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 16 Aug 2005 10:29:08 +0200
+
+update-notifier (0.40.3) breezy; urgency=low
+
+  * gamin changed the semantic of FAMEvent.Filename, changed the
+    code to deal with that
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 11 Aug 2005 15:14:40 +0200
+
+update-notifier (0.40.2) breezy; urgency=low
+
+  * report errors in the cache to the user
+  * use libnotify to tell the user about updates
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 10 Aug 2005 13:07:00 +0200
+
+update-notifier (0.40.1) breezy; urgency=low
+
+  *  global already seen hook file in /etc/update-notifier/hooks_seen 
+     added
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon,  4 Jul 2005 11:28:47 +0200
+
+update-notifier (0.40) breezy; urgency=low
+
+  * fixed various bugs in the hook display code
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 27 Jun 2005 15:02:05 +0200
+
+update-notifier (0.39.2) breezy; urgency=low
+
+  * fix in the md5sum check in preinst (apologies to keybuk 
+    for suspecting the new dpkg) 
+  * call intltool-update -v -p in build target to make
+    langpack generation happy
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 14 Jun 2005 10:25:54 +0200
+
+update-notifier (0.39.1) breezy; urgency=low
+
+  * fixed a bug in apt-check (only happens on very new python-apt 
+    versions)
+  * ported the hal-reconnect bits to the new dbus api
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 10 Jun 2005 11:10:23 +0200
+
+update-notifier (0.39) breezy; urgency=low
+
+  * ported to libhal 0.5.1, build-depend on it,
+    -> the reconnect bits still needs to be ported
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 10 May 2005 16:52:30 +0200
+
+update-notifier (0.38.11) hoary; urgency=low
+
+  * session icon and tray icon improved, no more blurry
+    (thanks to Alexander Brausewetter) 
+  * updated fi.po translation (thanks to Timo Jyrinki)
+  * updated german translation
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 30 Mar 2005 12:39:13 +0200
+
+update-notifier (0.38.10) hoary; urgency=low
+
+  * fix for the pin file reading
+  * work-around a problem in python-apt when reading the pin file
+    (#8095)
+  * fix for the nr of upgrades calculation
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 23 Mar 2005 14:54:53 +0100
+
+update-notifier (0.38.9ubuntu1) hoary; urgency=low
+
+  * fixed wrongly formated 20archive file 
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 23 Mar 2005 01:52:13 +0100
+
+update-notifier (0.38.9) hoary; urgency=low
+
+  * i18n fixes (missing translatable strings
+  * fix for wrong upgrade count (#7907)
+  * fix for a misdetection of a ubuntu cd
+  * translation update (es)
+  * setup /etc/apt/apt.conf.d/20archive with defaults 
+    for archive size (500Mb) and archive age (30 days)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 23 Mar 2005 01:04:10 +0100
+
+update-notifier (0.38.8) hoary; urgency=low
+
+  * try harder not to identify the live cd as install cd (#7114)
+  * try to keep the CD detected dialog above other window
+  * detect downloads of packages (fix #6307)
+  * show nice message when calling gksudo (fix #6671)
+  * typo fix (#7052)
+  * consider pined packages too (#7368)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri,  4 Mar 2005 11:55:32 +0100
+
+update-notifier (0.38.7) hoary; urgency=low
+
+  * fixed a problem with the i18n 
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 21 Feb 2005 23:10:32 +0100
+
+update-notifier (0.38.6) hoary; urgency=low
+
+  * work around a gamin problem with monitoring single files
+  * added fi.po translation (thanks to Timo Jyrinki)
+  * added es.po translation (thanks to Jorge Bernal)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue,  8 Feb 2005 10:16:26 +0100
+
+update-notifier (0.38.5) hoary; urgency=low
+
+  * fixed a problem that causes udpate-notifier not to update it's status
+    when it was upgraded or re-installed
+  * basic i18n support for the hooks added
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue,  1 Feb 2005 15:03:26 +0100
+
+update-notifier (0.38.4) hoary; urgency=low
+
+  * fixed missing gettext init (thanks to seb128!)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 28 Jan 2005 13:11:57 +0100
+
+update-notifier (0.38.3) hoary; urgency=low
+
+  * da.po added (thanks to Martin Willemoes Hansen)
+  * some more code cleanups
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 27 Jan 2005 20:07:09 +0100
+
+update-notifier (0.38.2) hoary; urgency=low
+
+  * depend on update-manager now
+  * better error reporting when hal/dbus/fam are not available
+  * run "gnome-software-properties" by default if prefernces is clicked
+  * save last action as default action on left click
+
+ -- Michael Vogt <mvo@debian.org>  Mon, 24 Jan 2005 11:28:07 +0100
+
+update-notifier (0.38.1) hoary; urgency=low
+
+  * put the periodic entries in /etc/apt/apt.conf.d/99update-notifier 
+    into /etc/apt/apt.conf.d/10periodic
+
+ -- Michael Vogt <mvo@debian.org>  Wed, 19 Jan 2005 14:16:56 +0100
+
+update-notifier (0.38) hoary; urgency=low
+
+  * basic hook support added
+
+ -- Michael Vogt <mvo@debian.org>  Wed, 12 Jan 2005 16:51:43 +0100
+
+update-notifier (0.37.3) hoary; urgency=low
+
+  * improved the detection of apt-get update conditions a lot
+  * simplified the code that show/hides the icon
+  * md5 check for left-over /etc/apt/apt.conf.d/99upgrade-notifer
+    and delete it if unmodified
+
+ -- Michael Vogt <mvo@debian.org>  Tue, 11 Jan 2005 14:28:29 +0100
+
+update-notifier (0.37.2) hoary; urgency=low
+
+  * fixed a missed name change in debian/S99update-notifier
+
+ -- Michael Vogt <mvo@debian.org>  Fri,  7 Jan 2005 00:00:45 +0100
+
+update-notifier (0.37.1) hoary; urgency=low
+
+  * cdrom detection dialog improved
+  * renamed to "update-notifier" 
+
+ -- Michael Vogt <mvo@debian.org>  Thu,  6 Jan 2005 16:40:13 +0100
+
+upgrade-notifier (0.37) hoary; urgency=low
+
+  * hal support added, not-yet-scanned cdroms are automatically detected
+
+ -- Michael Vogt <mvo@debian.org>  Wed, 29 Dec 2004 20:57:24 +0100
+
+upgrade-notifier (0.36.1-1) hoary; urgency=low
+
+  * new version that fixes a segfault
+
+ -- Michael Vogt <mvo@debian.org>  Wed, 15 Dec 2004 17:27:12 +0100
+
+upgrade-notifier (0.36-1) hoary; urgency=low
+
+  * new upstream release
+
+ -- Michael Vogt <mvo@debian.org>  Tue, 14 Dec 2004 17:23:21 +0100
+
+upgrade-notifier (0.35-1) hoary; urgency=low
+
+  * new upstream release
+ 
+ -- Michael Vogt <mvo@debian.org>  Sun, 28 Nov 2004 13:56:33 +0100
+
+upgrade-notifier (0.34-1) hoary; urgency=low
+
+  * new upstream release
+
+ -- Michael Vogt <mvo@debian.org>  Tue,  9 Nov 2004 12:36:07 +0100
+
+upgrade-notifier (0.33-7) unstable; urgency=low
+
+  * prepared cron.daily to run "apt-get update" (not enabled)
+
+ -- Michael Vogt <mvo@debian.org>  Tue,  2 Nov 2004 14:43:52 +0100
+
+upgrade-notifier (0.33-6) unstable; urgency=low
+
+  * Build with update-manager.
+
+ -- Michiel Sikkes <michiel@eyesopened.nl>  Mon, 25 Oct 2004 22:01:09 +0200
+
+upgrade-notifier (0.33-5) unstable; urgency=low
+
+  * Added build-depends.
+
+ -- Michiel Sikkes <michiel@eyesopened.nl>  Mon, 25 Oct 2004 21:47:03 +0200
+
+upgrade-notifier (0.33-4) unstable; urgency=low
+
+  * Build against current glib.
+
+ -- Michiel Sikkes <michiel@eyesopened.nl>  Mon, 25 Oct 2004 14:50:59 +0200
+
+upgrade-notifier (0.33-3) unstable; urgency=low
+
+  * Build against current gtk.
+
+ -- Michiel Sikkes <michiel@eyesopened.nl>  Sun, 24 Oct 2004 04:39:53 +0200
+
+upgrade-notifier (0.33-2) unstable; urgency=low
+
+  * Added synaptic wrapper script.
+
+ -- Michiel Sikkes <michiel@eyesopened.nl>  Sat, 23 Oct 2004 16:58:03 +0200
+
+upgrade-notifier (0.33-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Michiel Sikkes <michiel@eyesopened.nl>  Fri, 22 Oct 2004 22:55:25 +0200
+

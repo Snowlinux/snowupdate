@@ -1,0 +1,412 @@
+# Esperanto translation for update-notifier
+# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
+# This file is distributed under the same license as the update-notifier package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: update-notifier\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-31 00:41+0000\n"
+"PO-Revision-Date: 2012-05-31 07:48+0000\n"
+"Last-Translator: Michael Moroni <michael.moroni@mailoo.org>\n"
+"Language-Team: Esperanto <eo@li.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2012-10-09 15:32+0000\n"
+"X-Generator: Launchpad (build 16112)\n"
+
+#: ../data/apt_check.py:22
+#, python-format
+msgid "Unknown Error: '%s' (%s)"
+msgstr "Nekonata eraro: '%s' (%s)"
+
+#: ../data/apt_check.py:61
+#, python-format
+msgid "%i package can be updated."
+msgid_plural "%i packages can be updated."
+msgstr[0] "%i pakaĵo estas ĝisdatigebla."
+msgstr[1] "%i pakaĵoj estas ĝisdatigeblaj."
+
+#: ../data/apt_check.py:66
+#, python-format
+msgid "%i update is a security update."
+msgid_plural "%i updates are security updates."
+msgstr[0] "%i ĝisdatigo estas sekureca ĝisdatigo."
+msgstr[1] "%i ĝisdatigoj estas sekurecaj ĝisdatigoj."
+
+#: ../data/apt_check.py:94
+#, python-format
+msgid "Error: Opening the cache (%s)"
+msgstr "Eraro: malfermanta la kaŝmemoron (%s)"
+
+#: ../data/apt_check.py:108
+msgid "Error: BrokenCount > 0"
+msgstr "Eraro: RompNombro > 0"
+
+#: ../data/apt_check.py:115
+#, python-format
+msgid "Error: Marking the upgrade (%s)"
+msgstr "Eraro: markanta promociojn (%s)"
+
+#: ../data/apt_check.py:179
+msgid "Show the packages that are going to be installed/upgraded"
+msgstr "Montri la pakaĵojn, kiuj estas instalotaj/promociotaj"
+
+#: ../data/apt_check.py:184
+msgid "Show human readable output on stdout"
+msgstr "Vidigi home legeblan eligon sur ĉefeligujo."
+
+#: ../data/apt_check.py:188
+msgid ""
+"Return the time in days when security updates are installed unattended (0 "
+"means disabled)"
+msgstr ""
+"Entajpu la tempon en tagoj ĝis sekurec-ĝisdatigoj estu aŭtomate instalataj "
+"(0 signifas malŝaltita)"
+
+#: ../src/crash.c:46
+msgid "System program problem detected"
+msgstr "La sistemo detektis problemon de programaro"
+
+#: ../src/crash.c:47
+msgid "Do you want to report the problem now?"
+msgstr "Ĉu vi deziras tuj raporti la problemon?"
+
+#: ../src/crash.c:57
+msgid "Report problem…"
+msgstr "Raporti problemon..."
+
+#: ../src/crash.c:90 ../src/crash.c:209
+msgid "Crash report detected"
+msgstr "Raporto de kolapso detektita"
+
+#: ../src/crash.c:91
+msgid ""
+"An application has crashed on your system (now or in the past). Click on the "
+"notification icon to display details. "
+msgstr ""
+"Aplikaĵo kolapsis en via sistemo (ĵus aŭ en la pasinteco). Alklaku sur la "
+"atentigpiktogramon por montri detalojn. "
+
+#. Create and show the notification
+#: ../src/avahi.c:15
+msgid "Network service discovery disabled"
+msgstr "Malkovrado de retservoj malŝaltita"
+
+#: ../src/avahi.c:16
+msgid ""
+"Your current network has a .local domain, which is not recommended and "
+"incompatible with the Avahi network service discovery. The service has been "
+"disabled."
+msgstr ""
+"Via nuna reto havas domajnon .local, kio estas malrekomendita kaj nekongrua "
+"kun la malkovrado de retservoj de Avahi. La servo estis malŝaltita."
+
+#: ../src/cdroms.c:51
+msgid "Software Packages Volume Detected"
+msgstr "Datumportilo kun programarpakaĵoj detektita"
+
+#: ../src/cdroms.c:52
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with software packages has "
+"been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Datumportilo kun programaraj pakaĵoj "
+"estas detektita.</span>\n"
+"\n"
+"Ĉu vi deziras malfermi ĝin per la pakaĵmastrumilo?"
+
+#: ../src/cdroms.c:60
+msgid "Start Package Manager"
+msgstr "Lanĉi pakaĵmastrumilon"
+
+#: ../src/cdroms.c:66
+msgid "Upgrade volume detected"
+msgstr "Datumportilo kun promocioj detektita"
+
+#: ../src/cdroms.c:67
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A distribution volume with software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to try to upgrade from it automatically? "
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Distribua datumportilo kun "
+"programarpakaĵoj estis detektita.</span>\n"
+"\n"
+"Ĉu vi volas klopodi promocii el ĝi aŭtomate? "
+
+#: ../src/cdroms.c:74
+msgid "Run upgrade"
+msgstr "Promocii"
+
+#: ../src/cdroms.c:82
+msgid "APTonCD volume detected"
+msgstr "Datumportilo de APTonCD detektita"
+
+#: ../src/cdroms.c:83
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with unofficial software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Datumportilo kun neoficialaj pakaĵoj "
+"estis detektita.</span>\n"
+"\n"
+"Ĉu vi deziras malfermi ĝin per la pakaĵmastrumilo?"
+
+#: ../src/cdroms.c:91 ../src/update.c:38
+msgid "Start package manager"
+msgstr "Lanĉi pakaĵmastrumilon"
+
+#: ../src/hooks.c:360 ../ui/hooks-dialog.ui.h:2
+msgid "_Run this action now"
+msgstr "_Ruli tiun agon nun"
+
+#: ../src/hooks.c:513 ../src/hooks.c:664 ../src/hooks.c:893
+msgid "Information available"
+msgstr "Informoj disponeblaj"
+
+#: ../src/hooks.c:665
+msgid "Click on the notification icon to show the available information.\n"
+msgstr ""
+"Alklaku sur la atentigpiktogramo por montri la disponeblajn informojn.\n"
+
+#: ../src/reboot.c:27 ../src/reboot.c:275
+msgid "System restart required"
+msgstr "Restartigo de sistemo postulata"
+
+#: ../src/reboot.c:28
+msgid ""
+"To finish updating your system, please restart it.\n"
+"\n"
+"Click on the notification icon for details."
+msgstr ""
+"Por fini la ĝisdatigon de via sistemo, bonvole restartigu ĝin.\n"
+"\n"
+"Alklaku sur la atentigpiktogramo por detaloj."
+
+#: ../src/reboot.c:102
+msgid "Reboot failed"
+msgstr "Restartigo fiaskis"
+
+#: ../src/reboot.c:103
+msgid "Failed to request reboot, please shutdown manually"
+msgstr "Peto de restartigo fiaskis, bonvolu elŝalti la komputilon permane"
+
+#: ../src/update.c:27
+msgid "Show updates"
+msgstr "Montri ĝisdatigojn"
+
+#: ../src/update.c:31
+msgid "Install all updates"
+msgstr "Instali ĉiujn ĝisdatigojn"
+
+#: ../src/update.c:35
+msgid "Check for updates"
+msgstr "Kontroli por ĝisdatigoj"
+
+#: ../src/update.c:82
+#, c-format
+msgid "There is %i update available"
+msgid_plural "There are %i updates available"
+msgstr[0] "Estas %i disponebla ĝisdatigo"
+msgstr[1] "Estas %i disponeblaj ĝisdatigoj"
+
+#: ../src/update.c:147
+msgid "Show notifications"
+msgstr "Montri atentigojn"
+
+#. and update the tooltip
+#: ../src/update.c:205
+msgid "A package manager is working"
+msgstr "Pakaĵmastrumilo estas laboranta"
+
+#: ../src/update.c:237
+#, c-format
+msgid ""
+"There is %i update available. Click on the notification icon to show the "
+"available update."
+msgid_plural ""
+"There are %i updates available. Click on the notification icon to show the "
+"available updates."
+msgstr[0] ""
+"Estas %i disponebla ĝisdatigo. Alklaku sur la atentigpiktogramo por montri "
+"la disponeblan ĝisdatigon."
+msgstr[1] ""
+"Estas %i disponeblaj ĝisdatigoj. Alklaku sur la atentigpiktogramo por montri "
+"la disponeblajn ĝisdatigojn."
+
+#: ../src/update.c:248
+msgid "Software updates available"
+msgstr "Programarĝisdatigoj disponeblas"
+
+#: ../src/update.c:284
+#, fuzzy
+msgid ""
+"The update information is outdated. This may be caused by network problems "
+"or by a repository that is no longer available. Please update manually by "
+"selecting 'Show updates' from the indicator menu, and watching for any "
+"failing repositories."
+msgstr ""
+"La ĝisdatiga informo estas neĝisdata. Ĉi tio povas esti kaŭzita pro retaj "
+"problemoj aŭ pro deponejo, kiu ne plu disponeblas. Bonvole permane ĝisdatigu "
+"per alklakado sur ĉi tiu piktogramo kaj tiam per elektado de 'Kontroli pri "
+"ĝisdatigoj' kaj kontrolu ĉu iuj el la listigitaj deponejoj fiaskas."
+
+#: ../src/update.c:579
+#, c-format
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong.\n"
+"The error message was: '%s'. "
+msgstr ""
+"Eraro okazis, bonvole rulu la pakaĵmastrumilon per dekstralklaka menuo aŭ "
+"per 'apt-get' en terminalo por vidi tion, kio malkorektas.\n"
+"La erarmesaĝo estis: '%s'. "
+
+#: ../src/update.c:586
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong."
+msgstr ""
+"Eraro okazis, bonvole rulu la pakaĵmastrumilon per dekstralklaka menuo aŭ "
+"per 'apt-get' en terminalo por vidi tion, kio malkorektas."
+
+#: ../src/update.c:590
+msgid "This usually means that your installed packages have unmet dependencies"
+msgstr ""
+"Kutime tio signifas, ke viaj instalitaj pakaĵoj havas nekongruajn dependecojn"
+
+#: ../src/update.c:603
+msgid "A problem occurred when checking for the updates."
+msgstr "Problemo okazis dum kontrolado pri la ĝisdatigoj."
+
+#: ../src/update-notifier.c:572
+msgid "- inform about updates"
+msgstr "- informoj pri ĝisdatigoj"
+
+#: ../src/update-notifier.c:574
+#, c-format
+msgid "Failed to init the UI: %s\n"
+msgstr "Iniciato de la uzantinterfaco fiaskis: %s\n"
+
+#: ../src/update-notifier.c:575
+msgid "unknown error"
+msgstr "nekonata eraro"
+
+#: ../src/update-notifier.c:598
+msgid "update-notifier"
+msgstr "atentigilo pri ĝisdatigoj"
+
+#: ../ui/hooks-dialog.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Update information</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Informoj pri ĝisdatigoj</span>"
+
+#: ../ui/reboot-dialog.ui.h:1
+msgid "Restart Required"
+msgstr "Restartigo postulata"
+
+#: ../ui/reboot-dialog.ui.h:2
+msgid "Restart _Later"
+msgstr "Restartigi _poste"
+
+#: ../ui/reboot-dialog.ui.h:3
+msgid "_Restart Now"
+msgstr "_Restartigi nun"
+
+#: ../ui/reboot-dialog.ui.h:4
+msgid ""
+"The computer needs to restart to finish installing updates. Please save your "
+"work before continuing."
+msgstr ""
+"La komputilo postulas restartigon por fini la instaladon de la ĝisdatigoj. "
+"Bonvole konservu vian laboron antaŭ ol daŭrigi."
+
+#: ../data/update-notifier.desktop.in.h:1
+msgid "Update Notifier"
+msgstr "Atentigilo pri ĝisdatigoj"
+
+#: ../data/update-notifier.desktop.in.h:2
+msgid "Check for available updates automatically"
+msgstr "Aŭtomate kontroli pri disponeblaj ĝisdatigoj"
+
+#. Name
+#: ../data/package-data-downloads-failed.in:2
+msgid "Failure to download extra data files"
+msgstr "Fiasko dum elŝutado de pliaj datumdosieroj"
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"The following packages requested additional data downloads after package "
+"installation, but the data could not be downloaded or could not be processed."
+msgstr ""
+"La sekvaj pakaĵoj postulis aldonajn elŝutojn de datumoj post la instalo sed "
+"la datumoj povus ne esti elŝutitaj aŭ traktitaj."
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid "  $packages"
+msgstr "  $packages"
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+msgid ""
+"The download will be attempted again later, or you can try the download "
+"again now.  Running this command requires an active Internet connection."
+msgstr ""
+"La elŝuto estos klopodata denove poste aŭ vi povas provi la elŝuton denove "
+"nun. Rulado de ĉi tiu komando postulas aktivan interretan konekton."
+
+#. Name
+#: ../data/package-data-downloads-failed-permanently.in:2
+msgid "Data files for some packages could not be downloaded"
+msgstr "Datumdosieroj por kelkaj pakaĵoj povus ne esti elŝutitaj."
+
+#. Description
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"This is a permanent failure that leaves these packages unusable on your "
+"system.  You may need to fix your Internet connection, then remove and "
+"reinstall the packages to fix this problem."
+msgstr ""
+"Ĉi tiu estas permanenta eraro, kiu lasas ĉi tiujn pakaĵojn neuzeblaj en via "
+"sistemo. Eble vi devos ripari vian retan konekton kaj tiam forigi kaj "
+"reinstali la pakaĵojn por solvi ĉi tiun problemon."
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">Please enter your password to "
+#~ "access problem reports of system programs</span>"
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">Bonvole entajpu vian pasvorton por "
+#~ "atingi problemraportojn de sistemprogramaroj</span>"
+
+#~ msgid "Addon volume detected"
+#~ msgstr "Datumportilo kun aldonaĵoj detektita"
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">An addon volume with software "
+#~ "applications has been detected.</span>\n"
+#~ "\n"
+#~ "Would you like to view/install the content? "
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">Datumportilo kun programaroj estis "
+#~ "detektita.</span>\n"
+#~ "\n"
+#~ "Ĉu vi deziras rigardi/instali la enhavon? "
+
+#~ msgid "Start addon installer"
+#~ msgstr "Lanĉi instalilon de aldonaĵoj"
+
+#~ msgid "Internal error"
+#~ msgstr "Interna eraro"

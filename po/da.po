@@ -1,0 +1,418 @@
+# Danish translation of Update Notifier.
+# Copyright (C) 2005 Michael Vogt <mvo@debian.org>
+# Copyright (C) 2005    Michiel Sikkes <michiel@eyesopened.nl>
+# This file is distributed under the same license as the update-notifier package.
+# Martin Willemoes Hansen <mwh@sysrq.dk>, 2005.
+# Kenneth Nielsen <k.nielsen@gmail.com>, 2009.
+# Mads Bille Lundby <lundbymads@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: update-notifier\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-31 00:41+0000\n"
+"PO-Revision-Date: 2012-04-14 15:59+0000\n"
+"Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2012-10-09 15:32+0000\n"
+"X-Generator: Launchpad (build 16112)\n"
+
+#: ../data/apt_check.py:22
+#, python-format
+msgid "Unknown Error: '%s' (%s)"
+msgstr "Ukendt fejl: \"%s\" (%s)"
+
+#: ../data/apt_check.py:61
+#, python-format
+msgid "%i package can be updated."
+msgid_plural "%i packages can be updated."
+msgstr[0] "%i pakke kan opdateres."
+msgstr[1] "%i pakker kan opdateres."
+
+#: ../data/apt_check.py:66
+#, python-format
+msgid "%i update is a security update."
+msgid_plural "%i updates are security updates."
+msgstr[0] "%i opdatering er en sikkerhedsopdatering."
+msgstr[1] "%i opdateringer er sikkerhedsopdateringer."
+
+#: ../data/apt_check.py:94
+#, python-format
+msgid "Error: Opening the cache (%s)"
+msgstr "Fejl: Åbning af mellemlageret (%s)"
+
+# Hvis man får denne fejlmeddelelse er det rart at man kan google den (på engelsk). Det synes ikke nødvendigt at oversætte denne.
+#: ../data/apt_check.py:108
+msgid "Error: BrokenCount > 0"
+msgstr "Fejl: BrokenCount > 0"
+
+#: ../data/apt_check.py:115
+#, python-format
+msgid "Error: Marking the upgrade (%s)"
+msgstr "Fejl: Markering af opgraderingen (%s)"
+
+#: ../data/apt_check.py:179
+msgid "Show the packages that are going to be installed/upgraded"
+msgstr "Vis pakkerne, som vil blive installeret/opgraderet"
+
+#: ../data/apt_check.py:184
+msgid "Show human readable output on stdout"
+msgstr "Vis menneskeligt læsbart output på stdout"
+
+#: ../data/apt_check.py:188
+msgid ""
+"Return the time in days when security updates are installed unattended (0 "
+"means disabled)"
+msgstr ""
+"Returnér tidspunkt i dage, hvor sikkerhedsopdateringer installeres "
+"automatiseret (0 betyder deaktiveret)"
+
+#: ../src/crash.c:46
+msgid "System program problem detected"
+msgstr "Problem med systemprogram fundet"
+
+#: ../src/crash.c:47
+msgid "Do you want to report the problem now?"
+msgstr "Ønsker du at rapportere problemet nu?"
+
+#: ../src/crash.c:57
+msgid "Report problem…"
+msgstr "Rapportér problem..."
+
+#: ../src/crash.c:90 ../src/crash.c:209
+msgid "Crash report detected"
+msgstr "Rapport om nedbrud fundet"
+
+#: ../src/crash.c:91
+msgid ""
+"An application has crashed on your system (now or in the past). Click on the "
+"notification icon to display details. "
+msgstr ""
+"Et program brød ned på din computer (nu eller tidligere). Klik på "
+"statusikonet for at vise detaljer. "
+
+#. Create and show the notification
+#: ../src/avahi.c:15
+msgid "Network service discovery disabled"
+msgstr "Genkendelse af netværkstjeneste deaktiveret"
+
+#: ../src/avahi.c:16
+msgid ""
+"Your current network has a .local domain, which is not recommended and "
+"incompatible with the Avahi network service discovery. The service has been "
+"disabled."
+msgstr ""
+"Dit nuværende netværk har et .local domæne. Dette er ikke anbefalet og er "
+"ikke kompatibelt med Avahi genkendelsen af netværkstjenester. Tjenesten er "
+"blevet deaktiveret."
+
+#: ../src/cdroms.c:51
+msgid "Software Packages Volume Detected"
+msgstr "Softwarepakkearkiv fundet"
+
+#: ../src/cdroms.c:52
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with software packages has "
+"been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Et medie med softwarepakker er fundet."
+"</span>\n"
+"\n"
+"Ønsker du at åbne det med pakkehåndteringen?"
+
+#: ../src/cdroms.c:60
+msgid "Start Package Manager"
+msgstr "Start pakkehåndtering"
+
+#: ../src/cdroms.c:66
+msgid "Upgrade volume detected"
+msgstr "Opgraderingsmedie fundet"
+
+#: ../src/cdroms.c:67
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A distribution volume with software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to try to upgrade from it automatically? "
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Et distributionsmedie med "
+"softwarepakker er fundet.</span>\n"
+"\n"
+"Ønsker du at forsøge at opgradere fra det automatisk? "
+
+#: ../src/cdroms.c:74
+msgid "Run upgrade"
+msgstr "Kør opgradering"
+
+#: ../src/cdroms.c:82
+msgid "APTonCD volume detected"
+msgstr "APTonCD-medie fundet"
+
+#: ../src/cdroms.c:83
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with unofficial software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Et medie med uofficielle "
+"softwarepakker er fundet.</span>\n"
+"\n"
+"Ønsker du at åbne det med pakkehåndteringen?"
+
+#: ../src/cdroms.c:91 ../src/update.c:38
+msgid "Start package manager"
+msgstr "Start pakkehåndtering"
+
+#: ../src/hooks.c:360 ../ui/hooks-dialog.ui.h:2
+msgid "_Run this action now"
+msgstr "_Kør denne handling nu"
+
+#: ../src/hooks.c:513 ../src/hooks.c:664 ../src/hooks.c:893
+msgid "Information available"
+msgstr "Information tilgængelig"
+
+#: ../src/hooks.c:665
+msgid "Click on the notification icon to show the available information.\n"
+msgstr "Klik på statusikonet for at vise den tilgængelige information.\n"
+
+#: ../src/reboot.c:27 ../src/reboot.c:275
+msgid "System restart required"
+msgstr "Genstart af computeren er påkrævet"
+
+#: ../src/reboot.c:28
+msgid ""
+"To finish updating your system, please restart it.\n"
+"\n"
+"Click on the notification icon for details."
+msgstr ""
+"Genstart din computer for at færdiggøre opdateringen.\n"
+"\n"
+"Klik på statusikonet for detaljer."
+
+#: ../src/reboot.c:102
+msgid "Reboot failed"
+msgstr "Genstart fejlede"
+
+#: ../src/reboot.c:103
+msgid "Failed to request reboot, please shutdown manually"
+msgstr "Forespørgsel om genstart fejlede. Luk venligst ned manuelt"
+
+#: ../src/update.c:27
+msgid "Show updates"
+msgstr "Vis opdateringer"
+
+#: ../src/update.c:31
+msgid "Install all updates"
+msgstr "Installér alle opdateringer"
+
+#: ../src/update.c:35
+msgid "Check for updates"
+msgstr "Søg efter opdateringer"
+
+#: ../src/update.c:82
+#, c-format
+msgid "There is %i update available"
+msgid_plural "There are %i updates available"
+msgstr[0] "Der er %i opdatering tilgængelig"
+msgstr[1] "Der er %i opdateringer tilgængelige"
+
+#: ../src/update.c:147
+msgid "Show notifications"
+msgstr "Vis meddelelser"
+
+#. and update the tooltip
+#: ../src/update.c:205
+msgid "A package manager is working"
+msgstr "Et pakkehåndteringsprogram kører allerede"
+
+#: ../src/update.c:237
+#, c-format
+msgid ""
+"There is %i update available. Click on the notification icon to show the "
+"available update."
+msgid_plural ""
+"There are %i updates available. Click on the notification icon to show the "
+"available updates."
+msgstr[0] ""
+"Der er %i tilgængelig opdatering. Klik på statusikonet for at vise den "
+"tilgængelige opdatering."
+msgstr[1] ""
+"Der er %i tilgængelige opdateringer. Klik på statusikonet for at vise de "
+"tilgængelige opdateringer."
+
+#: ../src/update.c:248
+msgid "Software updates available"
+msgstr "Softwareopdateringer tilgængelige"
+
+#: ../src/update.c:284
+#, fuzzy
+msgid ""
+"The update information is outdated. This may be caused by network problems "
+"or by a repository that is no longer available. Please update manually by "
+"selecting 'Show updates' from the indicator menu, and watching for any "
+"failing repositories."
+msgstr ""
+"Systemets opdateringsoplysninger er forældede. Dette kan være forårsaget af "
+"netværksproblemer eller af et softwarearkiv, som ikke længere er "
+"tilgængeligt. Opdater venligst manuelt ved at klikke på dette ikon og vælg "
+"derefter \"Søg efter opdateringer\" og undersøg om nogen af de viste "
+"softwarearkiver fejler."
+
+#: ../src/update.c:579
+#, c-format
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong.\n"
+"The error message was: '%s'. "
+msgstr ""
+"Der opstod en fejl. Kør venligst Pakkehåndteringen fra højrekliksmenuen "
+"eller apt-get i terminalen, for at se hvad der er galt.\n"
+"Fejlbeskeden var: \"%s\". "
+
+#: ../src/update.c:586
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong."
+msgstr ""
+"Der opstod en fejl. Kør venligst Pakkehåndtering fra højrekliksmenuen eller "
+"apt-get i en terminal for at se hvad der er galt."
+
+#: ../src/update.c:590
+msgid "This usually means that your installed packages have unmet dependencies"
+msgstr ""
+"Dette betyder som regel, at de installerede pakker ikke har alle de pakker "
+"de afhænger af, installeret"
+
+#: ../src/update.c:603
+msgid "A problem occurred when checking for the updates."
+msgstr "Der opstod en fejl under søgning efter opdateringer."
+
+#: ../src/update-notifier.c:572
+msgid "- inform about updates"
+msgstr "- informér om opdateringer"
+
+#: ../src/update-notifier.c:574
+#, c-format
+msgid "Failed to init the UI: %s\n"
+msgstr "Kunne ikke initiere brugergrænsefladen: %s\n"
+
+#: ../src/update-notifier.c:575
+msgid "unknown error"
+msgstr "ukendt fejl"
+
+#: ../src/update-notifier.c:598
+msgid "update-notifier"
+msgstr "opdateringspåmindelse"
+
+#: ../ui/hooks-dialog.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Update information</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Opdateringsinformation</span>"
+
+#: ../ui/reboot-dialog.ui.h:1
+msgid "Restart Required"
+msgstr "Genstart er påkrævet"
+
+#: ../ui/reboot-dialog.ui.h:2
+msgid "Restart _Later"
+msgstr "Genstart _senere"
+
+#: ../ui/reboot-dialog.ui.h:3
+msgid "_Restart Now"
+msgstr "_Genstart nu"
+
+#: ../ui/reboot-dialog.ui.h:4
+msgid ""
+"The computer needs to restart to finish installing updates. Please save your "
+"work before continuing."
+msgstr ""
+"Computeren kræver en genstart for at færdiggøre installationen af "
+"opdateringer. Gem venligst dit arbejde før du fortsætter."
+
+#: ../data/update-notifier.desktop.in.h:1
+msgid "Update Notifier"
+msgstr "Opdateringspåmindelse"
+
+#: ../data/update-notifier.desktop.in.h:2
+msgid "Check for available updates automatically"
+msgstr "Kontrollér automatisk for tilgængelige opdateringer"
+
+#. Name
+#: ../data/package-data-downloads-failed.in:2
+msgid "Failure to download extra data files"
+msgstr "Kunne ikke hente ekstra datafiler"
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"The following packages requested additional data downloads after package "
+"installation, but the data could not be downloaded or could not be processed."
+msgstr ""
+"Følgende pakker forespurgte om yderligere hentning af data efter "
+"pakkeinstallation, men dataene kunne ikke hentes eller kunne ikke behandles."
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid "  $packages"
+msgstr "  $packages"
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+msgid ""
+"The download will be attempted again later, or you can try the download "
+"again now.  Running this command requires an active Internet connection."
+msgstr ""
+"Hentningen vil blive forsøgt igen senere. Du kan også forsøge at hente igen "
+"nu. Kørsel af denne kommando kræver en aktiv internetforbindelse."
+
+#. Name
+#: ../data/package-data-downloads-failed-permanently.in:2
+msgid "Data files for some packages could not be downloaded"
+msgstr "Der kunne ikke hentes datafiler til visse af pakkerne"
+
+#. Description
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"This is a permanent failure that leaves these packages unusable on your "
+"system.  You may need to fix your Internet connection, then remove and "
+"reinstall the packages to fix this problem."
+msgstr ""
+"Dette er en permanent fejl, der efterlader disse pakker i ubrugelig tilstand "
+"på dit system. Du skal muligvis have ordnet din internetforbindelse, og "
+"dernæst fjerne og geninstallere pakkerne for at rette problemet."
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">Please enter your password to "
+#~ "access problem reports of system programs</span>"
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">Indtast venligst din adgangskode "
+#~ "for at få adgang til rapporter om problemer i systemprogrammer</span>"
+
+#~ msgid "Addon volume detected"
+#~ msgstr "Udvidelsesmedie fundet"
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">An addon volume with software "
+#~ "applications has been detected.</span>\n"
+#~ "\n"
+#~ "Would you like to view/install the content? "
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">Et udvidelsesmedie med "
+#~ "softwarepakker er fundet.</span>\n"
+#~ "\n"
+#~ "Ønsker du at gennemse/installere indholdet? "
+
+#~ msgid "Start addon installer"
+#~ msgstr "Start installationsprogram for udvidelser"
+
+#~ msgid "Internal error"
+#~ msgstr "Intern fejl"

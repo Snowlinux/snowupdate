@@ -1,0 +1,13 @@
+debian/99update-notifier etc/apt/apt.conf.d
+debian/10periodic etc/apt/apt.conf.d
+debian/15update-stamp etc/apt/apt.conf.d
+debian/20archive etc/apt/apt.conf.d
+debian/90-updates-available etc/update-motd.d
+debian/98-reboot-required etc/update-motd.d
+debian/98-fsck-at-reboot etc/update-motd.d
+usr/share/update-notifier/notify-reboot-required
+usr/share/update-notifier/package-data-downloads-failed
+usr/share/update-notifier/package-data-downloads-failed-permanently
+usr/lib/update-notifier/
+usr/share/locale
+debian/update-manager-downloader-fix2.diff usr/share/update-notifier/upgrader-patches

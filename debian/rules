@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+export CFLAGS += -Wall -g -O$(if $(findstring noopt,$(DEB_BUILD_OPTIONS)),0,2)
+export LDFLAGS += -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
+
+%:
+	dh $@
+
+override_dh_auto_test:
+	cd tests && ./test_package-data-downloader.py

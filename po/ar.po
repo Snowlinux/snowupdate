@@ -1,0 +1,426 @@
+# translation of po_update-notifier-ar.po to Arabic
+# Arabic translation for update-notifier
+# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
+# This file is distributed under the same license as the update-notifier package.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2006.
+# Khaled Hosny <khaledhosny@eglug.org>, 2007.
+# OsamaKhalid <osamak.wfm@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: po_update-notifier-ar\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-31 00:41+0000\n"
+"PO-Revision-Date: 2012-09-06 02:40+0000\n"
+"Last-Translator: Ibrahim Saed <ibraheem5000@gmail.com>\n"
+"Language-Team: Arabic\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n % 100 >= "
+"3 && n % 100 <= 10 ? 3 : n % 100 >= 11 && n % 100 <= 99 ? 4 : 5;\n"
+"X-Launchpad-Export-Date: 2012-10-09 15:32+0000\n"
+"X-Generator: Launchpad (build 16112)\n"
+
+#: ../data/apt_check.py:22
+#, python-format
+msgid "Unknown Error: '%s' (%s)"
+msgstr "خطأ مجهول: '%s' ‏(%s)"
+
+#: ../data/apt_check.py:61
+#, python-format
+msgid "%i package can be updated."
+msgid_plural "%i packages can be updated."
+msgstr[0] "لا حزم يمكن تحديثها."
+msgstr[1] "حزمة واحدة يمكن تحديثها."
+msgstr[2] "حزمتان يمكن تحديثهما."
+msgstr[3] "%i حزم يمكن تحديثها."
+msgstr[4] "%i حزمة يمكن تحديثها."
+msgstr[5] "%i حزمة يمكن تحديثها."
+
+#: ../data/apt_check.py:66
+#, python-format
+msgid "%i update is a security update."
+msgid_plural "%i updates are security updates."
+msgstr[0] "لا تحديثات أمنية."
+msgstr[1] "تحديث أمني واحد."
+msgstr[2] "تحديثين أمنيّين."
+msgstr[3] "%i تحديثات أمنية."
+msgstr[4] "%i تحديثا أمنيا."
+msgstr[5] "%i تحديث أمنيا."
+
+#: ../data/apt_check.py:94
+#, python-format
+msgid "Error: Opening the cache (%s)"
+msgstr "خطأ: فتح الخبيئة (%s)"
+
+#: ../data/apt_check.py:108
+msgid "Error: BrokenCount > 0"
+msgstr "خطأ: عداد الانكسار > 0"
+
+#: ../data/apt_check.py:115
+#, python-format
+msgid "Error: Marking the upgrade (%s)"
+msgstr "خطأ: تعليم الترقية (%s)"
+
+#: ../data/apt_check.py:179
+msgid "Show the packages that are going to be installed/upgraded"
+msgstr "أظهر الحزم التي ستثبت/سترقّى"
+
+#: ../data/apt_check.py:184
+msgid "Show human readable output on stdout"
+msgstr "أظهر مخرج مقروء من البشر على stdout"
+
+#: ../data/apt_check.py:188
+msgid ""
+"Return the time in days when security updates are installed unattended (0 "
+"means disabled)"
+msgstr "أظهر الزمن بالأيام عند تثبيت تحديثات أمنية تلقائيًا (0 يعني التعطيل)"
+
+#: ../src/crash.c:46
+msgid "System program problem detected"
+msgstr "تم اكتشاف مشكلة في برنامج النظام"
+
+#: ../src/crash.c:47
+msgid "Do you want to report the problem now?"
+msgstr "أتريد الإبلاغ عن المشكلة الآن؟"
+
+#: ../src/crash.c:57
+msgid "Report problem…"
+msgstr "أبلغ عن مشكلة..."
+
+#: ../src/crash.c:90 ../src/crash.c:209
+msgid "Crash report detected"
+msgstr "يوجد تقرير انهيار"
+
+#: ../src/crash.c:91
+msgid ""
+"An application has crashed on your system (now or in the past). Click on the "
+"notification icon to display details. "
+msgstr ""
+"انهار تطبيق في النظام (للتو أو سابقا). انقر على أيقونة التبليغ لتطالع "
+"التفاصيل. "
+
+#. Create and show the notification
+#: ../src/avahi.c:15
+msgid "Network service discovery disabled"
+msgstr "عُطِّل استكشاف خدمة الشبكة"
+
+#: ../src/avahi.c:16
+msgid ""
+"Your current network has a .local domain, which is not recommended and "
+"incompatible with the Avahi network service discovery. The service has been "
+"disabled."
+msgstr ""
+"لشبكتك الحالية نطاق .local، وهو ما لا ينصح به وليس متوافقا مع استكشاف خدمة "
+"الشبكة Avahi. عُطِّلت الخدمة."
+
+#: ../src/cdroms.c:51
+msgid "Software Packages Volume Detected"
+msgstr "حجوم حزم البرمجيات اكتشفت"
+
+#: ../src/cdroms.c:52
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with software packages has "
+"been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">يوجد مجلد يحوى حزما برمجية.</span>\n"
+"\n"
+"أترغب في فتحه بمدير الحزم؟"
+
+#: ../src/cdroms.c:60
+msgid "Start Package Manager"
+msgstr "ابدأ مدير الحزم"
+
+#: ../src/cdroms.c:66
+msgid "Upgrade volume detected"
+msgstr "يوجد مجلد ترقية"
+
+#: ../src/cdroms.c:67
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A distribution volume with software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to try to upgrade from it automatically? "
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">يوجد مجلد توزيعة يحوي حزما برمجية.</"
+"span>\n"
+"\n"
+"أترغب في محاولة الترقية منه آليا؟ "
+
+#: ../src/cdroms.c:74
+msgid "Run upgrade"
+msgstr "أجرِ الترقية"
+
+#: ../src/cdroms.c:82
+msgid "APTonCD volume detected"
+msgstr "يوجد مجلد APTonCD"
+
+#: ../src/cdroms.c:83
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with unofficial software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">يوجد مجلد يحوي حزما برمجية غير رسمية.</"
+"span>\n"
+"\n"
+"أتريد فتحه بمدير الحزم؟"
+
+#: ../src/cdroms.c:91 ../src/update.c:38
+msgid "Start package manager"
+msgstr "ابدء مدير الحزم"
+
+#: ../src/hooks.c:360 ../ui/hooks-dialog.ui.h:2
+msgid "_Run this action now"
+msgstr "_شغل هذا الإجراء اﻵن"
+
+#: ../src/hooks.c:513 ../src/hooks.c:664 ../src/hooks.c:893
+msgid "Information available"
+msgstr "توجد معلومات"
+
+#: ../src/hooks.c:665
+msgid "Click on the notification icon to show the available information.\n"
+msgstr "انقر على أيقونة التبليغ لتستعرض المعلومات المتوفرة.\n"
+
+#: ../src/reboot.c:27 ../src/reboot.c:275
+msgid "System restart required"
+msgstr "يجب  إعادة تشغيل النظام"
+
+#: ../src/reboot.c:28
+msgid ""
+"To finish updating your system, please restart it.\n"
+"\n"
+"Click on the notification icon for details."
+msgstr ""
+"للإنتهاء من تحديث نظامك، رجاءاً أعد التشغيل.\n"
+"\n"
+"إضغط على أيقونة الإشعارات للتفاصيل."
+
+#: ../src/reboot.c:102
+msgid "Reboot failed"
+msgstr "فشلت إعادة الإقلاع"
+
+#: ../src/reboot.c:103
+msgid "Failed to request reboot, please shutdown manually"
+msgstr "فشل طلب إعادة الإقلاع، من فضلك أغلق الجهاز يدويا"
+
+#: ../src/update.c:27
+msgid "Show updates"
+msgstr "اعرض التحديثات"
+
+#: ../src/update.c:31
+msgid "Install all updates"
+msgstr "ثبِّت كل التحديثات"
+
+#: ../src/update.c:35
+msgid "Check for updates"
+msgstr "التمس تحديثات"
+
+#: ../src/update.c:82
+#, c-format
+msgid "There is %i update available"
+msgid_plural "There are %i updates available"
+msgstr[0] "لا توجد تحديثات"
+msgstr[1] "يوجد تحديث واحد"
+msgstr[2] "يوجد تحديثان"
+msgstr[3] "توجد %i تحديثات"
+msgstr[4] "يوجد %i تحديثا"
+msgstr[5] "يوجد %i تحديثات"
+
+#: ../src/update.c:147
+msgid "Show notifications"
+msgstr "اعرض التبليغات"
+
+#. and update the tooltip
+#: ../src/update.c:205
+msgid "A package manager is working"
+msgstr "يعمل بالفعل مدير حزم"
+
+#: ../src/update.c:237
+#, c-format
+msgid ""
+"There is %i update available. Click on the notification icon to show the "
+"available update."
+msgid_plural ""
+"There are %i updates available. Click on the notification icon to show the "
+"available updates."
+msgstr[0] "لا تحديثات متوفرة."
+msgstr[1] ""
+"يوجد %i تحديث متوفر. انقر على أيقونة التبليغ لإظهار التحديث المتوفر."
+msgstr[2] ""
+"يوجد تحديثان متوفران. انقر على أيقونة التبليغ لإظهار التحديثين المتوفرين."
+msgstr[3] ""
+"يوجد %i تحديثات متوفرة. انقر على أيقونة التبليغ لإظهار التحديثات المتوفرة."
+msgstr[4] ""
+"يوجد %i تحديثا متوفرا. انقر على أيقونة التبليغ لإظهار التحديثات المتوفرة."
+msgstr[5] ""
+"يوجد %i تحديث متوفر. انقر على أيقونة التبليغ لإظهار التحديثات المتوفرة."
+
+#: ../src/update.c:248
+msgid "Software updates available"
+msgstr "توجد تحديثات برمجية"
+
+#: ../src/update.c:284
+#, fuzzy
+msgid ""
+"The update information is outdated. This may be caused by network problems "
+"or by a repository that is no longer available. Please update manually by "
+"selecting 'Show updates' from the indicator menu, and watching for any "
+"failing repositories."
+msgstr ""
+"معلومات التحديث قديمة. قد يكون هذا بسبب مشاكل في الشبكة أو مستودع لم يعد "
+"متاحا. من فضلك حدّث يدويا باختيار 'التمس تحديثات' وتفقّد ما إذا كانت بعض "
+"المستودعات تفشل."
+
+#: ../src/update.c:579
+#, c-format
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong.\n"
+"The error message was: '%s'. "
+msgstr ""
+"لقد حدث خطأ، من فضلك شغل مدير الحزم من قائمة الضغطة اليمنى أو apt-get من "
+"الطرفية لترى ما الخطأ.\n"
+"رسالة الخطأ كانت: '%s'. "
+
+#: ../src/update.c:586
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong."
+msgstr ""
+"حدث عطل. رجاءً شغّل مدير الحزم من قائمة السياق أو apt-get في مرقاب لترى ما "
+"العطل."
+
+#: ../src/update.c:590
+msgid "This usually means that your installed packages have unmet dependencies"
+msgstr "يعني هذا غالبا أن حزمك المثبتة تنقصها اعتماديات"
+
+#: ../src/update.c:603
+msgid "A problem occurred when checking for the updates."
+msgstr "طرأت مشكلة أثناء التماس تحديثات."
+
+#: ../src/update-notifier.c:572
+msgid "- inform about updates"
+msgstr "- أبلغ بالتحديثات"
+
+#: ../src/update-notifier.c:574
+#, c-format
+msgid "Failed to init the UI: %s\n"
+msgstr "فشل بدء واجهة الاستخدام: %s\n"
+
+#: ../src/update-notifier.c:575
+msgid "unknown error"
+msgstr "خطأ مجهول"
+
+#: ../src/update-notifier.c:598
+msgid "update-notifier"
+msgstr "update-notifier"
+
+#: ../ui/hooks-dialog.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Update information</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">معلومات التحديث</span>"
+
+#: ../ui/reboot-dialog.ui.h:1
+msgid "Restart Required"
+msgstr "إعادة التشغيل مطلوبة"
+
+#: ../ui/reboot-dialog.ui.h:2
+msgid "Restart _Later"
+msgstr "أعد التشغيل _لاحقا"
+
+#: ../ui/reboot-dialog.ui.h:3
+msgid "_Restart Now"
+msgstr "أعد التشغيل اﻵ_ن"
+
+#: ../ui/reboot-dialog.ui.h:4
+msgid ""
+"The computer needs to restart to finish installing updates. Please save your "
+"work before continuing."
+msgstr ""
+"يحتاج الحاسوب لإعادة التشغيل لتطبيق التحديثات. من فضلك احفظ عملك قبل "
+"المواصلة."
+
+#: ../data/update-notifier.desktop.in.h:1
+msgid "Update Notifier"
+msgstr "مشعر التحديثات"
+
+#: ../data/update-notifier.desktop.in.h:2
+msgid "Check for available updates automatically"
+msgstr "التمس التحديثات تلقائيا"
+
+#. Name
+#: ../data/package-data-downloads-failed.in:2
+msgid "Failure to download extra data files"
+msgstr "فشل تنزيل ملفات البيانات الإضافية"
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"The following packages requested additional data downloads after package "
+"installation, but the data could not be downloaded or could not be processed."
+msgstr ""
+"الحزم الآتية تتطلب تنزيل بيانات إضافية بعد تثبيت الحزم، ولكن تعذّر تنزيل "
+"البيانات أو معالجتها."
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid "  $packages"
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+msgid ""
+"The download will be attempted again later, or you can try the download "
+"again now.  Running this command requires an active Internet connection."
+msgstr ""
+"ستُعاد محاولة التنزيل مجددا في وقت لاحق، أو يمكنك محاولة التنزيل مجددا الآن. "
+"تنفيذ هذا الأمر يتطلب اتصالا نشطا بالإنترنت."
+
+#. Name
+#: ../data/package-data-downloads-failed-permanently.in:2
+msgid "Data files for some packages could not be downloaded"
+msgstr "لا يمكن تنزيل ملفات البيانات لبعض الحزم"
+
+#. Description
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"This is a permanent failure that leaves these packages unusable on your "
+"system.  You may need to fix your Internet connection, then remove and "
+"reinstall the packages to fix this problem."
+msgstr ""
+"هذا فشل دائم سيترك هذه الحزم غير صالحة للاستخدام على نظامك. قد تكون بحاجة "
+"لإصلاح اتصالك بالإنترنت، ثم أزِل وأعد تثبيت الحزم لإصلاح هذه المشكلة."
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">Please enter your password to "
+#~ "access problem reports of system programs</span>"
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">من فضلك أدخل كلمة السر لتَنفُذ إلى "
+#~ "الإبلاغ عن أعطال برمجيات النظام</span>"
+
+#~ msgid "Addon volume detected"
+#~ msgstr "يوجد مجلد ملحقات"
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">An addon volume with software "
+#~ "applications has been detected.</span>\n"
+#~ "\n"
+#~ "Would you like to view/install the content? "
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">يوجد مجلد يحوي تطبيقات برمجية.</"
+#~ "span>\n"
+#~ "\n"
+#~ "أتريد استعراض أو تثبيت المحتويات؟ "
+
+#~ msgid "Start addon installer"
+#~ msgstr "ابدأ مثبت الملحقات"
+
+#~ msgid "Internal error"
+#~ msgstr "عطل داخلي"

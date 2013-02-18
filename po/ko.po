@@ -1,0 +1,403 @@
+# Korean translation for update-notifier
+# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
+# This file is distributed under the same license as the update-notifier package.
+# Eungkyu Song <eungkyu@gmail.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: update-notifier\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-31 00:41+0000\n"
+"PO-Revision-Date: 2012-09-14 16:32+0000\n"
+"Last-Translator: Kim Boram <boramism@gmail.com>\n"
+"Language-Team: Korean <ko@li.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2012-10-09 15:32+0000\n"
+"X-Generator: Launchpad (build 16112)\n"
+
+#: ../data/apt_check.py:22
+#, python-format
+msgid "Unknown Error: '%s' (%s)"
+msgstr "알 수 없는 오류: '%s'(%s)"
+
+#: ../data/apt_check.py:61
+#, python-format
+msgid "%i package can be updated."
+msgid_plural "%i packages can be updated."
+msgstr[0] "패키지 %i개를  업데이트할 수 있습니다."
+
+#: ../data/apt_check.py:66
+#, python-format
+msgid "%i update is a security update."
+msgid_plural "%i updates are security updates."
+msgstr[0] "%i 업데이트는 보안 업데이트입니다."
+
+#: ../data/apt_check.py:94
+#, python-format
+msgid "Error: Opening the cache (%s)"
+msgstr "오류: 캐시 열기 (%s)"
+
+#: ../data/apt_check.py:108
+msgid "Error: BrokenCount > 0"
+msgstr "오류: BrokenCount > 0"
+
+#: ../data/apt_check.py:115
+#, python-format
+msgid "Error: Marking the upgrade (%s)"
+msgstr "오류: 업그레이드 표시 (%s)"
+
+#: ../data/apt_check.py:179
+msgid "Show the packages that are going to be installed/upgraded"
+msgstr "설치/업그레이드할 패키지 보이기"
+
+#: ../data/apt_check.py:184
+msgid "Show human readable output on stdout"
+msgstr "표준 출력으로 메시지 보여주기"
+
+#: ../data/apt_check.py:188
+msgid ""
+"Return the time in days when security updates are installed unattended (0 "
+"means disabled)"
+msgstr ""
+"보안 업데이트된 채 방치된 않은 시간을 일 수로 반환합니다. (0으로 설정하면 사"
+"용하지 않습니다)"
+
+#: ../src/crash.c:46
+msgid "System program problem detected"
+msgstr "시스템 프로그램 오류를 발견했습니다."
+
+#: ../src/crash.c:47
+msgid "Do you want to report the problem now?"
+msgstr "오류를 보고하시겠습니까?"
+
+#: ../src/crash.c:57
+msgid "Report problem…"
+msgstr "오류 보고…"
+
+#: ../src/crash.c:90 ../src/crash.c:209
+msgid "Crash report detected"
+msgstr "충돌 보고서 발견"
+
+#: ../src/crash.c:91
+msgid ""
+"An application has crashed on your system (now or in the past). Click on the "
+"notification icon to display details. "
+msgstr ""
+"(이전이나 지금 현재) 시스템 내의 프로그램에 충돌이 발생했습니다. 자세한 내용"
+"을 확인하려면 알림 아이콘을 클릭하십시오. "
+
+#. Create and show the notification
+#: ../src/avahi.c:15
+msgid "Network service discovery disabled"
+msgstr "네트워크 서비스 탐색 사용하지 않기"
+
+#: ../src/avahi.c:16
+msgid ""
+"Your current network has a .local domain, which is not recommended and "
+"incompatible with the Avahi network service discovery. The service has been "
+"disabled."
+msgstr ""
+"현재 네트워크는 .local 도메인을 가지고 있어 Avahi 네트워크 서비스 탐색에 문제"
+"를 일으킬 수 있습니다.서비스를 사용하지 않습니다."
+
+#: ../src/cdroms.c:51
+msgid "Software Packages Volume Detected"
+msgstr "소프트웨어 패키지 볼륨이 발견함"
+
+#: ../src/cdroms.c:52
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with software packages has "
+"been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">소프트웨어 패키지가 있는 배포판 볼륨을 "
+"발견했습니다.</span>\n"
+"\n"
+"패키지 관리자로 여시겠습니까?"
+
+#: ../src/cdroms.c:60
+msgid "Start Package Manager"
+msgstr "패키지 관리자 시작"
+
+#: ../src/cdroms.c:66
+msgid "Upgrade volume detected"
+msgstr "업그레이드 볼륨 발견"
+
+#: ../src/cdroms.c:67
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A distribution volume with software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to try to upgrade from it automatically? "
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">소프트웨어 패키지가 있는 배포판 볼륨을 "
+"발견했습니다.</span>\n"
+"\n"
+"자동 업그레이드를 시도하시겠습니까? "
+
+#: ../src/cdroms.c:74
+msgid "Run upgrade"
+msgstr "업그레이드 실행"
+
+#: ../src/cdroms.c:82
+msgid "APTonCD volume detected"
+msgstr "APTonCD 볼륨 발견"
+
+#: ../src/cdroms.c:83
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with unofficial software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">비공식 소프트웨어 패키지가 든 볼륨을 발"
+"견했습니다.</span>\n"
+"\n"
+"패키지 관리자로 여시겠습니까?"
+
+#: ../src/cdroms.c:91 ../src/update.c:38
+msgid "Start package manager"
+msgstr "패키지 관리자 시작"
+
+#: ../src/hooks.c:360 ../ui/hooks-dialog.ui.h:2
+msgid "_Run this action now"
+msgstr "이 동작을 실행(_R)"
+
+#: ../src/hooks.c:513 ../src/hooks.c:664 ../src/hooks.c:893
+msgid "Information available"
+msgstr "정보를 볼 수 있음"
+
+#: ../src/hooks.c:665
+msgid "Click on the notification icon to show the available information.\n"
+msgstr "정보를 보려면 알림 아이콘을 클릭하십시오.\n"
+
+#: ../src/reboot.c:27 ../src/reboot.c:275
+msgid "System restart required"
+msgstr "시스템을 다시 시작해야 합니다"
+
+#: ../src/reboot.c:28
+msgid ""
+"To finish updating your system, please restart it.\n"
+"\n"
+"Click on the notification icon for details."
+msgstr ""
+"시스템 업그레이드를 끝내려면 다시 시작해주십시오.\n"
+"\n"
+"자세한 내용을 보려면 알림 아이콘을 클릭해주십시오."
+
+#: ../src/reboot.c:102
+msgid "Reboot failed"
+msgstr "다시 시작할 수 없습니다"
+
+#: ../src/reboot.c:103
+msgid "Failed to request reboot, please shutdown manually"
+msgstr "다시 시작할 수 없습니다. 직접 종료해주십시오."
+
+#: ../src/update.c:27
+msgid "Show updates"
+msgstr "업데이트 보이기"
+
+#: ../src/update.c:31
+msgid "Install all updates"
+msgstr "업데이트 모두 설치"
+
+#: ../src/update.c:35
+msgid "Check for updates"
+msgstr "업데이트 확인"
+
+#: ../src/update.c:82
+#, c-format
+msgid "There is %i update available"
+msgid_plural "There are %i updates available"
+msgstr[0] "설치할 수 있는 업데이트가 %i개 있습니다."
+
+#: ../src/update.c:147
+msgid "Show notifications"
+msgstr "알림 보이기"
+
+#. and update the tooltip
+#: ../src/update.c:205
+msgid "A package manager is working"
+msgstr "패키지 관리자가 작동 중입니다."
+
+#: ../src/update.c:237
+#, c-format
+msgid ""
+"There is %i update available. Click on the notification icon to show the "
+"available update."
+msgid_plural ""
+"There are %i updates available. Click on the notification icon to show the "
+"available updates."
+msgstr[0] ""
+"%i개의 업데이트가 있습니다. 사용할 수 있는 업데이트를 보려면 알림 아이콘을 눌"
+"러주십시오."
+
+#: ../src/update.c:248
+msgid "Software updates available"
+msgstr "소프트웨어 업데이트를 사용할 수 있습니다"
+
+#: ../src/update.c:284
+#, fuzzy
+msgid ""
+"The update information is outdated. This may be caused by network problems "
+"or by a repository that is no longer available. Please update manually by "
+"selecting 'Show updates' from the indicator menu, and watching for any "
+"failing repositories."
+msgstr ""
+"업데이트 정보가 오래되었습니다. 네트워크에 문제가 있거나 저장소를 사용할 수 "
+"없습니다.이 아이콘을 눌러 직접 업데이트한 뒤 '업데이트 확인'을 선택해 문제가 "
+"있는 저장소를 확인하십시오."
+
+#: ../src/update.c:579
+#, c-format
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong.\n"
+"The error message was: '%s'. "
+msgstr ""
+"오류가 발생했습니다. 마우스 오른쪽 단추를 누르면 나오는 메뉴에서 패키지 관리"
+"자를 열거나 터미널에서 apt-get 명령을 실행하여 오류를 확인하십시오.\n"
+"오류 메시지는 다음과 같습니다: '%s' "
+
+#: ../src/update.c:586
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong."
+msgstr ""
+"오류가 발생하였습니다. 오른쪽 클릭 메뉴에서 패키지 관리자를 실행하거나 터미널"
+"에서 apt-get 명령을 실행해 문제를 확인해주십시오."
+
+#: ../src/update.c:590
+msgid "This usually means that your installed packages have unmet dependencies"
+msgstr "이 오류는 설치한 꾸러미의 의존성이 맞지 않을 때 주로 나타납니다."
+
+#: ../src/update.c:603
+msgid "A problem occurred when checking for the updates."
+msgstr "업데이트 확인 중 오류가 발생하였습니다."
+
+#: ../src/update-notifier.c:572
+msgid "- inform about updates"
+msgstr "-업데이트 알려주기"
+
+#: ../src/update-notifier.c:574
+#, c-format
+msgid "Failed to init the UI: %s\n"
+msgstr "UI 초기화 실패: %s\n"
+
+#: ../src/update-notifier.c:575
+msgid "unknown error"
+msgstr "알 수 없는 오류"
+
+#: ../src/update-notifier.c:598
+msgid "update-notifier"
+msgstr "업데이트 알리미"
+
+#: ../ui/hooks-dialog.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Update information</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">업데이트 정보</span>"
+
+#: ../ui/reboot-dialog.ui.h:1
+msgid "Restart Required"
+msgstr "다시 시작해야합니다."
+
+#: ../ui/reboot-dialog.ui.h:2
+msgid "Restart _Later"
+msgstr "나중에 다시 시작(_L)"
+
+#: ../ui/reboot-dialog.ui.h:3
+msgid "_Restart Now"
+msgstr "지금 다시 시작(_R)"
+
+#: ../ui/reboot-dialog.ui.h:4
+msgid ""
+"The computer needs to restart to finish installing updates. Please save your "
+"work before continuing."
+msgstr ""
+"업데이트 설치를 완료하려면 다시 시작해야 합니다. 진행하기 전에 작업을 저장하"
+"십시오."
+
+#: ../data/update-notifier.desktop.in.h:1
+msgid "Update Notifier"
+msgstr "업데이트 알리미"
+
+#: ../data/update-notifier.desktop.in.h:2
+msgid "Check for available updates automatically"
+msgstr "자동으로 사용할 수 있는 업데이트 확인"
+
+#. Name
+#: ../data/package-data-downloads-failed.in:2
+msgid "Failure to download extra data files"
+msgstr "추가 데이터 파일 다운로드 실패"
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"The following packages requested additional data downloads after package "
+"installation, but the data could not be downloaded or could not be processed."
+msgstr ""
+"다음 패키지는 설치 후 추가 데이터를 다운로드해야 합니다. 하지만 데이터를 다운"
+"로드할 수 없거나 계속 진행할 수 없습니다."
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid "  $packages"
+msgstr "  $packages"
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+msgid ""
+"The download will be attempted again later, or you can try the download "
+"again now.  Running this command requires an active Internet connection."
+msgstr ""
+"나중에 다시 다운로드하거나 지금 다시 다운로드를 시도할 수 있습니다. 이 명령"
+"을 실행하려면 인터넷에 연결되어있어야 합니다."
+
+#. Name
+#: ../data/package-data-downloads-failed-permanently.in:2
+msgid "Data files for some packages could not be downloaded"
+msgstr "일부 패키지의 데이터 파일을 다운로드할 수 없습니다."
+
+#. Description
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"This is a permanent failure that leaves these packages unusable on your "
+"system.  You may need to fix your Internet connection, then remove and "
+"reinstall the packages to fix this problem."
+msgstr ""
+"이 것은 다음 패키를 시스템에서 사용할 수 없게 만드는 심각한 문제입니다. 인터"
+"넷 연결을 다시 확인한 후 패키지를 제거하거나 다시 설치해 이 문제를 해결하십시"
+"오."
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">Please enter your password to "
+#~ "access problem reports of system programs</span>"
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">시스템 프로그램의 문제 보고서에 접근"
+#~ "하기 위해 암호를 입력하세요</span>"
+
+#~ msgid "Addon volume detected"
+#~ msgstr "추가 기능 볼륨 발견"
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">An addon volume with software "
+#~ "applications has been detected.</span>\n"
+#~ "\n"
+#~ "Would you like to view/install the content? "
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">소프트웨어 프로그램을 가지고 있는 추"
+#~ "가 기능 볼륨을 발견했습니다.</span>\n"
+#~ "\n"
+#~ "볼륨의 내용을 보거나 설치하시겠습니까? "
+
+#~ msgid "Start addon installer"
+#~ msgstr "추가 기능 설치 시작"
+
+#~ msgid "Internal error"
+#~ msgstr "내부 오류"

@@ -1,0 +1,7 @@
+Name: UTF-8 Migration
+Priority: Medium
+Command: ls
+Terminal: True
+Description: This command will convert your stuff into UTF-8.
+ Use this command if you want a working gnome desktop and you
+ feel the world should be a better place.

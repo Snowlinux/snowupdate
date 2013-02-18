@@ -1,0 +1,401 @@
+# translation of po_update-notifier-km.po to Khmer
+# Khmer translation for update-notifier
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the update-notifier package.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: po_update-notifier-km\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-31 00:41+0000\n"
+"PO-Revision-Date: 2012-04-17 02:57+0000\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer <support@khmeros.info>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2012-10-09 15:32+0000\n"
+"X-Generator: Launchpad (build 16112)\n"
+
+#: ../data/apt_check.py:22
+#, python-format
+msgid "Unknown Error: '%s' (%s)"
+msgstr "កំហុស​មិន​ស្គាល់ ៖ '%s' (%s)"
+
+#: ../data/apt_check.py:61
+#, python-format
+msgid "%i package can be updated."
+msgid_plural "%i packages can be updated."
+msgstr[0] "អាច​ធ្វើ​បច្ចុប្បន្ន​កញ្ចប់ %i"
+
+#: ../data/apt_check.py:66
+#, python-format
+msgid "%i update is a security update."
+msgid_plural "%i updates are security updates."
+msgstr[0] "បច្ចុប្បន្ន %i គឺ​ជា​បច្ចុប្បន្ន​ភាព​សុវត្ថិភាព ។"
+
+#: ../data/apt_check.py:94
+#, python-format
+msgid "Error: Opening the cache (%s)"
+msgstr "កំហុស ៖ ក្នុង​ការ​បើក​ឃ្លាំង​សម្ងាត់ (%s)"
+
+#: ../data/apt_check.py:108
+msgid "Error: BrokenCount > 0"
+msgstr "កំហុស ៖ ចំនួន​ខូច > ០"
+
+#: ../data/apt_check.py:115
+#, python-format
+msgid "Error: Marking the upgrade (%s)"
+msgstr "កំហុស ៖ សម្គាល់​ថា​ធ្វើ​ឲ្យ​ប្រសើរ​ឡើង (%s)"
+
+#: ../data/apt_check.py:179
+msgid "Show the packages that are going to be installed/upgraded"
+msgstr "បង្ហាញ​កញ្ចប់​ដែល​នឹង​ត្រូវ​បាន​ដំឡើង/ធ្វើ​ឲ្យ​ប្រសើរ​ឡើង"
+
+#: ../data/apt_check.py:184
+msgid "Show human readable output on stdout"
+msgstr "បង្ហាញ​លទ្ធផល​ដែល​អាច​មនុស្ស​អាច​អាន​បានៅ​លើ stdout"
+
+#: ../data/apt_check.py:188
+msgid ""
+"Return the time in days when security updates are installed unattended (0 "
+"means disabled)"
+msgstr ""
+"ត្រឡប់​ពេលវេលា​គិត​ជា​ថ្ងៃ នៅ​ពេល​ដំឡើង​បច្ចុប្បន្ន​ភាព​សុវត្ថិភាព​ដែល​​គ្មាន​ចេតនា (០ មាន​ន័យ​ថា បិទ)"
+
+#: ../src/crash.c:46
+msgid "System program problem detected"
+msgstr "បាន​រកឃើញ​បញ្ហា​​របស់​កម្មវិធី​ប្រព័ន្ធ"
+
+#: ../src/crash.c:47
+msgid "Do you want to report the problem now?"
+msgstr "តើ​អ្នក​ចង់​រាយការណ៍​អំពី​បញ្ហា​នេះ​ឥឡូវ​ដែរឬទេ ?"
+
+#: ../src/crash.c:57
+msgid "Report problem…"
+msgstr "រាយការណ៍​បញ្ហា..."
+
+#: ../src/crash.c:90 ../src/crash.c:209
+msgid "Crash report detected"
+msgstr "បាន​រកឃើញ​របាយការណ៍​គាំង"
+
+#: ../src/crash.c:91
+msgid ""
+"An application has crashed on your system (now or in the past). Click on the "
+"notification icon to display details. "
+msgstr ""
+"កម្មវិធី​បាន​គាំង​នៅ​ក្នុង​ប្រព័ន្ធ​របស់​អ្នក (បច្ចុប្បន្ន ឬ​ពី​មុន) ។ ចុច​លើ​រូបតំណាង​ជូន​ដំណឹង ដើម្បី​បង្ហាញ​សេចក្ដី​"
+"លម្អិត ។ "
+
+#. Create and show the notification
+#: ../src/avahi.c:15
+msgid "Network service discovery disabled"
+msgstr "បាន​បិទ​ការ​រកឃើញសេវា​កម្ម​បណ្ដាញ"
+
+#: ../src/avahi.c:16
+msgid ""
+"Your current network has a .local domain, which is not recommended and "
+"incompatible with the Avahi network service discovery. The service has been "
+"disabled."
+msgstr ""
+"បណ្ដាញ​បច្ចុប្បន្ន​របស់​អ្នក​មាន​ដែន .local ដែល​មិន​ត្រូវ​បាន​ផ្ដល់​អនុសាសន៍​ ហើយ​មិន​ឆប​គ្នា​ជា​មួយ​នឹង​ការ​រកឃើញ​"
+"សេវា​កម្ម​បណ្ដាញ Avahi ។ សេវា​កម្ម​ត្រូវ​បាន​បិទ ។"
+
+#: ../src/cdroms.c:51
+msgid "Software Packages Volume Detected"
+msgstr "បាន​រក​ឃើញ​ភាគ​កញ្ចប់​កម្មវិធី"
+
+#: ../src/cdroms.c:52
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with software packages has "
+"been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">ភាគ​ដែល​មាន​កញ្ចប់​កម្មវិធី​ត្រូវ​បាន​រកឃើញ ។</"
+"span>\n"
+"\n"
+"តើ​អ្នក​ចង់​បើក​វា​ជា​មួយ​កម្មវិធី​​គ្រប់គ្រង​កញ្ចប់​ដែរឬទេ ?"
+
+#: ../src/cdroms.c:60
+msgid "Start Package Manager"
+msgstr "ចាប់ផ្ដើម​កម្មវិធី​គ្រប់គ្រង​កញ្ចប់"
+
+#: ../src/cdroms.c:66
+msgid "Upgrade volume detected"
+msgstr "បាន​រកឃើញ​ភាគ​ធ្វើ​ឲ្យ​ប្រសើ​រឡើង"
+
+#: ../src/cdroms.c:67
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A distribution volume with software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to try to upgrade from it automatically? "
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">បាន​រកឃើញ​ភាគ​ចែកចាយ​ដែល​មាន​កញ្ចប់​កម្មវិធី ។</"
+"span>\n"
+"\n"
+"តើ​អ្នក​ចង់​ព្យាយាម​ធ្វើ​ឲ្យ​វា​ប្រសើរ​ឡើង​ដោយ​ស្វ័យ​ប្រវត្តិ​ដែរឬទេ ? "
+
+#: ../src/cdroms.c:74
+msgid "Run upgrade"
+msgstr "ដំណើរ​ការ​​ការ​ធ្វើ​ឲ្យ​ប្រសើ​រឡើង"
+
+#: ../src/cdroms.c:82
+msgid "APTonCD volume detected"
+msgstr "បាន​រ​កឃើញ​ភាគ APTonCD"
+
+#: ../src/cdroms.c:83
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with unofficial software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">ភាគ​ដែលមាន​កញ្ចប់​កម្មវិធី​មិន​ផ្លូវការ​ត្រូវ​បាន​រកឃើញ ។"
+"</span>\n"
+"\n"
+"តើ​អ្នក​ចង់​បើក​វា​ជា​មួយ​កម្មវិធី​គ្រប់គ្រង​កញ្ចប់​ដែរឬទេ ?"
+
+#: ../src/cdroms.c:91 ../src/update.c:38
+msgid "Start package manager"
+msgstr "ចាប់ផ្ដើម​កម្មវិធី​គ្រប់គ្រង​កញ្ចប់"
+
+#: ../src/hooks.c:360 ../ui/hooks-dialog.ui.h:2
+msgid "_Run this action now"
+msgstr "ដំណើរការ​សកម្ម​ភាព​នេះ​ឥឡូវ"
+
+#: ../src/hooks.c:513 ../src/hooks.c:664 ../src/hooks.c:893
+msgid "Information available"
+msgstr "ព័ត៌មាន​ដែល​មាន"
+
+#: ../src/hooks.c:665
+msgid "Click on the notification icon to show the available information.\n"
+msgstr "ចុច​រូបតំណាង​ជូន​ដំណឹង ដើម្បី​បង្ហាញ​ព័ត៌មាន​ដែលមាន ។\n"
+
+#: ../src/reboot.c:27 ../src/reboot.c:275
+msgid "System restart required"
+msgstr "ទាមទារ​ឲ្យ​ចាប់ផ្ដើម​ប្រព័ន្ធ​ឡើង​វិញ"
+
+#: ../src/reboot.c:28
+msgid ""
+"To finish updating your system, please restart it.\n"
+"\n"
+"Click on the notification icon for details."
+msgstr ""
+"ដើម្បី​បញ្ចប់​កា​រធ្វើ​បច្ចុប្បន្នភាព​ប្រព័ន្ធ​របស់​អ្នក សូម​ចាប់ផ្ដើម​វា​ឡើង​វិញ ។\n"
+"\n"
+"ចុច​រូបតំណាង​ជូន​ដំណឹង ដើម្បី​មើល​ព័ត៌មាន​លម្អិត ។"
+
+#: ../src/reboot.c:102
+msgid "Reboot failed"
+msgstr "បាន​បរាជ័យ​ក្នុងកា​រចាប់ផ្ដើម​ឡើងវិញ"
+
+#: ../src/reboot.c:103
+msgid "Failed to request reboot, please shutdown manually"
+msgstr "បាន​បរាជ័យ​ក្នុងការ​ស្នើ​ឲ្យ​ចាប់ផ្ដើម​ឡើងវិញ សូម​បិទ​ដោយ​ដៃ"
+
+#: ../src/update.c:27
+msgid "Show updates"
+msgstr "បង្ហាញ​បច្ចុប្បន្នភាព"
+
+#: ../src/update.c:31
+msgid "Install all updates"
+msgstr "ដំឡើង​បច្ចុប្បន្នភាព​​ទាំងអស់"
+
+#: ../src/update.c:35
+msgid "Check for updates"
+msgstr "ពិនិត្យ​មើល​បច្ចុប្បន្នភាព"
+
+#: ../src/update.c:82
+#, c-format
+msgid "There is %i update available"
+msgid_plural "There are %i updates available"
+msgstr[0] "មាន​បច្ចុប្បន្ន %i អាច​ប្រើ​បាន"
+
+#: ../src/update.c:147
+msgid "Show notifications"
+msgstr "បង្ហាញ​ការ​ជូន​ដំណឹង"
+
+#. and update the tooltip
+#: ../src/update.c:205
+msgid "A package manager is working"
+msgstr "កម្មវិធី​គ្រប់គ្រង​កញ្ចប់​កំពុង​ដំណើរការ"
+
+#: ../src/update.c:237
+#, c-format
+msgid ""
+"There is %i update available. Click on the notification icon to show the "
+"available update."
+msgid_plural ""
+"There are %i updates available. Click on the notification icon to show the "
+"available updates."
+msgstr[0] ""
+"មាន​បច្ចុប្បន្ន​ភាព %i អាច​ប្រើ​បាន ។ ចុច​រូបតំណាង​ជូន​ដំណឹង ដើម្បី​បង្ហាញ​បច្ចុប្បន្នភាព​ដែល​មាន ។"
+
+#: ../src/update.c:248
+msgid "Software updates available"
+msgstr "មាន​បច្ចុប្បន្នភាព​កម្មវិធី"
+
+#: ../src/update.c:284
+#, fuzzy
+msgid ""
+"The update information is outdated. This may be caused by network problems "
+"or by a repository that is no longer available. Please update manually by "
+"selecting 'Show updates' from the indicator menu, and watching for any "
+"failing repositories."
+msgstr ""
+"ព័ត៌មាន​បច្ចុប្បន្នភាព​ផុត​កំណត់​ហើយ ។ វា​អាច​បណ្ដាល​មក​ពី​បញ្ហា​បណ្ដាញ ឬ​មក​ពី​ឃ្លាំង​ដែល​មិន​អាច​ប្រើ​បាន​ ។ សូម​"
+"ធ្វើ​បច្ចុប្បន្នភាព​ដោយ​ដៃ ដោយ​ចុច​រូបតំណាង​នេះ ហើយ​បន្ទាប់មក​ជ្រើស​ 'ពិនិត្យ​មើល​បច្ចុប្បន្នភាព' ហើយ​ពិនិត្យ​"
+"មើល​ថាតើ​មាន​ឃ្លាំង​ដែល​​បាន​រាយ​មួយ​ចំនួន​បរាជ័យ​ដែរឬទេ ។"
+
+#: ../src/update.c:579
+#, c-format
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong.\n"
+"The error message was: '%s'. "
+msgstr ""
+"កំហុស​មួយ​បាន​កើត​ឡើង សូម​ដំណើរការ​កម្មវិធី​គ្រប់គ្រង​កញ្ចប់​ពី​ម៉ឺនុយ​បរិបទ ឬ​ apt-get នៅ​ក្នុង​កុងសូល ដើម្បី​មើល​អ្វី​"
+"ដែល​មិន​ត្រឹមត្រូវ ៖ '%s' ។ "
+
+#: ../src/update.c:586
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong."
+msgstr ""
+"កំហុស​មួយ​បានកើត​ឡើង សូម​ដំណើរការ​កម្មវិធី​គ្រប់គ្រង​កញ្ចប់​ពី​ម៉ឺនុយ​បរិបទ ឬ​ apt-get នៅ​ក្នុង​កុង​សូល ដើម្បី​មើល​អ្វី​"
+"ដែល​មិន​ត្រឹមត្រូវ ។"
+
+#: ../src/update.c:590
+msgid "This usually means that your installed packages have unmet dependencies"
+msgstr "តាម​ធម្មតា​មាន​ន័យ កញ្ចប់​ដែល​បាន​ដំឡើង​របស់​អ្នក​មាន​ភាព​អាសយដ្ឋាន​ដែល​មិន​ត្រូវ​គ្នា"
+
+#: ../src/update.c:603
+msgid "A problem occurred when checking for the updates."
+msgstr "បញ្ហា​មួយ​បាន​កើត​ឡើង​ នៅ​ពេល​ពិនិត្យ​មើល​បច្ចុប្បន្នភាព ។"
+
+#: ../src/update-notifier.c:572
+msgid "- inform about updates"
+msgstr "- ប្រាប់​អំពី​បច្ចុប្បន្នភាព"
+
+#: ../src/update-notifier.c:574
+#, c-format
+msgid "Failed to init the UI: %s\n"
+msgstr "បាន​បរាជ័យ​ init UI  ៖ %s\n"
+
+#: ../src/update-notifier.c:575
+msgid "unknown error"
+msgstr "កំហុស​ដែល​មិន​ស្គាល់"
+
+#: ../src/update-notifier.c:598
+msgid "update-notifier"
+msgstr "កម្មវិធី​ជូន​ដំណឹង​បច្ចុប្បន្នភាព"
+
+#: ../ui/hooks-dialog.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Update information</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">ព័ត៌មាន​ប្ចុប្បន្នភាព</span>"
+
+#: ../ui/reboot-dialog.ui.h:1
+msgid "Restart Required"
+msgstr "ទាមទារ​ឲ្យ​ចាប់ផ្ដើម​ឡើង​វិញ"
+
+#: ../ui/reboot-dialog.ui.h:2
+msgid "Restart _Later"
+msgstr "ចាប់ផ្ដើម​ឡើង​វិញ​ពេលក្រោយ"
+
+#: ../ui/reboot-dialog.ui.h:3
+msgid "_Restart Now"
+msgstr "ចាប់ផ្ដើម​ឡើងវិញ​ឥឡូវ"
+
+#: ../ui/reboot-dialog.ui.h:4
+msgid ""
+"The computer needs to restart to finish installing updates. Please save your "
+"work before continuing."
+msgstr ""
+"កុំព្យូទ័រ​ត្រូវ​ឲ្យ​ចាប់ផ្ដើម​ឡើងវិញ ដើម្បី​បញ្ចប់​ការ​ដំឡើង​បច្ចុប្បន្នភាព ។ សូម​រក្សាទុក​ការងារ​របស់​អ្នក​មុន​នឹង​"
+"បន្ត ។"
+
+#: ../data/update-notifier.desktop.in.h:1
+msgid "Update Notifier"
+msgstr "កម្មវិធី​ជូន​ដំណឹង​បច្ចុប្បន្នភាព"
+
+#: ../data/update-notifier.desktop.in.h:2
+msgid "Check for available updates automatically"
+msgstr "ពិនិត្យ​មើល​បច្ចុប្បន្នភាព​ដែល​មាន​ដោយ​ស្វ័យ​ប្រវត្តិ"
+
+#. Name
+#: ../data/package-data-downloads-failed.in:2
+msgid "Failure to download extra data files"
+msgstr "បាន​បរាជ័យ​ក្នុង​ការ​ទាញយក​ឯកសារ​ទិន្នន័យ​បន្ថែម"
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"The following packages requested additional data downloads after package "
+"installation, but the data could not be downloaded or could not be processed."
+msgstr ""
+"កញ្ចប់​ដូច​ខា​ងក្រោម​បាន​​ស្នើ​ឲ្យ​ទាញយក​ទិន្នន័យ​បន្ថែម បន្ទាប់​ពី​ការ​ដំឡើង​កញ្ចប់ ប៉ុន្តែ​ទិន្នន័យ​មិន​អាច​ត្រូវ​បាន​"
+"ទាញ​យក​ ឬ​មិន​អាច​ដំណើរការ​បាន ។"
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid "  $packages"
+msgstr "  $packages"
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+msgid ""
+"The download will be attempted again later, or you can try the download "
+"again now.  Running this command requires an active Internet connection."
+msgstr ""
+"ការ​ទាញយក​នឹង​ត្រូវបាន​ព្យាយាម​ម្ដង​ទៀត​នៅ​ពេល​ក្រោយ ឬ​អ្នក​អាច​ព្យាយាម​ទាញយក​ម្ដង​ទៀត​ឥឡូវ ។ ដំណើរការ​"
+"ពាក្យ​បញ្ជា​នេះ​ទាមទារ​ឲ្យ​មាន​​អ៊ីនធឺណិត ។"
+
+#. Name
+#: ../data/package-data-downloads-failed-permanently.in:2
+msgid "Data files for some packages could not be downloaded"
+msgstr "ឯកសារ​ទិន្នន័យ​សម្រាប់​កញ្ចប់​មួយ​ចំនួន​មិន​អាច​ត្រូវ​បាន​ទាញយក​ទេ"
+
+#. Description
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"This is a permanent failure that leaves these packages unusable on your "
+"system.  You may need to fix your Internet connection, then remove and "
+"reinstall the packages to fix this problem."
+msgstr ""
+"នេះ​ជា​ការ​បរាជ័យ​ ដែល​ធ្វើ​ឲ្យ​កញ្ចប់​ទាំង​នេះ​មិន​អាច​ប្រើ​បាន​ក្នុង​ប្រព័ន្ធ​របស់​អ្នក ។ អ្នក​ត្រូវ​មើល​ការ​ការ​"
+"តភ្ជាប់​អ៊ីនធឺណិត បន្ទាប់​មក​យក​ចេញ និង​ដំឡើង​កញ្ចប់​ទាំង​នេះ​ឡើង​វិញ ដើម្បី​កែ​បញ្ហា​នេះ ។"
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">Please enter your password to "
+#~ "access problem reports of system programs</span>"
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">សូម​បញ្ចូល​ពាក្យ​សម្ងាត់​របស់​អ្នក ដើម្បី​ចូល​​រាយការណ៍​"
+#~ "បញ្ហា​កម្មវិធី​ប្រព័ន្ធ</span>"
+
+#~ msgid "Addon volume detected"
+#~ msgstr "បាន​រកឃើញ​ភាគ​ផ្នែក​បន្ថែម"
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">An addon volume with software "
+#~ "applications has been detected.</span>\n"
+#~ "\n"
+#~ "Would you like to view/install the content? "
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">ភាគ​ផ្នែក​បន្ថែម​ដែល​មាន​កម្មវិធី​ត្រូវ​បាន​រកឃើញ ។"
+#~ "</span>\n"
+#~ "\n"
+#~ "តើ​អ្នក​ចង់​មើល/ដំឡើង​មាតិកា​ដែរឬទេ ? "
+
+#~ msgid "Start addon installer"
+#~ msgstr "ចាប់ផ្ដើម​កម្មវិធី​ដំឡើង​ផ្នែក​បន្ថែម"
+
+#~ msgid "Internal error"
+#~ msgstr "កំហុស​ខាង​ក្នុង"

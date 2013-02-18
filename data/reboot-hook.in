@@ -1,0 +1,8 @@
+_Name: Reboot required
+Priority: High
+Terminal: False
+DontShowAfterReboot: True
+_Description: 
+ To complete the system update a reboot is required so that 
+ the new services are activated. We strongly recommend that your machine is 
+ restarted as soon as possible.

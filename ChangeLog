@@ -1,0 +1,84 @@
+2006-01-11  Scott James Remnant  <scott@netsplit.com>
+
+	* src/reboot.c: New file containing code to deal with reboot
+	notifications.
+	* src/reboot.h: Header for new code.
+	* src/Makefile.am (update_notifier_SOURCES): Add new source files
+	to the binary.
+	
+	* src/update-notifier.c (tray_icons_init): Initialise the reboot
+	tray icon as well.
+	(fam_init): Initialise watch for the reboot-required file.
+	(fam_check): If the reboot-required file gets touched or remove,
+	run the reboot_check function.
+	* src/update-notifier.h (struct _UpgradeNotifier): Add pointer to
+	reboot tray applet and request context for watching the file we'll
+	use to do this.
+
+	* data/notify-reboot-required: instead of copying a hook into the
+	directory, touch /var/run/reboot-required which is sufficient for
+	that message.  Obviously anything wanting to give more detail can
+	still use the hooks.
+	* data/reboot-hook.in: Removed.
+	* data/Makefile.am (templates_DATA): Drop this now there's no hook.
+
+	* pixmaps/reboot.png: Copied pixmap from the Ubuntu logout dialog.
+	* pixmaps/reboot-icon.png: Taken from Tango theme and colours
+	modified to be a bie like the logout one.
+	* pixmaps/Makefile.am (appicon_DATA): added both new graphcis to
+	pixmaps directory.
+
+2005-03-03  Dan Damian  <dand@gnome.ro>
+
+       * po/ro.po:
+       * configure.in: Added Romanian translation.
+
+2005-03-02  Martin Willemoes Hansen  <mwh@sysrq.dk>
+
+        * da.po: Updated Danish translation.
+
+2005-01-25  Martin Willemoes Hansen  <mwh@sysrq.dk>
+        * da.po: Added Danish translation.
+	
+2005-01-06  Michael Vogt <mvo@debian.org>
+	* lot's of internal changes
+	* renamed to udpate-notifier
+	
+2004-10-24  Michiel Sikkes  <michiel@eyesopened.nl>
+
+	* configure.in: Added with-package-manager configure var.
+	* src/upgrade-notifier.c: 
+	  - Added die signal to the gnome client.
+	  - Added invokation of the package manager.
+
+2004-10-22  Michiel Sikkes  <michiel@eyesopened.nl>
+
+	* Makefile.am: Removed autogen.sh from extra_dist.
+	* configure.in: Replaced configure.in with src/upgrade-notifier.c in
+	AC_INIT.
+
+2004-10-22  Michiel Sikkes  <michiel@eyesopened.nl>
+
+	* src/Makefile.am: Added upgrade-notifier.[ch]
+	* src/upgrade-dialog.glade: Moved to ui/
+	* src/upgrade-notifier.c: Added. Was: tray.c
+
+2004-10-22  Michiel Sikkes  <michiel@eyesopened.nl>
+
+	* AUTHORS: Added myself
+	* autogen.sh: Stripped down, using gnome-autogen.sh now.
+	* configure.in: Added checks for the package manager and
+	upate-manager.
+	* data/Makefile: 
+	* data/Makefile.in:
+	* pixmaps/Makefile:
+	* pixmaps/Makefile.in:
+	* po/Makefile:
+	* po/Makefile.in:
+	* po/Makefile.in.in:
+	* po/POTFILES:
+	* po/upgrade-notifier.pot:
+	* src/Makefile:
+	* src/Makefile.in: Removed all these files. They don't belong in the
+	upstream repo ;-)
+

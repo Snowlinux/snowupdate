@@ -1,0 +1,10 @@
+etc/xdg/autostart/update-notifier.desktop
+usr/share/update-notifier/ui/hooks-dialog.ui
+usr/share/update-notifier/ui/reboot-dialog.ui
+usr/share/icons/hicolor/16x16/
+usr/share/icons/hicolor/22x22/
+usr/share/icons/hicolor/24x24/
+usr/share/icons/hicolor/48x48/
+usr/share/glib-2.0/schemas/com.ubuntu.update-notifier.gschema.xml
+usr/share/GConf/gsettings/update-notifier.convert
+usr/bin/update-notifier

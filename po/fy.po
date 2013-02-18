@@ -1,0 +1,396 @@
+# Frisian translation for update-notifier
+# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
+# This file is distributed under the same license as the update-notifier package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: update-notifier\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-31 00:41+0000\n"
+"PO-Revision-Date: 2011-03-23 19:22+0000\n"
+"Last-Translator: Sense Egbert Hofstede <u@sensehofstede.nl>\n"
+"Language-Team: Frisian <fy@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2012-10-09 15:32+0000\n"
+"X-Generator: Launchpad (build 16112)\n"
+
+#: ../data/apt_check.py:22
+#, python-format
+msgid "Unknown Error: '%s' (%s)"
+msgstr "Ûnbekende flater: '%s' (%s)"
+
+#: ../data/apt_check.py:61
+#, python-format
+msgid "%i package can be updated."
+msgid_plural "%i packages can be updated."
+msgstr[0] "%i pakket kin bywurke wurde."
+msgstr[1] "%i pakketten kinne bywurke wurde."
+
+#: ../data/apt_check.py:66
+#, python-format
+msgid "%i update is a security update."
+msgid_plural "%i updates are security updates."
+msgstr[0] "%i is in feiligens bywurking."
+msgstr[1] "%i binne feiligens bywurkingen."
+
+#: ../data/apt_check.py:94
+#, python-format
+msgid "Error: Opening the cache (%s)"
+msgstr "Flater: iepenje fan cache (%s)"
+
+#: ../data/apt_check.py:108
+msgid "Error: BrokenCount > 0"
+msgstr "Flater: BrokenCount > 0"
+
+#: ../data/apt_check.py:115
+#, python-format
+msgid "Error: Marking the upgrade (%s)"
+msgstr "Flater: bywurking (%s) markearje"
+
+#: ../data/apt_check.py:179
+msgid "Show the packages that are going to be installed/upgraded"
+msgstr ""
+
+#: ../data/apt_check.py:184
+msgid "Show human readable output on stdout"
+msgstr ""
+
+#: ../data/apt_check.py:188
+msgid ""
+"Return the time in days when security updates are installed unattended (0 "
+"means disabled)"
+msgstr ""
+
+#: ../src/crash.c:46
+msgid "System program problem detected"
+msgstr "Probleem mei systeemprogramme fûn"
+
+#: ../src/crash.c:47
+msgid "Do you want to report the problem now?"
+msgstr "Wolle jo it probleem no rapportearje?"
+
+#: ../src/crash.c:57
+msgid "Report problem…"
+msgstr "Probleem rapportearje..."
+
+#: ../src/crash.c:90 ../src/crash.c:209
+msgid "Crash report detected"
+msgstr "Ferûngelokt-rapport ûntdútsen"
+
+#: ../src/crash.c:91
+msgid ""
+"An application has crashed on your system (now or in the past). Click on the "
+"notification icon to display details. "
+msgstr ""
+"In programma is fer^ngelokke op jo systeem (no of yn it ferline). Klik op it "
+"meidielingsbyldkaike foar mear ynformaasje. "
+
+#. Create and show the notification
+#: ../src/avahi.c:15
+msgid "Network service discovery disabled"
+msgstr "Finen fan netwurktsjinsten útskeakele."
+
+#: ../src/avahi.c:16
+msgid ""
+"Your current network has a .local domain, which is not recommended and "
+"incompatible with the Avahi network service discovery. The service has been "
+"disabled."
+msgstr ""
+"Jo netwurk hat in .local-domein. .local-domeinen kinne net brûkt wurde mei "
+"de Avahi netwurktsjinsten-ûntdekkingstsjinst. De tsjinst is dêrom útskeakele."
+
+#: ../src/cdroms.c:51
+msgid "Software Packages Volume Detected"
+msgstr ""
+
+#: ../src/cdroms.c:52
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with software packages has "
+"been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Der is in folume mei softwarepaketten "
+"fûn.</span>\n"
+"\n"
+"Wolle jo it iepenje mei it pakettebehear?"
+
+#: ../src/cdroms.c:60
+msgid "Start Package Manager"
+msgstr "Pakketbehearder begjinne"
+
+#: ../src/cdroms.c:66
+msgid "Upgrade volume detected"
+msgstr "Bywurkvolume fûn"
+
+#: ../src/cdroms.c:67
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A distribution volume with software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to try to upgrade from it automatically? "
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Der is in distribusjefolume mei "
+"softwarepaketten ûntdútsen.</span>\n"
+"\n"
+"Wolle jo fan dit folume fernije? "
+
+#: ../src/cdroms.c:74
+msgid "Run upgrade"
+msgstr "Opwurdearing útfiere"
+
+#: ../src/cdroms.c:82
+msgid "APTonCD volume detected"
+msgstr "APTonCD-folume ûntdútsen"
+
+#: ../src/cdroms.c:83
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with unofficial software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Der is in folume mei net-offisjele "
+"softwarepaketten fûn.</span>\n"
+"\n"
+"Wolle jo it iepenje mei it pakettebehear?"
+
+#: ../src/cdroms.c:91 ../src/update.c:38
+msgid "Start package manager"
+msgstr "Pakettebehearder begjinne"
+
+#: ../src/hooks.c:360 ../ui/hooks-dialog.ui.h:2
+msgid "_Run this action now"
+msgstr "Dizze aksje no útfie_re"
+
+#: ../src/hooks.c:513 ../src/hooks.c:664 ../src/hooks.c:893
+msgid "Information available"
+msgstr "Ynformaasje beskikber"
+
+#: ../src/hooks.c:665
+msgid "Click on the notification icon to show the available information.\n"
+msgstr "Klik op it meldingsbyldkaike om de ynformaasje sjen te litten.\n"
+
+#: ../src/reboot.c:27 ../src/reboot.c:275
+msgid "System restart required"
+msgstr "Systeem opnij starte fereaske"
+
+#: ../src/reboot.c:28
+msgid ""
+"To finish updating your system, please restart it.\n"
+"\n"
+"Click on the notification icon for details."
+msgstr ""
+
+#: ../src/reboot.c:102
+msgid "Reboot failed"
+msgstr "Opnij opstarte mislearre"
+
+#: ../src/reboot.c:103
+msgid "Failed to request reboot, please shutdown manually"
+msgstr ""
+
+#: ../src/update.c:27
+msgid "Show updates"
+msgstr "Bywurkingen sjen litte"
+
+#: ../src/update.c:31
+msgid "Install all updates"
+msgstr "Alle bywurkingen ynstallearje"
+
+#: ../src/update.c:35
+msgid "Check for updates"
+msgstr "Op bywurkingen kontrollearje"
+
+#: ../src/update.c:82
+#, c-format
+msgid "There is %i update available"
+msgid_plural "There are %i updates available"
+msgstr[0] "Der is %i bywurking beskikber"
+msgstr[1] "Der binne %i bywurkingen beskikber"
+
+#: ../src/update.c:147
+msgid "Show notifications"
+msgstr "Kunskip sjen litte"
+
+#. and update the tooltip
+#: ../src/update.c:205
+msgid "A package manager is working"
+msgstr "Der is al in programma foar pakketbehear opstarten"
+
+#: ../src/update.c:237
+#, c-format
+msgid ""
+"There is %i update available. Click on the notification icon to show the "
+"available update."
+msgid_plural ""
+"There are %i updates available. Click on the notification icon to show the "
+"available updates."
+msgstr[0] ""
+"Der is in %i bywurking beskikber. Klik op it meldingsembleem om de "
+"beskikbere bywurking te toanen."
+msgstr[1] ""
+"Der binne %i bywurkingen beskikber. Klik op it meldingsembleem om de "
+"beskikbere bywurkingen te toanen."
+
+#: ../src/update.c:248
+msgid "Software updates available"
+msgstr "Softwarebywurkingen beskikber"
+
+#: ../src/update.c:284
+#, fuzzy
+msgid ""
+"The update information is outdated. This may be caused by network problems "
+"or by a repository that is no longer available. Please update manually by "
+"selecting 'Show updates' from the indicator menu, and watching for any "
+"failing repositories."
+msgstr ""
+"De update ynformaasje is net mear by de tiid. Dit kin komme troch problemen "
+"mei it netwurk of troch in opslakplak dat net langer beskikber is. "
+"Asjebleaft update hânmatich troch te klikken op dizze ikoan en dan  "
+"'Kontrolear op updates' te selectearjen en kontrolear of dat sommige "
+"opslagplakken út de lyst if ek mislearje."
+
+#: ../src/update.c:579
+#, c-format
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong.\n"
+"The error message was: '%s'. "
+msgstr ""
+
+#: ../src/update.c:586
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong."
+msgstr ""
+"Der barde in flater. Start de pakketbehearder fanút it rjochts-klikmenu of "
+"start apt-get yn in terminal om te sjen wat der oan'e hân is."
+
+#: ../src/update.c:590
+msgid "This usually means that your installed packages have unmet dependencies"
+msgstr ""
+"Dit betekent faaks dat in tal softwarepakketten op jo kompjûter ôfhinkelik "
+"binne fan pakketten die (nog) net ynstallearre binne."
+
+#: ../src/update.c:603
+msgid "A problem occurred when checking for the updates."
+msgstr "Der wie swierrigens ûnder it kontrolearjen op fernijings."
+
+#: ../src/update-notifier.c:572
+msgid "- inform about updates"
+msgstr ""
+
+#: ../src/update-notifier.c:574
+#, c-format
+msgid "Failed to init the UI: %s\n"
+msgstr ""
+
+#: ../src/update-notifier.c:575
+msgid "unknown error"
+msgstr "ûnbekende flater"
+
+#: ../src/update-notifier.c:598
+msgid "update-notifier"
+msgstr "Fernijings-melder"
+
+#: ../ui/hooks-dialog.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Update information</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Fernijingsynformaasje</span>"
+
+#: ../ui/reboot-dialog.ui.h:1
+msgid "Restart Required"
+msgstr "Opnije starte fereaske"
+
+#: ../ui/reboot-dialog.ui.h:2
+msgid "Restart _Later"
+msgstr "_Letter opnij starte"
+
+#: ../ui/reboot-dialog.ui.h:3
+msgid "_Restart Now"
+msgstr "No opnij sta_rte"
+
+#: ../ui/reboot-dialog.ui.h:4
+msgid ""
+"The computer needs to restart to finish installing updates. Please save your "
+"work before continuing."
+msgstr ""
+
+#: ../data/update-notifier.desktop.in.h:1
+msgid "Update Notifier"
+msgstr "Bywurkingmelder"
+
+#: ../data/update-notifier.desktop.in.h:2
+msgid "Check for available updates automatically"
+msgstr ""
+
+#. Name
+#: ../data/package-data-downloads-failed.in:2
+msgid "Failure to download extra data files"
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"The following packages requested additional data downloads after package "
+"installation, but the data could not be downloaded or could not be processed."
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid "  $packages"
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+msgid ""
+"The download will be attempted again later, or you can try the download "
+"again now.  Running this command requires an active Internet connection."
+msgstr ""
+
+#. Name
+#: ../data/package-data-downloads-failed-permanently.in:2
+msgid "Data files for some packages could not be downloaded"
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"This is a permanent failure that leaves these packages unusable on your "
+"system.  You may need to fix your Internet connection, then remove and "
+"reinstall the packages to fix this problem."
+msgstr ""
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">Please enter your password to "
+#~ "access problem reports of system programs</span>"
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">Jou jo wachtwurd om "
+#~ "probleemrapportages fan jo systeemprogramma's te iepenjen.</span>"
+
+#~ msgid "Addon volume detected"
+#~ msgstr "Taheakfolume fûn"
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">An addon volume with software "
+#~ "applications has been detected.</span>\n"
+#~ "\n"
+#~ "Would you like to view/install the content? "
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">Der is in tafoechvolume mei "
+#~ "softwareapplikaasjes ûntdútsen.</span>\n"
+#~ "\n"
+#~ "Wolle jo de ynhald besjen/installearje? "
+
+#~ msgid "Start addon installer"
+#~ msgstr "Taheakynstallearder begjinne"
+
+#~ msgid "Internal error"
+#~ msgstr "Ynterne flater"

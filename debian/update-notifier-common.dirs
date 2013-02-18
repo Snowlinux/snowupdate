@@ -1,0 +1,9 @@
+etc/apt/apt.conf.d
+etc/update-notifier
+var/lib/update-notifier
+var/lib/update-notifier/user.d
+var/lib/update-notifier/package-data-downloads
+etc/update-motd.d
+usr/share/update-notifier/plugins/cache-changed
+usr/share/update-notifier/upgrader-patches
+usr/share/package-data-downloads

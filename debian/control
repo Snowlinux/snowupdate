@@ -1,0 +1,57 @@
+Source: update-notifier
+Section: gnome
+Priority: optional
+Maintainer: Michael Vogt <michael.vogt@ubuntu.com>
+Build-Depends: debhelper (>= 7.0.50~),
+               libgtk-3-dev,
+               libglib2.0-dev (>= 2.34),
+               intltool,
+               libnotify-dev (>= 0.7),
+               libgudev-1.0-dev,
+               libx11-dev,
+               autotools-dev,
+               libappindicator3-dev,
+               po-debconf,
+               python,
+               python-apt,
+               python-debian
+Standards-Version: 3.8.4
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/update-notifier/ubuntu
+
+Package: update-notifier
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         update-notifier-common (= ${source:Version}),
+         python,
+         python-apt,
+         python-dbus,
+         python-debian,
+         update-manager-gnome | update-manager (>= 1:0.165),
+         ubuntu-release-upgrader-gtk,
+         notification-daemon,
+         gksu,
+         policykit-1
+Recommends: apport-gtk (>=2.8-0ubuntu3), 
+            python-aptdaemon.gtk3widgets | synaptic, 
+            software-properties-gtk, 
+            anacron, 
+            python-aptdaemon
+Suggests: ubuntu-system-service
+Description: Daemon which notifies about package updates
+ Puts an icon in the user's notification area when package updates are
+ available.
+
+Package: update-notifier-common
+Replaces: update-notifier (<< 0.75.1)
+Architecture: all
+Pre-Depends: dpkg (>= 1.15.7.2)
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         python,
+         python-apt (>= 0.6.12), python-debian, debconf, patch
+Recommends: libpam-modules (>= 1.0.1-9ubuntu3)
+Suggests: gksu, policykit-1
+Description: Files shared between update-notifier and other packages
+ Apt setup files and reboot notification scripts shared between
+ update-notifier and other packages, notably for server use cases.

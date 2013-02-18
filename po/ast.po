@@ -1,0 +1,414 @@
+# Asturian translation for update-notifier
+# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
+# This file is distributed under the same license as the update-notifier package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: update-notifier\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-31 00:41+0000\n"
+"PO-Revision-Date: 2012-04-14 20:18+0000\n"
+"Last-Translator: Iñigo Varela <malditoastur@gmail.com>\n"
+"Language-Team: Asturian <ast@li.org>\n"
+"Language: ast\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2012-10-09 15:32+0000\n"
+"X-Generator: Launchpad (build 16112)\n"
+
+#: ../data/apt_check.py:22
+#, python-format
+msgid "Unknown Error: '%s' (%s)"
+msgstr "Fallu desconocíu: «%s» (%s)"
+
+#: ../data/apt_check.py:61
+#, python-format
+msgid "%i package can be updated."
+msgid_plural "%i packages can be updated."
+msgstr[0] "%i paquete puede anovase."
+msgstr[1] "%i paquetes pueden anovase."
+
+#: ../data/apt_check.py:66
+#, python-format
+msgid "%i update is a security update."
+msgid_plural "%i updates are security updates."
+msgstr[0] "l'anovamientu %i ye un anovamientu de seguridá."
+msgstr[1] "los anovamientos %i son anovamientos de seguridá"
+
+#: ../data/apt_check.py:94
+#, python-format
+msgid "Error: Opening the cache (%s)"
+msgstr "Fallu: Abriendo la caché (%s)"
+
+#: ../data/apt_check.py:108
+msgid "Error: BrokenCount > 0"
+msgstr "Fallu: BrokenCount > 0"
+
+#: ../data/apt_check.py:115
+#, python-format
+msgid "Error: Marking the upgrade (%s)"
+msgstr "Fallu: Marcando l'actualización (%s)"
+
+#: ../data/apt_check.py:179
+msgid "Show the packages that are going to be installed/upgraded"
+msgstr "Amuesa los paquetes que van ser instalaos o actualizaos"
+
+#: ../data/apt_check.py:184
+msgid "Show human readable output on stdout"
+msgstr "Amuesa una salida llexible pa humanos en stdout"
+
+#: ../data/apt_check.py:188
+msgid ""
+"Return the time in days when security updates are installed unattended (0 "
+"means disabled)"
+msgstr ""
+"Devuelve'l tiempu en díes nel que los anovamientos de seguridá s'instalen de "
+"mou desatendíu (0 significa deshabilitáu)."
+
+#: ../src/crash.c:46
+msgid "System program problem detected"
+msgstr "Deteutóse un problema en programa de sistema"
+
+#: ../src/crash.c:47
+msgid "Do you want to report the problem now?"
+msgstr "¿Quies informar agora d'esti problema?"
+
+#: ../src/crash.c:57
+msgid "Report problem…"
+msgstr "Informar del problema..."
+
+#: ../src/crash.c:90 ../src/crash.c:209
+msgid "Crash report detected"
+msgstr "Deteutóse un informe de fallu"
+
+#: ../src/crash.c:91
+msgid ""
+"An application has crashed on your system (now or in the past). Click on the "
+"notification icon to display details. "
+msgstr ""
+"Una aplicación quedo colingada nel so sistema (agora o nel pasáu). Calque "
+"sobro l'iconu de notificación p'amosar más detais. "
+
+#. Create and show the notification
+#: ../src/avahi.c:15
+msgid "Network service discovery disabled"
+msgstr "Serviciu d'autodeteición de rede deshabilitáu"
+
+#: ../src/avahi.c:16
+msgid ""
+"Your current network has a .local domain, which is not recommended and "
+"incompatible with the Avahi network service discovery. The service has been "
+"disabled."
+msgstr ""
+"La so rede actual tien un dominiu .llocal. non recomendáu ya incompatible "
+"col serviciu d'autodeteición de rede Avahi. El serviciu foi deshabilitáu"
+
+#: ../src/cdroms.c:51
+msgid "Software Packages Volume Detected"
+msgstr "Volume de paquetes de software deteutaos"
+
+#: ../src/cdroms.c:52
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with software packages has "
+"been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Tiense deteutao un volume con paquetes "
+"de software.</span>\n"
+"\n"
+"¿Prestaría-y abrilu col xestor de paquetes?"
+
+#: ../src/cdroms.c:60
+msgid "Start Package Manager"
+msgstr "Aniciar Xestor de paquetes"
+
+#: ../src/cdroms.c:66
+msgid "Upgrade volume detected"
+msgstr "Deteutáu volume d'anovamientu"
+
+#: ../src/cdroms.c:67
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A distribution volume with software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to try to upgrade from it automatically? "
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Tiense deteutao un volume de "
+"distribución con paquetes de software.</span>\n"
+"\n"
+"¿Deseya intentar l'actualización dende ésti automáticamente? "
+
+#: ../src/cdroms.c:74
+msgid "Run upgrade"
+msgstr "Actualizar"
+
+#: ../src/cdroms.c:82
+msgid "APTonCD volume detected"
+msgstr "Deteutáu volume APTonCD"
+
+#: ../src/cdroms.c:83
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with unofficial software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Tiense deteutáu un volume con paquetes "
+"non oficiales de software.</span>\n"
+"\n"
+"¿Deseya abrilu col xestor de paquetes?"
+
+#: ../src/cdroms.c:91 ../src/update.c:38
+msgid "Start package manager"
+msgstr "Aniciar xestor de paquetes"
+
+#: ../src/hooks.c:360 ../ui/hooks-dialog.ui.h:2
+msgid "_Run this action now"
+msgstr "_Executar esta aición agora."
+
+#: ../src/hooks.c:513 ../src/hooks.c:664 ../src/hooks.c:893
+msgid "Information available"
+msgstr "Información disponible"
+
+#: ../src/hooks.c:665
+msgid "Click on the notification icon to show the available information.\n"
+msgstr ""
+"Calque sobro l'iconu de notificación p'amosar l'información disponible\n"
+
+#: ../src/reboot.c:27 ../src/reboot.c:275
+msgid "System restart required"
+msgstr "Ye necesario reaniciar el sistema"
+
+#: ../src/reboot.c:28
+msgid ""
+"To finish updating your system, please restart it.\n"
+"\n"
+"Click on the notification icon for details."
+msgstr ""
+"Pa finar l'anovamientu del sistema, reanícialu.\n"
+"\n"
+"Calca nel iconu de notificación pa obtener más información."
+
+#: ../src/reboot.c:102
+msgid "Reboot failed"
+msgstr "Falló'l reaniciu"
+
+#: ../src/reboot.c:103
+msgid "Failed to request reboot, please shutdown manually"
+msgstr "Falló'l reaniciu solicitáu; por favor, apague manualmente"
+
+#: ../src/update.c:27
+msgid "Show updates"
+msgstr "Amosar actualizaciones"
+
+#: ../src/update.c:31
+msgid "Install all updates"
+msgstr "Instalar toles actualizaciones"
+
+#: ../src/update.c:35
+msgid "Check for updates"
+msgstr "Comprobar actualizaciones"
+
+#: ../src/update.c:82
+#, c-format
+msgid "There is %i update available"
+msgid_plural "There are %i updates available"
+msgstr[0] "Hai %i actualización disponible"
+msgstr[1] "Hai %i actualizaciones disponibles"
+
+#: ../src/update.c:147
+msgid "Show notifications"
+msgstr "Amosar notificaciones"
+
+#. and update the tooltip
+#: ../src/update.c:205
+msgid "A package manager is working"
+msgstr "El xestor de paquetes ta trabayando"
+
+#: ../src/update.c:237
+#, c-format
+msgid ""
+"There is %i update available. Click on the notification icon to show the "
+"available update."
+msgid_plural ""
+"There are %i updates available. Click on the notification icon to show the "
+"available updates."
+msgstr[0] ""
+"Hai %i actualización disponible. Calca nel iconu de notificación p'amosar "
+"l'actualización disponible."
+msgstr[1] ""
+"Hai %i actualizaciones disponibles. Calca nel iconu de notificación p'amosar "
+"les actualizaciones disponibles."
+
+#: ../src/update.c:248
+msgid "Software updates available"
+msgstr "Hai actualizaciones de software disponibles"
+
+#: ../src/update.c:284
+#, fuzzy
+msgid ""
+"The update information is outdated. This may be caused by network problems "
+"or by a repository that is no longer available. Please update manually by "
+"selecting 'Show updates' from the indicator menu, and watching for any "
+"failing repositories."
+msgstr ""
+"La información d'anovamientu ta caducada. Esto pue debese a problemes de "
+"rede o por qu'un depósitu yá nun tea disponible. Por favor anova manualmente "
+"calcando nesti iconu y depués seleiciona \"Guetar anovamientos\" y comprueba "
+"si dalgún de los depósitos llistaos falla."
+
+#: ../src/update.c:579
+#, c-format
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong.\n"
+"The error message was: '%s'. "
+msgstr ""
+"Hebo un fallu, executa l'alministrador de paquetes dende'l menú del botón "
+"drechu, o apt-get nun terminal, pa ver qué salió mal.\n"
+"El mensaxe d'error ye: '%s'. "
+
+#: ../src/update.c:586
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong."
+msgstr ""
+"Tien asocedío un error; por favor, execute el Xestor de paquetes dende'l "
+"menú contestual o apt-get nuna terminal p'adicar au ta'l problema."
+
+#: ../src/update.c:590
+msgid "This usually means that your installed packages have unmet dependencies"
+msgstr ""
+"Normalmente, esto quier dicir que tien instalao paquetes que tienen "
+"dependencies que nun se puen satisfacer."
+
+#: ../src/update.c:603
+msgid "A problem occurred when checking for the updates."
+msgstr "Hebo un problema al comprobar les actualizaciones."
+
+#: ../src/update-notifier.c:572
+msgid "- inform about updates"
+msgstr "- informar sobro los anovamientos"
+
+#: ../src/update-notifier.c:574
+#, c-format
+msgid "Failed to init the UI: %s\n"
+msgstr "Falló al anicializar la interface d'usuariu: %s\n"
+
+#: ../src/update-notifier.c:575
+msgid "unknown error"
+msgstr "fallu desconocíu"
+
+#: ../src/update-notifier.c:598
+msgid "update-notifier"
+msgstr "notificador-d'anovamientos"
+
+#: ../ui/hooks-dialog.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Update information</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Información d'anovamientu</span>"
+
+#: ../ui/reboot-dialog.ui.h:1
+msgid "Restart Required"
+msgstr "Requierse reaniciar"
+
+#: ../ui/reboot-dialog.ui.h:2
+msgid "Restart _Later"
+msgstr "Reaniciar más _sero"
+
+#: ../ui/reboot-dialog.ui.h:3
+msgid "_Restart Now"
+msgstr "_Reaniciar agora"
+
+#: ../ui/reboot-dialog.ui.h:4
+msgid ""
+"The computer needs to restart to finish installing updates. Please save your "
+"work before continuing."
+msgstr ""
+"L'equipu necesita reaniciase pa finar l'anovamientu. Guarde'l so trabayu "
+"enantes de continuar."
+
+#: ../data/update-notifier.desktop.in.h:1
+msgid "Update Notifier"
+msgstr "Notificador d'anovamientos"
+
+#: ../data/update-notifier.desktop.in.h:2
+msgid "Check for available updates automatically"
+msgstr "Comprobar automáticamente los anovamientos disponibles"
+
+#. Name
+#: ../data/package-data-downloads-failed.in:2
+msgid "Failure to download extra data files"
+msgstr "Fallu al descargar ficheros de datos estra"
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"The following packages requested additional data downloads after package "
+"installation, but the data could not be downloaded or could not be processed."
+msgstr ""
+"Los siguientes paquetes solicitaron descargues adicionales de datos dempués "
+"de la instalación del paquete, pero los datos nun pudieron descargase o nun "
+"pudieron procesase."
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid "  $packages"
+msgstr "  $packages"
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+msgid ""
+"The download will be attempted again later, or you can try the download "
+"again now.  Running this command requires an active Internet connection."
+msgstr ""
+"La descarga va intentase dempués, o pues intentalo agora mesmo. Executar "
+"esta orde requier tener activa una conexón a Internet."
+
+#. Name
+#: ../data/package-data-downloads-failed-permanently.in:2
+msgid "Data files for some packages could not be downloaded"
+msgstr "Los ficheros de datos pa dalgunos paquetes nun pudieron descargase."
+
+#. Description
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"This is a permanent failure that leaves these packages unusable on your "
+"system.  You may need to fix your Internet connection, then remove and "
+"reinstall the packages to fix this problem."
+msgstr ""
+"Esti ye un fallu permanente que dexa estos paquetes inutilizables nel "
+"sistema. Pues necesitar configurar la to conexón a Internet, dempués "
+"desaniciar y reinstalar los paquetes pa iguar esti problema."
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">Please enter your password to "
+#~ "access problem reports of system programs</span>"
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">Introduz la contraseña p'acceder a "
+#~ "los informes de problemes de los programes del sistema</span>"
+
+#~ msgid "Addon volume detected"
+#~ msgstr "Discu suplementariu deteutáu"
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">An addon volume with software "
+#~ "applications has been detected.</span>\n"
+#~ "\n"
+#~ "Would you like to view/install the content? "
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">Tiense deteutáu un volume "
+#~ "suplementariu con aplicaciones de software.</span>\n"
+#~ "\n"
+#~ "¿Prúye-y allupar/instalar el conteníu? "
+
+#~ msgid "Start addon installer"
+#~ msgstr "Entamar l'instalador de suplementos"
+
+#~ msgid "Internal error"
+#~ msgstr "Error internu"

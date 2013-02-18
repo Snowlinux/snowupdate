@@ -1,0 +1,394 @@
+# Telugu translation for update-notifier
+# Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
+# This file is distributed under the same license as the update-notifier package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: update-notifier\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-31 00:41+0000\n"
+"PO-Revision-Date: 2012-03-17 04:30+0000\n"
+"Last-Translator: Praveen Illa <mail2ipn@gmail.com>\n"
+"Language-Team: Telugu <te@li.org>\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2012-10-09 15:32+0000\n"
+"X-Generator: Launchpad (build 16112)\n"
+
+#: ../data/apt_check.py:22
+#, python-format
+msgid "Unknown Error: '%s' (%s)"
+msgstr "తెలియని దోషం: '%s' (%s)"
+
+#: ../data/apt_check.py:61
+#, python-format
+msgid "%i package can be updated."
+msgid_plural "%i packages can be updated."
+msgstr[0] "%i ప్యాకేజీ నవీకరించవచ్చు."
+msgstr[1] "%i ప్యాకేజీలు నవీకరించవచ్చు."
+
+#: ../data/apt_check.py:66
+#, python-format
+msgid "%i update is a security update."
+msgid_plural "%i updates are security updates."
+msgstr[0] "%i నవీకరణ భద్రతకి సంభందించిన నవీకరణ."
+msgstr[1] "%i నవీకరణలు భద్రతకి సంభందించిన నవీకరణలు."
+
+#: ../data/apt_check.py:94
+#, python-format
+msgid "Error: Opening the cache (%s)"
+msgstr "దోషం: (%s) క్యాచీ తెరవబడుతోంది"
+
+#: ../data/apt_check.py:108
+msgid "Error: BrokenCount > 0"
+msgstr "దోషం: BrokenCount > 0"
+
+#: ../data/apt_check.py:115
+#, python-format
+msgid "Error: Marking the upgrade (%s)"
+msgstr "దోషం: (%s) ఉన్నతీకరణకు గుర్తువేస్తోంది"
+
+#: ../data/apt_check.py:179
+msgid "Show the packages that are going to be installed/upgraded"
+msgstr "స్థాపించబడే/ఉన్నతీకరించబడే ప్యాకేజీలను చూపించు"
+
+#: ../data/apt_check.py:184
+msgid "Show human readable output on stdout"
+msgstr "మానవులు చదవగలిగే అవుట్‌పుట్‌ను stdout మీద చూపించు"
+
+#: ../data/apt_check.py:188
+msgid ""
+"Return the time in days when security updates are installed unattended (0 "
+"means disabled)"
+msgstr "ప్రమేయంలేకుండా భద్రతా తాజాకరణలు స్థాపించు అంతరము (రోజులలో) ఇస్తుంది.(0 అనగా అచేతనం)"
+
+#: ../src/crash.c:46
+msgid "System program problem detected"
+msgstr "వ్యవస్థ ప్రోగ్రాం సమస్య గుర్తించబడింది"
+
+#: ../src/crash.c:47
+msgid "Do you want to report the problem now?"
+msgstr "సమస్యను ఇపుడు నివేదించాలనుకుంటున్నారా?"
+
+#: ../src/crash.c:57
+msgid "Report problem…"
+msgstr "సమస్యను నివేదించు..."
+
+#: ../src/crash.c:90 ../src/crash.c:209
+msgid "Crash report detected"
+msgstr "క్రాష్ నివేదిక గుర్తించబడింది"
+
+#: ../src/crash.c:91
+msgid ""
+"An application has crashed on your system (now or in the past). Click on the "
+"notification icon to display details. "
+msgstr ""
+"మీ వ్యవస్థలో ఒక అనువర్తనం క్రాష్ అయినది(ఇపుడుగాని లేదా గతంలోగాని). వివరాలను చూపించుటకు నొటిఫికేషన్ "
+"ప్రతీక మీద నొక్కండి. "
+
+#. Create and show the notification
+#: ../src/avahi.c:15
+msgid "Network service discovery disabled"
+msgstr "నెట్వర్కు సర్వీసు కనుగొనుట అచేతనమయింది"
+
+#: ../src/avahi.c:16
+msgid ""
+"Your current network has a .local domain, which is not recommended and "
+"incompatible with the Avahi network service discovery. The service has been "
+"disabled."
+msgstr ""
+"మీ ప్రస్థుత నెట్‌వర్కు .local domain ను కలిగిఉంది, ఇది సిఫారసు చేయదగినదికాదు మరియు Avahi "
+"నెట్‌వర్కు సర్వీసు డిస్కవరీతో ఇది ఇన్‌కాంపేటబుల్. సర్వీసు అచేతనం చేయబడింది."
+
+#: ../src/cdroms.c:51
+msgid "Software Packages Volume Detected"
+msgstr "సాఫ్ట్‍వేర్ ప్యాకేజీల సంపుటం కనుగొనబడింది"
+
+#: ../src/cdroms.c:52
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with software packages has "
+"been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">సాఫ్ట్‍వేర్ ప్యాకేజీలతో కూడిన ఒక సంపుటం కనుగొనబడింది."
+"</span>\n"
+"\n"
+"దీనిని ప్యాకేజీ నిర్వాహకంతో తెరుచుటకు మీరు ఆసక్తి చూపుతున్నారా?"
+
+#: ../src/cdroms.c:60
+msgid "Start Package Manager"
+msgstr "ప్యాకేజి నిర్వాహకాన్ని ప్రారంభించు"
+
+#: ../src/cdroms.c:66
+msgid "Upgrade volume detected"
+msgstr "ఉన్నతీకరణ సంపుటం కనుగొనబడింది"
+
+#: ../src/cdroms.c:67
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A distribution volume with software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to try to upgrade from it automatically? "
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">సాఫ్ట్‍వేర్ ప్యాకేజీలతో కూడిన ఒక పంపణీ సంపుటం "
+"కనుగొనబడింది.</span>\n"
+"\n"
+"దానినుండి స్వయంచాలకంగా ప్రయత్నించి ఉన్నతీకరించడానికి మీరు ఆసక్తి చూపుతున్నారా? "
+
+#: ../src/cdroms.c:74
+msgid "Run upgrade"
+msgstr "ఉన్నతీకరణ నడుపు"
+
+#: ../src/cdroms.c:82
+msgid "APTonCD volume detected"
+msgstr "APTonCD సంపుటం కనుగొనబడింది"
+
+#: ../src/cdroms.c:83
+msgid ""
+"<span weight=\"bold\" size=\"larger\">A volume with unofficial software "
+"packages has been detected.</span>\n"
+"\n"
+"Would you like to open it with the package manager?"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">అనధికార సాఫ్ట్‍వేర్ ప్యాకేజీలతో కూడిన ఒక సంపుటం "
+"కనుగొనబడింది.</span>\n"
+"\n"
+"దీనిని ప్యాకేజీ నిర్వాహకంతో తెరుచుటకు మీరు ఆసక్తి చూపుతున్నారా?"
+
+#: ../src/cdroms.c:91 ../src/update.c:38
+msgid "Start package manager"
+msgstr "ప్యాకేజి నిర్వాహకాన్ని ప్రారంభించు"
+
+#: ../src/hooks.c:360 ../ui/hooks-dialog.ui.h:2
+msgid "_Run this action now"
+msgstr "ఈ చర్యను ఇపుడు నడుపు(_R)"
+
+#: ../src/hooks.c:513 ../src/hooks.c:664 ../src/hooks.c:893
+msgid "Information available"
+msgstr "సమాచారం అందుబాటులో ఉన్నది"
+
+#: ../src/hooks.c:665
+msgid "Click on the notification icon to show the available information.\n"
+msgstr "అందుబాటులో ఉన్న సమాచారం చూపించుటకు గమనికల ఐకాన్ మీద నొ క్కండి.\n"
+
+#: ../src/reboot.c:27 ../src/reboot.c:275
+msgid "System restart required"
+msgstr "వ్యవస్థ పున:ప్రారంభం అవసరం"
+
+#: ../src/reboot.c:28
+msgid ""
+"To finish updating your system, please restart it.\n"
+"\n"
+"Click on the notification icon for details."
+msgstr "మీ వ్యవస్థని తాజా చేయుటకొరకు మరల ప్రారంభించండి."
+
+#: ../src/reboot.c:102
+msgid "Reboot failed"
+msgstr "రీ బూట్ విఫలమైనది"
+
+#: ../src/reboot.c:103
+msgid "Failed to request reboot, please shutdown manually"
+msgstr "రీబూట్ విన్నపం విఫలమైంది, దయచేసి మానవీయంగా మూసివేయగలరు"
+
+#: ../src/update.c:27
+msgid "Show updates"
+msgstr "నవీకరణలు చూపించు"
+
+#: ../src/update.c:31
+msgid "Install all updates"
+msgstr "అన్ని నవీకరణలను స్థాపించు"
+
+#: ../src/update.c:35
+msgid "Check for updates"
+msgstr "నవీకరణల కోసం ప్రయత్నించు"
+
+#: ../src/update.c:82
+#, c-format
+msgid "There is %i update available"
+msgid_plural "There are %i updates available"
+msgstr[0] "%i నవీకరణ అందుబాటులో ఉంది"
+msgstr[1] "%i నవీకరణలు అందుబాటులో ఉన్నాయి"
+
+#: ../src/update.c:147
+msgid "Show notifications"
+msgstr "గమనికలను చూపించు"
+
+#. and update the tooltip
+#: ../src/update.c:205
+msgid "A package manager is working"
+msgstr "ఒక ప్యాకేజి నిర్వాహకి పనిచేస్తున్నది"
+
+#: ../src/update.c:237
+#, c-format
+msgid ""
+"There is %i update available. Click on the notification icon to show the "
+"available update."
+msgid_plural ""
+"There are %i updates available. Click on the notification icon to show the "
+"available updates."
+msgstr[0] "%i తాజాకరణ అందుబాటులోవుంది. సందేశ ప్రతిమ పై నొక్కి అందుబాటులో వున్న తాజాకరణ చూడవచ్చు."
+msgstr[1] ""
+"%i తాజాకరణలు అందుబాటులోవున్నాయి. సందేశ ప్రతిమ పై నొక్కి అందుబాటులో వున్న తాజాకరణలు చూడవచ్చు."
+
+#: ../src/update.c:248
+msgid "Software updates available"
+msgstr "సాప్ట్వేర్ నవీకరణలు అందుబాటులో ఉన్నాయి"
+
+#: ../src/update.c:284
+#, fuzzy
+msgid ""
+"The update information is outdated. This may be caused by network problems "
+"or by a repository that is no longer available. Please update manually by "
+"selecting 'Show updates' from the indicator menu, and watching for any "
+"failing repositories."
+msgstr ""
+"నవీకరణ సమాచారం కాలంచెల్లినది. ఇది నెట్వర్కు సమస్యల వల్లనో లేదా భాండాగారం ఇక ఏమాత్రం అందుబాటులో "
+"లేకపోవడం వల్ల సంభవించవచ్చు. దయచేసి ఈ ప్రతీకను నొక్కడం ద్వారా మానవీయంగా నవీకరించండి మరియు తరువాత "
+"'Check for updates' ఎంచుకోండి మరియు ఒకవేళ జాబితాగా ఇవ్వబడిన కొన్ని భాండాగారాలు విఫలమయితే తనిఖీచేయండి."
+
+#: ../src/update.c:579
+#, c-format
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong.\n"
+"The error message was: '%s'. "
+msgstr ""
+"ఒక దోషం సంభవించింది, తప్పు ఎక్కడుందో చూడటానికి దయచేసి రైట్ క్లిక్ మెనూ నుండి ప్యాకేజీ నిర్వాహకిని నడుపండి "
+"లేదా టెర్మినల్‌లో apt-get వాడండి.\n"
+"దోష సందేశం ఏమిటంటే: '%s'. "
+
+#: ../src/update.c:586
+msgid ""
+"An error occurred, please run Package Manager from the right-click menu or "
+"apt-get in a terminal to see what is wrong."
+msgstr ""
+"ఒక దోషం సంభవించినది, దయచేసి రైట్ క్లిక్ మెను నుండి ప్యాకేజీ నిర్వాహకిని నడుపు లేదా తప్పేమిటో చూచుటకు "
+"టెర్మినల్ లో apt-get వాడండి."
+
+#: ../src/update.c:590
+msgid "This usually means that your installed packages have unmet dependencies"
+msgstr "సాధారణంగా దీని అర్ధం ఏమిటంటే మీరు స్థాపింనిన ప్యాకేజీలు ఆధారితత్వాలను సరిగాకలిగిలేవు"
+
+#: ../src/update.c:603
+msgid "A problem occurred when checking for the updates."
+msgstr "నవీకరణలు కొ రకు ప్రయత్నించేటపుడు ఒక సమస్య సంభవించినది."
+
+#: ../src/update-notifier.c:572
+msgid "- inform about updates"
+msgstr "- నవీకరణలు గురించి తెలియపరుచు"
+
+#: ../src/update-notifier.c:574
+#, c-format
+msgid "Failed to init the UI: %s\n"
+msgstr "UI ప్రారంభించుటలో విఫలమయింది: %s\n"
+
+#: ../src/update-notifier.c:575
+msgid "unknown error"
+msgstr "తెలియని దోషం"
+
+#: ../src/update-notifier.c:598
+msgid "update-notifier"
+msgstr "నవీకరణ-సూచిక"
+
+#: ../ui/hooks-dialog.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Update information</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">నవీకరణ సమాచారం</span>"
+
+#: ../ui/reboot-dialog.ui.h:1
+msgid "Restart Required"
+msgstr "పున:ప్రారంభం అవసరం"
+
+#: ../ui/reboot-dialog.ui.h:2
+msgid "Restart _Later"
+msgstr "తరువాత పున:ప్రారంభించు"
+
+#: ../ui/reboot-dialog.ui.h:3
+msgid "_Restart Now"
+msgstr "ఇప్పుడు పున:ప్రారంభించు(_R)"
+
+#: ../ui/reboot-dialog.ui.h:4
+msgid ""
+"The computer needs to restart to finish installing updates. Please save your "
+"work before continuing."
+msgstr ""
+"నవీకరణలను పూర్తిచేయుటకు కంప్యూటర్ పునఃప్రారంభించవలసి ఉంటుంది. దయచేసి కొనసాగేముందు మీ పనిని "
+"భద్రపరుచుకోండి."
+
+#: ../data/update-notifier.desktop.in.h:1
+msgid "Update Notifier"
+msgstr "నవీకరణ-సూచిక"
+
+#: ../data/update-notifier.desktop.in.h:2
+msgid "Check for available updates automatically"
+msgstr "అందుబాటులోనున్న నవీకరణలను స్వయంచాలకంగా ప్రయత్నించు"
+
+#. Name
+#: ../data/package-data-downloads-failed.in:2
+msgid "Failure to download extra data files"
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"The following packages requested additional data downloads after package "
+"installation, but the data could not be downloaded or could not be processed."
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid "  $packages"
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed.in:5
+msgid ""
+"The download will be attempted again later, or you can try the download "
+"again now.  Running this command requires an active Internet connection."
+msgstr ""
+
+#. Name
+#: ../data/package-data-downloads-failed-permanently.in:2
+msgid "Data files for some packages could not be downloaded"
+msgstr ""
+
+#. Description
+#: ../data/package-data-downloads-failed-permanently.in:3
+msgid ""
+"This is a permanent failure that leaves these packages unusable on your "
+"system.  You may need to fix your Internet connection, then remove and "
+"reinstall the packages to fix this problem."
+msgstr ""
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">Please enter your password to "
+#~ "access problem reports of system programs</span>"
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">వ్యవస్థ ప్రోగ్రాంల యొక్క సమస్యల నివేదికలను "
+#~ "చూడటానికి దయచేసి మీ సంకేతపదాన్ని ఇవ్వండి</span>"
+
+#~ msgid "Addon volume detected"
+#~ msgstr "ఆడ్ఆన్ సంపుటం కనుగొనబడింది"
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">An addon volume with software "
+#~ "applications has been detected.</span>\n"
+#~ "\n"
+#~ "Would you like to view/install the content? "
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">సాఫ్ట్వేర్ అనువర్తనాలు గల జతపరచు వాల్యూమ్ "
+#~ "(నిల్వ) కనుగొనబడినది.</span>\n"
+#~ "\n"
+#~ "మీరు దానిలోని వివరాలు చూడాలా లేక స్థాపించాలా? "
+
+#~ msgid "Start addon installer"
+#~ msgstr "యాడ్ ఆన్ స్ధాపికను ప్రారంభించు"
+
+#~ msgid "Internal error"
+#~ msgstr "అంతర్గత దోషం"
